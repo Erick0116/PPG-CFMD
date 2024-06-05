@@ -1,0 +1,218 @@
+container: {type: ColumnPanel}
+components:
+- name: card_1
+  properties: {role: card, col_widths: '{"JNXLGM":15,"QZIGUF":45,"MARQGT":15,"XBSODA":45,"QSUGJY":15,"WBZSTR":45,"URQUOG":15,"AQMLOM":45,"WZTNBU":15,"ZLOHFG":45,"KNHCAQ":15,"BDKVUJ":45,"KTRWIH":15,"LYNETN":45,"AZMXMQ":15,"FJUGVJ":45,"LUOEUL":15,"RFBXAS":45,"BAZZAT":15,"LZDCDV":45,"LEUQGB":15,"WATKAP":45}',
+    background: 'theme:Gray 50'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'EPAZTQ,SCSCQF KNJMNG,IYWJEQ'}
+  components:
+  - name: label_6
+    properties: {text: Vehicle Details, align: center, font: Verdana, font_size: 20,
+      bold: true, foreground: 'theme:Secondary 500'}
+    type: Label
+    layout_properties: {grid_position: 'OAURSB,DJHDUS'}
+  - name: label_1
+    properties: {text: Make, font: Verdana, bold: false}
+    type: Label
+    layout_properties: {grid_position: 'AORAZS,JNXLGM'}
+  - name: txt_make
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'AORAZS,QZIGUF'}
+  - name: label_2
+    properties: {text: Body Type, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'JTWIBA,MARQGT'}
+  - name: txt_bodyType
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'JTWIBA,XBSODA'}
+  - name: label_3
+    properties: {text: Color, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'BJYEYC,QSUGJY'}
+  - name: txt_color
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'BJYEYC,WBZSTR'}
+  - name: label_4
+    properties: {text: Model, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'XYTWDS,URQUOG'}
+  - name: txt_model
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'XYTWDS,AQMLOM'}
+  - name: label_5
+    properties: {text: Register Name, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'FXUQAU,WZTNBU'}
+  - name: txt_registerName
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'FXUQAU,ZLOHFG'}
+  - name: label_7
+    properties: {text: Plate No., font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'ICCCVK,KNHCAQ'}
+  - name: txt_plateno
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'ICCCVK,BDKVUJ'}
+  - name: label_8
+    properties: {text: Engine No., font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'SAVXLP,KTRWIH'}
+  - name: txt_engineno
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'SAVXLP,LYNETN'}
+  - name: label_9
+    properties: {text: Chasis No., font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'SOOTJX,AZMXMQ'}
+  - name: txt_chasisno
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'SOOTJX,FJUGVJ'}
+  - name: label_20
+    properties: {text: Area Assigned, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'URVMTR,LUOEUL'}
+  - name: dp_area
+    properties: {font: Verdana}
+    type: DropDown
+    layout_properties: {grid_position: 'URVMTR,RFBXAS'}
+  - name: label_21
+    properties: {text: Status, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'WPPCIJ,BAZZAT'}
+  - name: dp_status
+    properties: {font: Verdana}
+    type: DropDown
+    layout_properties: {grid_position: 'WPPCIJ,LZDCDV'}
+  - name: label_22
+    properties: {text: Remarks, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'YFUDLA,LEUQGB'}
+  - name: txt_remarks
+    properties: {height: 108.65234375, font: Verdana}
+    type: TextArea
+    layout_properties: {grid_position: 'YFUDLA,WATKAP'}
+- name: card_2
+  properties: {role: card, col_widths: '{"HAPWEM":20,"BUEULE":40,"BCNHUH":20,"PGKRNA":40,"QUOZPV":20,"UFRPNZ":40,"TGFPTQ":20,"QBFHQJ":40,"QMYXCA":20,"XYJSFP":40}',
+    background: 'theme:Gray 50'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'EPAZTQ,VZQVOT VGJXME,TUVHVI'}
+  components:
+  - name: label_23
+    properties: {text: Registration Details, align: center, font: Verdana, font_size: 20,
+      bold: true, foreground: 'theme:Secondary 500'}
+    type: Label
+    layout_properties: {grid_position: 'BRJHVC,UKSJWX'}
+  - name: label_10
+    properties: {text: CR No., font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'LOGEKE,HAPWEM'}
+  - name: txt_crno
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'LOGEKE,BUEULE'}
+  - name: label_11
+    properties: {text: First Date of CR, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'ZNSNIS,QMYXCA'}
+  - name: dp_datecr
+    properties: {font: Verdana}
+    type: DatePicker
+    layout_properties: {grid_position: 'ZNSNIS,XYJSFP'}
+  - name: label_12
+    properties: {text: OR No., font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'UOPWPO,BCNHUH'}
+  - name: txt_orno
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'UOPWPO,PGKRNA'}
+  - name: label_13
+    properties: {text: Date Renewed, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'WYPJYK,QUOZPV'}
+  - name: dp_dateRenew
+    properties: {font: Verdana}
+    type: DatePicker
+    layout_properties: {grid_position: 'WYPJYK,UFRPNZ'}
+  - name: label_14
+    properties: {text: Next Renewal Date, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'CPBEMZ,TGFPTQ'}
+  - name: dp_nextRenewed
+    properties: {font: Verdana}
+    type: DatePicker
+    layout_properties: {grid_position: 'CPBEMZ,QBFHQJ'}
+- name: card_3
+  properties: {role: card, col_widths: '{"YOJOHK":20,"GHHKRJ":40,"MQQKSS":20,"ZHAEPA":40,"KYXUYA":20,"BBWITC":40,"WFPDTA":20,"ZJDBCK":40,"STWEKI":20,"KWWVJB":40}',
+    background: 'theme:Gray 50'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'EPAZTQ,VZQVOT RGDIPO,NXAMEC'}
+  components:
+  - name: label_24
+    properties: {text: Insurance Detials, align: center, font: Verdana, font_size: 20,
+      bold: true, foreground: 'theme:Secondary 500'}
+    type: Label
+    layout_properties: {grid_position: 'CJNZZD,YFZVHU'}
+  - name: label_15
+    properties: {text: Insurance Type, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'RFTVLU,YOJOHK'}
+  - name: txt_insuranceType
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'RFTVLU,GHHKRJ'}
+  - name: label_16
+    properties: {text: Insurance Name, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'XIZLSC,MQQKSS'}
+  - name: txt_insuranceName
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'XIZLSC,ZHAEPA'}
+  - name: label_17
+    properties: {text: Premium, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'JBCMBZ,KYXUYA'}
+  - name: txt_premium
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'JBCMBZ,BBWITC'}
+  - name: label_18
+    properties: {text: Coverage, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'CPKLRW,WFPDTA'}
+  - name: txt_coverage
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'CPKLRW,ZJDBCK'}
+  - name: label_19
+    properties: {text: Expiry, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'KCMGLM,STWEKI'}
+  - name: dp_expiry
+    properties: {font: Verdana}
+    type: DatePicker
+    layout_properties: {grid_position: 'KCMGLM,KWWVJB'}
+- name: card_4
+  properties: {role: card, background: 'theme:Gray 50'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'EPAZTQ,VZQVOT ESNFUB,VAQFTZ'}
+  components:
+  - name: btn_save
+    properties: {text: Save, role: primary-color, align: full, font: Verdana, font_size: 15}
+    type: Button
+    layout_properties: {grid_position: 'SVQIGD,WUXNZL'}
+    event_bindings: {click: btn_save_click}
+  - name: btn_cancel
+    properties: {text: Cancel, align: full, role: primary-color, font: Verdana, font_size: 15}
+    type: Button
+    layout_properties: {grid_position: 'SVQIGD,CCTLOL'}
+is_package: true

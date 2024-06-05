@@ -1,7 +1,76 @@
 allow_embedding: false
-package_name: Material_Design_1
+package_name: PPG_CFMD
+db_schema:
+  vehicles:
+    client: none
+    server: full
+    columns:
+    - name: make
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: body_type
+      admin_ui: {order: 1, width: 200}
+      type: string
+    - name: color
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: model
+      admin_ui: {width: 200, order: 3}
+      type: string
+    - name: register_name
+      admin_ui: {width: 200, order: 4}
+      type: string
+    - name: plate_no
+      admin_ui: {width: 200, order: 5}
+      type: string
+    - name: engine_no
+      admin_ui: {width: 200, order: 6}
+      type: string
+    - name: chasis_no
+      admin_ui: {order: 7, width: 200}
+      type: string
+    - name: area_assigned
+      admin_ui: {width: 200, order: 8}
+      type: string
+    - name: status
+      admin_ui: {width: 200, order: 9}
+      type: string
+    - name: remarks
+      admin_ui: {width: 200, order: 10}
+      type: string
+    - name: cr_no
+      admin_ui: {width: 200, order: 11}
+      type: string
+    - name: or_no
+      admin_ui: {width: 200, order: 13}
+      type: string
+    - name: date_renewed_or
+      admin_ui: {width: 200, order: 14}
+      type: date
+    - name: date_cr
+      admin_ui: {order: 12, width: 200}
+      type: date
+    - name: next_renewal
+      admin_ui: {width: 200, order: 15}
+      type: date
+    - name: insurance_type
+      admin_ui: {width: 200, order: 16}
+      type: string
+    - name: insurance_name
+      admin_ui: {width: 200, order: 17}
+      type: string
+    - name: premium
+      admin_ui: {width: 200, order: 18}
+      type: number
+    - name: coverage
+      admin_ui: {width: 200, order: 19}
+      type: number
+    - name: expiry
+      admin_ui: {width: 200, order: 20}
+      type: date
+    title: Vehicles
 startup: {type: form, module: Main}
-name: Material Design 1
+name: PPG CFMD
 startup_form: null
 runtime_options:
   version: 2
