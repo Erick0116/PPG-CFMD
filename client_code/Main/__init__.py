@@ -5,6 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from  .RegisterVehicle import RegisterVehicle
+from .VehicleList import VehicleList
 
 
 class Main(MainTemplate):
@@ -17,3 +18,7 @@ class Main(MainTemplate):
   def btn_register_click(self, **event_args):
     self.card_1.clear()
     self.card_1.add_component(RegisterVehicle())
+
+  def btn_vehicleList_click(self, **event_args):
+    self.card_1.clear()
+    self.card_1.add_component(VehicleList())
