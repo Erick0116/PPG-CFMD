@@ -1,7 +1,7 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html', background: 'theme:White'}
+  properties: {html: '@theme:standard-page.html', background: 'theme:Gray 50'}
 components:
 - type: ColumnPanel
   properties: {}
@@ -9,7 +9,7 @@ components:
   layout_properties: {slot: default}
   components:
   - name: card_1
-    properties: {role: null, background: 'theme:White', visible: true}
+    properties: {role: null, background: 'theme:Gray 50', visible: true}
     type: ColumnPanel
     layout_properties: {grid_position: 'QTSOGG,IPFAAR'}
 - type: FlowPanel

@@ -8,7 +8,7 @@ components:
   components:
   - name: label_6
     properties: {text: Vehicle Details, align: center, font: Verdana, font_size: 20,
-      bold: true, foreground: 'theme:Secondary 500'}
+      bold: true, foreground: 'theme:Secondary 700'}
     type: Label
     layout_properties: {grid_position: 'OAURSB,DJHDUS'}
   - name: label_1
@@ -107,7 +107,7 @@ components:
   components:
   - name: label_23
     properties: {text: Registration Details, align: center, font: Verdana, font_size: 20,
-      bold: true, foreground: 'theme:Secondary 500'}
+      bold: true, foreground: 'theme:Secondary 700'}
     type: Label
     layout_properties: {grid_position: 'BRJHVC,UKSJWX'}
   - name: label_10
@@ -158,7 +158,7 @@ components:
   components:
   - name: label_24
     properties: {text: Insurance Detials, align: center, font: Verdana, font_size: 20,
-      bold: true, foreground: 'theme:Secondary 500'}
+      bold: true, foreground: 'theme:Secondary 700'}
     type: Label
     layout_properties: {grid_position: 'CJNZZD,YFZVHU'}
   - name: label_15
@@ -207,12 +207,14 @@ components:
   layout_properties: {grid_position: 'EPAZTQ,VZQVOT ESNFUB,VAQFTZ'}
   components:
   - name: btn_save
-    properties: {text: Save, role: primary-color, align: full, font: Verdana, font_size: 15}
+    properties: {text: Save, role: primary-color, align: full, font: Verdana, font_size: 15,
+      bold: true}
     type: Button
     layout_properties: {grid_position: 'SVQIGD,WUXNZL'}
     event_bindings: {click: btn_save_click}
   - name: btn_cancel
-    properties: {text: Cancel, align: full, role: primary-color, font: Verdana, font_size: 15}
+    properties: {text: Cancel, align: full, role: secondary-color, font: Verdana,
+      font_size: 15, bold: true}
     type: Button
     layout_properties: {grid_position: 'SVQIGD,CCTLOL'}
 is_package: true
