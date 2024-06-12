@@ -9,6 +9,7 @@ components:
     properties: {text: View details, role: primary-color, font: Verdana, font_size: 15, bold: true, align: left, icon: 'fa:info-circle'}
     type: Button
     layout_properties: {grid_position: 'WGUFTL,JEQXOH OKMMSR,DOAUZR'}
+    event_bindings: {click: btn_details_click}
   - name: label_1
     properties: {text: Plate No, align: right, font: Verdana, font_size: 15, bold: true, foreground: 'theme:White'}
     type: Label
@@ -58,7 +59,7 @@ components:
     properties: {text: Make, font: Verdana}
     type: Label
     layout_properties: {grid_position: 'RISEWZ,RBTZIW WNDABU,GTKIND'}
-  - name: text_box_1
+  - name: txt_make
     properties: {font: Verdana, enabled: false, background: 'theme:Gray 50'}
     type: TextBox
     layout_properties: {grid_position: 'RISEWZ,RBTZIW WNDABU,JVEMRG'}
@@ -66,7 +67,7 @@ components:
     properties: {text: Body Type, font: Verdana}
     type: Label
     layout_properties: {grid_position: 'RISEWZ,RBTZIW UISXDD,EQUVIR'}
-  - name: text_box_2
+  - name: txt_bodytype
     properties: {font: Verdana, enabled: false, background: 'theme:Gray 50'}
     type: TextBox
     layout_properties: {grid_position: 'RISEWZ,RBTZIW UISXDD,AXKHEZ'}
@@ -74,7 +75,7 @@ components:
     properties: {text: Color, font: Verdana}
     type: Label
     layout_properties: {grid_position: 'RISEWZ,RBTZIW FSDJGT,WWIXMD'}
-  - name: text_box_3
+  - name: txt_color
     properties: {font: Verdana, enabled: false, background: 'theme:Gray 50'}
     type: TextBox
     layout_properties: {grid_position: 'RISEWZ,RBTZIW FSDJGT,CTJMJS'}
@@ -82,7 +83,7 @@ components:
     properties: {text: Model, font: Verdana}
     type: Label
     layout_properties: {grid_position: 'RISEWZ,RBTZIW LBYXTU,YERMHR'}
-  - name: text_box_4
+  - name: txt_model
     properties: {font: Verdana, enabled: false, background: 'theme:Gray 50'}
     type: TextBox
     layout_properties: {grid_position: 'RISEWZ,RBTZIW LBYXTU,FZFJFW'}
@@ -90,7 +91,7 @@ components:
     properties: {text: Area Assigned, font: Verdana}
     type: Label
     layout_properties: {grid_position: 'RISEWZ,RBTZIW JQZTKQ,QNZCMX'}
-  - name: text_box_9
+  - name: txt_area
     properties: {font: Verdana}
     type: TextBox
     layout_properties: {grid_position: 'RISEWZ,RBTZIW JQZTKQ,BPHWXF'}
@@ -98,7 +99,7 @@ components:
     properties: {text: Register Name, font: Verdana}
     type: Label
     layout_properties: {grid_position: 'RISEWZ,XKFOYD CPCKAX,QLWLQA'}
-  - name: text_box_5
+  - name: txt_register_name
     properties: {font: Verdana}
     type: TextBox
     layout_properties: {grid_position: 'RISEWZ,XKFOYD CPCKAX,CZQPJD'}
@@ -106,7 +107,7 @@ components:
     properties: {text: Plate No., font: Verdana}
     type: Label
     layout_properties: {grid_position: 'RISEWZ,XKFOYD GGWXTT,YECBOR'}
-  - name: text_box_6
+  - name: txt_plateno
     properties: {font: Verdana}
     type: TextBox
     layout_properties: {grid_position: 'RISEWZ,XKFOYD GGWXTT,YEYABN'}
@@ -114,7 +115,7 @@ components:
     properties: {text: Engine No., font: Verdana}
     type: Label
     layout_properties: {grid_position: 'RISEWZ,XKFOYD RBYZJE,LTRAPJ'}
-  - name: text_box_7
+  - name: txt_engineno
     properties: {font: Verdana}
     type: TextBox
     layout_properties: {grid_position: 'RISEWZ,XKFOYD RBYZJE,GSUTLO'}
@@ -122,7 +123,7 @@ components:
     properties: {text: Chasis No., font: Verdana}
     type: Label
     layout_properties: {grid_position: 'RISEWZ,XKFOYD CIAHRO,YVXZFM'}
-  - name: text_box_8
+  - name: txt_chasisno
     properties: {font: Verdana}
     type: TextBox
     layout_properties: {grid_position: 'RISEWZ,XKFOYD CIAHRO,PAQUQU'}
@@ -130,7 +131,7 @@ components:
     properties: {text: Status, font: Verdana}
     type: Label
     layout_properties: {grid_position: 'RISEWZ,XKFOYD ATLHMT,WCPBLQ'}
-  - name: text_box_10
+  - name: txt_status
     properties: {font: Verdana}
     type: TextBox
     layout_properties: {grid_position: 'RISEWZ,XKFOYD ATLHMT,IWVURQ'}

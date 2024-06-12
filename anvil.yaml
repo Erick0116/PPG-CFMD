@@ -21,7 +21,7 @@ db_schema:
       admin_ui: {width: 200, order: 4}
       type: string
     - name: plate_no
-      admin_ui: {width: 200, order: 5}
+      admin_ui: {order: 2.5, width: 200}
       type: string
     - name: engine_no
       admin_ui: {width: 200, order: 6}
