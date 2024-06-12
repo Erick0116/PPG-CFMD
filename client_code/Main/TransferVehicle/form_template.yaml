@@ -1,0 +1,84 @@
+container: {type: ColumnPanel}
+components:
+- name: card_1
+  properties: {role: card, col_widths: '{"IKKICO":15,"WVSOPM":45,"PNBQOW":15,"WGVQEH":5,"GAGSWP":25,"QQBNJZ":10,"TWHUOO":20,"WQFTHT":5,"SROVUO":25,"THOIHA":10,"EYSRZT":20,"DIQUHF":5,"RYQGYX":25,"IHGKRF":10,"KCALDR":20}', background: 'theme:Gray 100'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'EQKEBE,VQWEZL'}
+  components:
+  - name: label_1
+    properties: {text: Plate No., align: right, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'BJNKRK,WVSOPM'}
+  - name: text_box_2
+    properties: {background: 'theme:White', font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'BJNKRK,PNBQOW'}
+  - name: label_2
+    properties: {text: Make, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'OTEYHL,WGVQEH'}
+  - name: text_box_1
+    properties: {background: 'theme:Gray 50', enabled: false, font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'OTEYHL,GAGSWP'}
+  - name: label_6
+    properties: {text: Registered Name, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'OTEYHL,QQBNJZ'}
+  - name: text_box_6
+    properties: {background: 'theme:Gray 50', enabled: false, font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'OTEYHL,TWHUOO'}
+  - name: label_3
+    properties: {text: Color, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'APGPQZ,WQFTHT'}
+  - name: text_box_3
+    properties: {background: 'theme:Gray 50', enabled: false, font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'APGPQZ,SROVUO'}
+  - name: label_7
+    properties: {text: Engine No., font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'APGPQZ,THOIHA'}
+  - name: text_box_7
+    properties: {background: 'theme:Gray 50', enabled: false, font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'APGPQZ,EYSRZT'}
+  - name: label_4
+    properties: {text: Model, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'RCILFC,DIQUHF'}
+  - name: text_box_4
+    properties: {background: 'theme:Gray 50', enabled: false, font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'RCILFC,RYQGYX'}
+  - name: label_8
+    properties: {text: Chassis No., font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'RCILFC,IHGKRF'}
+  - name: text_box_8
+    properties: {background: 'theme:Gray 50', enabled: false, font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'RCILFC,KCALDR'}
+  - name: label_5
+    properties: {text: Body Type, align: right, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'ZUFOEE,NJOKSM'}
+  - name: text_box_5
+    properties: {background: 'theme:Gray 50', enabled: false, font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'ZUFOEE,LXRTIW'}
+  - name: label_9
+    properties: {text: Area Transfered, align: right, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'QSZWKK,SOJCHL'}
+  - name: drop_down_1
+    properties: {background: 'theme:White', font: Verdana}
+    type: DropDown
+    layout_properties: {grid_position: 'QSZWKK,WAVZLU'}
+  - name: button_1
+    properties: {text: TRANSFER, role: primary-color, font: Verdana, bold: true, icon: 'fa:ship', align: right}
+    type: Button
+    layout_properties: {grid_position: 'TDNDVZ,IKKICO LEGDAE,HEPPBW'}
+is_package: true
