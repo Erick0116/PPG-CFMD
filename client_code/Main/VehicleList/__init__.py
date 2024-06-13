@@ -33,8 +33,21 @@ class VehicleList(VehicleListTemplate):
 
   def btn_details_click(self, **event_args):
     search_plateno  = self.txt_search.text
-    vehicle_info = anvil.server.call('search_vehicles', search_plateno)
-    print("Results:", vehicle_info)
+    vehicle_record = app_tables.vehicles.search(plate_no=search_plateno)
+    if vehicle_record:
+      self.txt_make.text = vehicle_record[0]['make']
+      self.txt_bodytype.text = vehicle_record[0]['body_type']
+      self.txt_color.text = vehicle_record[0]['color']
+      self.txt_area.text = vehicle_record[0]['area_assigned']
+      self.txt_model.text = vehicle_record[0]['model']
+      self.txt_register_name.text = vehicle_record[0]['register_name']
+      self.txt_plateno.text = vehicle_record[0]['plate_no']
+      self.txt_engineno.text = vehicle_record[0]['engine_no']
+      self.txt_chasisno.text = vehicle_record[0]['chasis_no']
+      self.txt_status.text = vehicle_record[0]['status']
+      
+    else:
+      None
 
   def expand_button_click(self, **event_args):
     self.toggle_expand()

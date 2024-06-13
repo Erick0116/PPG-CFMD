@@ -2,7 +2,7 @@ allow_embedding: false
 package_name: PPG_CFMD
 db_schema:
   vehicles:
-    client: none
+    client: search
     server: full
     columns:
     - name: make

@@ -2,6 +2,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
+from datetime import datetime
 
 @anvil.server.callable
 def vehicles_populate():
@@ -14,11 +15,8 @@ def search_vehicles(query):
 
 @anvil.server.callable
 def view_details(search_plateno):
-  results = app_tables.vehicles.search()
-  return results
- # print("Search Results:", results)
-  #if results and len(results) > 0:
-   # first_result = results[0]
-   # return [first_result['make'], first_result['body_type'], first_result['color'], first_result['plate_no']]
-  #else:
-   # return None
+  if search_plateno:
+    results = app_tables.vehicles.search(plate_no=search_plateno)
+    if results:
+      return {'make': results[0]['make']}
+  return None
