@@ -5,99 +5,96 @@ components:
   type: ColumnPanel
   layout_properties: {grid_position: 'LBLGQX,DIBTHT'}
   event_bindings: {hide: column_panel_1_hide}
-- name: button_1
-  properties: {text: button_1}
-  type: Button
-  layout_properties: {grid_position: 'TFDLAR,VPWGCK'}
-- name: card_1
-  properties: {role: card, col_widths: '{"JNXLGM":5,"QZIGUF":25,"NLIOUB":5,"OCHNBE":25,"XZSXYK":15,"ADNDIP":15,"TJGRZQ":5,"TLQHEV":25}', background: 'theme:Gray 100'}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'JUBZGY,IIBJSO'}
   components:
-  - name: label_6
-    properties: {text: Vehicle Details, align: center, font: Verdana, font_size: 20, bold: false, foreground: 'theme:White', background: 'theme:Gray 600', role: text}
-    type: Label
-    layout_properties: {grid_position: 'OAURSB,DJHDUS'}
-  - name: label_1
-    properties: {text: Make, font: Verdana, bold: false}
-    type: Label
-    layout_properties: {grid_position: 'AORAZS,JNXLGM PCKKDE,FHFZHH'}
-  - name: label_3
-    properties: {text: Color, font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'AORAZS,JNXLGM INQTPJ,UBJKXJ'}
-  - name: label_4
-    properties: {text: Model, font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'AORAZS,JNXLGM IUIYLZ,CDJJIM'}
-  - name: label_2
-    properties: {text: Body Type, font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'AORAZS,JNXLGM JGEJXN,BBXXUA'}
-  - name: txt_make
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'AORAZS,QZIGUF LNVFQI,WZJATJ'}
-  - name: txt_color
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'AORAZS,QZIGUF TDQHBY,SJOQPE'}
-  - name: txt_model
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'AORAZS,QZIGUF QOKMTJ,WCGHFR'}
-  - name: txt_bodyType
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'AORAZS,QZIGUF BENQLQ,TBAOPW'}
-  - name: label_7
-    properties: {text: Plate No., font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'AORAZS,NLIOUB GWYKUV,VWRDVF'}
-  - name: label_5
-    properties: {text: Register Name, font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'AORAZS,NLIOUB GLAQQJ,NFJZTU'}
-  - name: label_8
-    properties: {text: Engine No., font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'AORAZS,NLIOUB ZVSVIN,NCRGIX'}
-  - name: label_9
-    properties: {text: Chasis No., font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'AORAZS,NLIOUB JJMLJW,IIKLDG'}
-  - name: txt_plateno
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'AORAZS,OCHNBE KKSUHM,DPRQHJ'}
-  - name: txt_registerName
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'AORAZS,OCHNBE WHTGKX,VFZCQO'}
-  - name: txt_engineno
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'AORAZS,OCHNBE TXMHZZ,EUVBJF'}
-  - name: txt_chasisno
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'AORAZS,OCHNBE ZUHBEH,YWWJEI'}
-  - name: label_20
-    properties: {text: Area Assigned, font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'VYMTLX,XZSXYK'}
-  - name: dp_area
-    properties: {font: Verdana}
-    type: DropDown
-    layout_properties: {grid_position: 'VYMTLX,ADNDIP'}
-  - name: label_21
-    properties: {text: Status, font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'VYMTLX,TJGRZQ'}
-  - name: dp_status
-    properties: {font: Verdana}
-    type: DropDown
-    layout_properties: {grid_position: 'VYMTLX,TLQHEV'}
+  - name: card_1
+    properties: {role: card, col_widths: '{"JNXLGM":5,"QZIGUF":25,"NLIOUB":5,"OCHNBE":25,"XZSXYK":15,"ADNDIP":15,"TJGRZQ":5,"TLQHEV":25}', background: 'theme:Gray 100'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'TPOCVI,QWQKDE'}
+    components:
+    - name: label_6
+      properties: {text: Vehicle Details, align: center, font: Verdana, font_size: 20, bold: false, foreground: 'theme:White', background: 'theme:Gray 600', role: text}
+      type: Label
+      layout_properties: {grid_position: 'OAURSB,DJHDUS'}
+    - name: label_1
+      properties: {text: Make, font: Verdana, bold: false}
+      type: Label
+      layout_properties: {grid_position: 'AORAZS,JNXLGM PCKKDE,FHFZHH'}
+    - name: label_3
+      properties: {text: Color, font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'AORAZS,JNXLGM INQTPJ,UBJKXJ'}
+    - name: label_4
+      properties: {text: Model, font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'AORAZS,JNXLGM IUIYLZ,CDJJIM'}
+    - name: label_2
+      properties: {text: Body Type, font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'AORAZS,JNXLGM JGEJXN,BBXXUA'}
+    - name: txt_make
+      properties: {font: Verdana}
+      type: TextBox
+      layout_properties: {grid_position: 'AORAZS,QZIGUF LNVFQI,WZJATJ'}
+    - name: txt_color
+      properties: {font: Verdana}
+      type: TextBox
+      layout_properties: {grid_position: 'AORAZS,QZIGUF TDQHBY,SJOQPE'}
+    - name: txt_model
+      properties: {font: Verdana}
+      type: TextBox
+      layout_properties: {grid_position: 'AORAZS,QZIGUF QOKMTJ,WCGHFR'}
+    - name: txt_bodyType
+      properties: {font: Verdana}
+      type: TextBox
+      layout_properties: {grid_position: 'AORAZS,QZIGUF BENQLQ,TBAOPW'}
+    - name: label_7
+      properties: {text: Plate No., font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'AORAZS,NLIOUB GWYKUV,VWRDVF'}
+    - name: label_5
+      properties: {text: Register Name, font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'AORAZS,NLIOUB GLAQQJ,NFJZTU'}
+    - name: label_8
+      properties: {text: Engine No., font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'AORAZS,NLIOUB ZVSVIN,NCRGIX'}
+    - name: label_9
+      properties: {text: Chasis No., font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'AORAZS,NLIOUB JJMLJW,IIKLDG'}
+    - name: txt_plateno
+      properties: {font: Verdana}
+      type: TextBox
+      layout_properties: {grid_position: 'AORAZS,OCHNBE KKSUHM,DPRQHJ'}
+    - name: txt_registerName
+      properties: {font: Verdana}
+      type: TextBox
+      layout_properties: {grid_position: 'AORAZS,OCHNBE WHTGKX,VFZCQO'}
+    - name: txt_engineno
+      properties: {font: Verdana}
+      type: TextBox
+      layout_properties: {grid_position: 'AORAZS,OCHNBE TXMHZZ,EUVBJF'}
+    - name: txt_chasisno
+      properties: {font: Verdana}
+      type: TextBox
+      layout_properties: {grid_position: 'AORAZS,OCHNBE ZUHBEH,YWWJEI'}
+    - name: label_20
+      properties: {text: Area Assigned, font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'VYMTLX,XZSXYK'}
+    - name: dp_area
+      properties: {font: Verdana}
+      type: DropDown
+      layout_properties: {grid_position: 'VYMTLX,ADNDIP'}
+    - name: label_21
+      properties: {text: Status, font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'VYMTLX,TJGRZQ'}
+    - name: dp_status
+      properties: {font: Verdana}
+      type: DropDown
+      layout_properties: {grid_position: 'VYMTLX,TLQHEV'}
 - name: card_2
   properties: {role: card, col_widths: '{"HAPWEM":5,"BUEULE":20,"BCNHUH":5,"PGKRNA":20,"NQIGZK":10,"AUBIWX":25,"PDUQYM":10,"MJGIGF":10,"OIYLZR":5,"CEGBWW":10}', background: 'theme:Gray 50'}
   type: ColumnPanel

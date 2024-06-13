@@ -46,199 +46,144 @@ components:
       properties: {item_template: Main.VehicleList.RowTemplate1}
       type: RepeatingPanel
     layout_properties: {grid_position: 'BMCQLI,DIHAPS', full_width_row: false}
-- name: card_3
-  properties: {role: card, col_widths: '{"RBTZIW":20,"XKFOYD":19,"QLWLQA":15,"YECBOR":15,"GTKIND":15,"JVEMRG":45,"EQUVIR":15,"AXKHEZ":45,"WWIXMD":15,"CTJMJS":45,"YERMHR":15,"FZFJFW":45,"QNZCMX":15,"BPHWXF":45,"LTRAPJ":20,"GSUTLO":40,"YVXZFM":20,"PAQUQU":40,"WCPBLQ":20,"IWVURQ":40,"CZQPJD":33,"YEYABN":32}', background: 'theme:Gray 100'}
+- name: expand_button
+  properties: {text: Details, role: primary-color, background: 'theme:Gray 600', font: Verdana, bold: true, font_size: 15, align: full}
+  type: Button
+  layout_properties: {grid_position: 'BSDGOW,RSPGOW'}
+  event_bindings: {click: expand_button_click}
+- name: expandable_content
+  properties: {}
   type: ColumnPanel
-  layout_properties: {grid_position: 'VRDLJU,DAADRI'}
+  layout_properties: {grid_position: 'NKQKFV,DTJSWO'}
   components:
-  - name: label_2
-    properties: {text: Details, align: center, font: Verdana, font_size: 20, bold: false, role: text, background: 'theme:Gray 600', foreground: 'theme:White'}
-    type: Label
-    layout_properties: {grid_position: 'IENGLX,IRBHDG'}
-  - name: label_3
-    properties: {text: Make, font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'RISEWZ,RBTZIW WNDABU,GTKIND'}
-  - name: txt_make
-    properties: {font: Verdana, enabled: false, background: 'theme:Gray 50'}
-    type: TextBox
-    layout_properties: {grid_position: 'RISEWZ,RBTZIW WNDABU,JVEMRG'}
-  - name: label_4
-    properties: {text: Body Type, font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'RISEWZ,RBTZIW UISXDD,EQUVIR'}
-  - name: txt_bodytype
-    properties: {font: Verdana, enabled: false, background: 'theme:Gray 50'}
-    type: TextBox
-    layout_properties: {grid_position: 'RISEWZ,RBTZIW UISXDD,AXKHEZ'}
-  - name: label_5
-    properties: {text: Color, font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'RISEWZ,RBTZIW FSDJGT,WWIXMD'}
-  - name: txt_color
-    properties: {font: Verdana, enabled: false, background: 'theme:Gray 50'}
-    type: TextBox
-    layout_properties: {grid_position: 'RISEWZ,RBTZIW FSDJGT,CTJMJS'}
-  - name: label_6
-    properties: {text: Model, font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'RISEWZ,RBTZIW LBYXTU,YERMHR'}
-  - name: txt_model
-    properties: {font: Verdana, enabled: false, background: 'theme:Gray 50'}
-    type: TextBox
-    layout_properties: {grid_position: 'RISEWZ,RBTZIW LBYXTU,FZFJFW'}
-  - name: label_11
-    properties: {text: Area Assigned, font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'RISEWZ,RBTZIW JQZTKQ,QNZCMX'}
-  - name: txt_area
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'RISEWZ,RBTZIW JQZTKQ,BPHWXF'}
-  - name: label_7
-    properties: {text: Register Name, font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'RISEWZ,XKFOYD CPCKAX,QLWLQA'}
-  - name: txt_register_name
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'RISEWZ,XKFOYD CPCKAX,CZQPJD'}
-  - name: label_8
-    properties: {text: Plate No., font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'RISEWZ,XKFOYD GGWXTT,YECBOR'}
-  - name: txt_plateno
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'RISEWZ,XKFOYD GGWXTT,YEYABN'}
-  - name: label_9
-    properties: {text: Engine No., font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'RISEWZ,XKFOYD RBYZJE,LTRAPJ'}
-  - name: txt_engineno
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'RISEWZ,XKFOYD RBYZJE,GSUTLO'}
-  - name: label_10
-    properties: {text: Chasis No., font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'RISEWZ,XKFOYD CIAHRO,YVXZFM'}
-  - name: txt_chasisno
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'RISEWZ,XKFOYD CIAHRO,PAQUQU'}
-  - name: label_12
-    properties: {text: Status, font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'RISEWZ,XKFOYD ATLHMT,WCPBLQ'}
-  - name: txt_status
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'RISEWZ,XKFOYD ATLHMT,IWVURQ'}
-- name: card_4
-  properties: {role: card, background: 'theme:Gray 100', col_widths: '{"FMMYHE":5,"SWMTDP":20,"FYZZDT":10,"YILZWR":25,"DUUFIZ":5,"ZQTQFJ":15,"IQGQBV":10,"WPSTRW":10,"VDJUEU":10,"ARRIVT":10}'}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'CHCXHA,VSERMD'}
-  components:
-  - name: label_13
-    properties: {text: Registration Details, align: center, font: Verdana, font_size: 20, role: text, background: 'theme:Gray 600', foreground: 'theme:White'}
-    type: Label
-    layout_properties: {grid_position: 'JXVCAQ,TGCXAB'}
-  - name: label_14
-    properties: {text: CR No., font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'JEWARF,FMMYHE'}
-  - name: text_box_11
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'JEWARF,SWMTDP'}
-  - name: label_15
-    properties: {text: First. Date of CR, align: right, font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'JEWARF,FYZZDT'}
-  - name: text_box_12
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'JEWARF,YILZWR'}
-  - name: label_16
-    properties: {text: OR No., font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'JDMOFG,DUUFIZ'}
-  - name: text_box_13
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'JDMOFG,ZQTQFJ'}
-  - name: label_18
-    properties: {text: Date Renewed, align: right, font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'JDMOFG,IQGQBV'}
-  - name: text_box_14
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'JDMOFG,WPSTRW'}
-  - name: label_19
-    properties: {text: Next Renewal Date, font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'JDMOFG,VDJUEU'}
-  - name: text_box_15
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'JDMOFG,ARRIVT'}
-- name: card_5
-  properties: {role: card, background: 'theme:Gray 100', col_widths: '{"LGSJHV":10,"UDHIVU":20,"VRBZSB":10,"KNJOVL":20,"HKXSQU":10,"XWTTRW":10,"DYAXAW":5,"SOSUJR":15,"BUGAJF":5,"NXDWJA":15}'}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'YZFIEK,PUDYPB'}
-  components:
-  - name: label_17
-    properties: {text: Insurance, align: center, role: text, foreground: 'theme:White', background: 'theme:Gray 600', font: Verdana, font_size: 20}
-    type: Label
-    layout_properties: {grid_position: 'JKCBUC,SSPPEQ'}
-  - name: label_20
-    properties: {text: Insurance Type}
-    type: Label
-    layout_properties: {grid_position: 'UAXCLV,LGSJHV'}
-  - name: text_box_16
-    properties: {}
-    type: TextBox
-    layout_properties: {grid_position: 'UAXCLV,UDHIVU'}
-  - name: label_21
-    properties: {text: Insurance Name}
-    type: Label
-    layout_properties: {grid_position: 'UAXCLV,VRBZSB'}
-  - name: text_box_17
-    properties: {}
-    type: TextBox
-    layout_properties: {grid_position: 'UAXCLV,KNJOVL'}
-  - name: label_22
-    properties: {text: Premium, font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'LGYXVD,HKXSQU'}
-  - name: text_box_18
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'LGYXVD,XWTTRW'}
-  - name: label_23
-    properties: {text: Coverage, font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'LGYXVD,DYAXAW'}
-  - name: text_box_19
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'LGYXVD,SOSUJR'}
-  - name: label_24
-    properties: {text: Expiry, font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'LGYXVD,BUGAJF'}
-  - name: text_box_20
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'LGYXVD,NXDWJA'}
-  - name: label_25
-    properties: {text: Remarks, font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'TZJIDT,JKUWOW'}
-  - name: text_area_1
-    properties: {height: 82.12109375, font: Verdana}
-    type: TextArea
-    layout_properties: {grid_position: 'AZDLWZ,XFATWO ARQACU,JNBWUE'}
+  - name: card_3
+    properties: {role: card, col_widths: '{"RBTZIW":20,"XKFOYD":19,"QLWLQA":15,"YECBOR":15,"GTKIND":15,"JVEMRG":45,"EQUVIR":15,"AXKHEZ":45,"WWIXMD":15,"CTJMJS":45,"YERMHR":15,"FZFJFW":45,"QNZCMX":15,"BPHWXF":45,"LTRAPJ":20,"GSUTLO":40,"YVXZFM":20,"PAQUQU":40,"WCPBLQ":20,"IWVURQ":40,"CZQPJD":33,"YEYABN":32}', background: 'theme:Gray 100'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'IQRGUP,KREXNX'}
+    components:
+    - name: label_3
+      properties: {text: Make, font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'RISEWZ,RBTZIW WNDABU,GTKIND'}
+    - name: txt_make
+      properties: {font: Verdana, enabled: false, background: 'theme:Gray 50'}
+      type: TextBox
+      layout_properties: {grid_position: 'RISEWZ,RBTZIW WNDABU,JVEMRG'}
+    - name: label_4
+      properties: {text: Body Type, font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'RISEWZ,RBTZIW UISXDD,EQUVIR'}
+    - name: txt_bodytype
+      properties: {font: Verdana, enabled: false, background: 'theme:Gray 50'}
+      type: TextBox
+      layout_properties: {grid_position: 'RISEWZ,RBTZIW UISXDD,AXKHEZ'}
+    - name: label_5
+      properties: {text: Color, font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'RISEWZ,RBTZIW FSDJGT,WWIXMD'}
+    - name: txt_color
+      properties: {font: Verdana, enabled: false, background: 'theme:Gray 50'}
+      type: TextBox
+      layout_properties: {grid_position: 'RISEWZ,RBTZIW FSDJGT,CTJMJS'}
+    - name: label_6
+      properties: {text: Model, font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'RISEWZ,RBTZIW LBYXTU,YERMHR'}
+    - name: txt_model
+      properties: {font: Verdana, enabled: false, background: 'theme:Gray 50'}
+      type: TextBox
+      layout_properties: {grid_position: 'RISEWZ,RBTZIW LBYXTU,FZFJFW'}
+    - name: label_11
+      properties: {text: Area Assigned, font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'RISEWZ,RBTZIW JQZTKQ,QNZCMX'}
+    - name: txt_area
+      properties: {font: Verdana}
+      type: TextBox
+      layout_properties: {grid_position: 'RISEWZ,RBTZIW JQZTKQ,BPHWXF'}
+    - name: label_7
+      properties: {text: Register Name, font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'RISEWZ,XKFOYD CPCKAX,QLWLQA'}
+    - name: txt_register_name
+      properties: {font: Verdana}
+      type: TextBox
+      layout_properties: {grid_position: 'RISEWZ,XKFOYD CPCKAX,CZQPJD'}
+    - name: label_8
+      properties: {text: Plate No., font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'RISEWZ,XKFOYD GGWXTT,YECBOR'}
+    - name: txt_plateno
+      properties: {font: Verdana}
+      type: TextBox
+      layout_properties: {grid_position: 'RISEWZ,XKFOYD GGWXTT,YEYABN'}
+    - name: label_9
+      properties: {text: Engine No., font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'RISEWZ,XKFOYD RBYZJE,LTRAPJ'}
+    - name: txt_engineno
+      properties: {font: Verdana}
+      type: TextBox
+      layout_properties: {grid_position: 'RISEWZ,XKFOYD RBYZJE,GSUTLO'}
+    - name: label_10
+      properties: {text: Chasis No., font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'RISEWZ,XKFOYD CIAHRO,YVXZFM'}
+    - name: txt_chasisno
+      properties: {font: Verdana}
+      type: TextBox
+      layout_properties: {grid_position: 'RISEWZ,XKFOYD CIAHRO,PAQUQU'}
+    - name: label_12
+      properties: {text: Status, font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'RISEWZ,XKFOYD ATLHMT,WCPBLQ'}
+    - name: txt_status
+      properties: {font: Verdana}
+      type: TextBox
+      layout_properties: {grid_position: 'RISEWZ,XKFOYD ATLHMT,IWVURQ'}
+  - name: card_4
+    properties: {role: card, background: 'theme:Gray 100', col_widths: '{"FMMYHE":5,"SWMTDP":20,"FYZZDT":10,"YILZWR":25,"DUUFIZ":5,"ZQTQFJ":15,"IQGQBV":10,"WPSTRW":10,"VDJUEU":10,"ARRIVT":10}'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'WHHSMW,CVGQLM'}
+    components:
+    - name: label_14
+      properties: {text: CR No., font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'JEWARF,FMMYHE'}
+    - name: text_box_11
+      properties: {font: Verdana}
+      type: TextBox
+      layout_properties: {grid_position: 'JEWARF,SWMTDP'}
+    - name: label_15
+      properties: {text: First. Date of CR, align: right, font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'JEWARF,FYZZDT'}
+    - name: text_box_12
+      properties: {font: Verdana}
+      type: TextBox
+      layout_properties: {grid_position: 'JEWARF,YILZWR'}
+    - name: label_16
+      properties: {text: OR No., font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'JDMOFG,DUUFIZ'}
+    - name: text_box_13
+      properties: {font: Verdana}
+      type: TextBox
+      layout_properties: {grid_position: 'JDMOFG,ZQTQFJ'}
+    - name: label_18
+      properties: {text: Date Renewed, align: right, font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'JDMOFG,IQGQBV'}
+    - name: text_box_14
+      properties: {font: Verdana}
+      type: TextBox
+      layout_properties: {grid_position: 'JDMOFG,WPSTRW'}
+    - name: label_19
+      properties: {text: Next Renewal Date, font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'JDMOFG,VDJUEU'}
+    - name: text_box_15
+      properties: {font: Verdana}
+      type: TextBox
+      layout_properties: {grid_position: 'JDMOFG,ARRIVT'}
 is_package: true

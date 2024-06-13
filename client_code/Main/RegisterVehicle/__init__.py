@@ -4,12 +4,16 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from anvil.js import get_dom_node
 
 
 class RegisterVehicle(RegisterVehicleTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    
+
+ 
 
     # Any code you write here will run before the form opens.
 
@@ -28,5 +32,7 @@ class RegisterVehicle(RegisterVehicleTemplate):
     
     anvil.server.call('register_vehicle', make, body_type, color, model, register_name, plate_no, engine_no, chasis_no, area_assigned, status, remarks)
     alert("Vehicle has been added successfully!")
+
+ 
 
 
