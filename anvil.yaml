@@ -21,7 +21,7 @@ db_schema:
       admin_ui: {width: 200, order: 4}
       type: string
     - name: plate_no
-      admin_ui: {order: 2.5, width: 200}
+      admin_ui: {order: 3.5, width: 200}
       type: string
     - name: engine_no
       admin_ui: {width: 200, order: 6}
@@ -38,37 +38,53 @@ db_schema:
     - name: remarks
       admin_ui: {order: 21, width: 200}
       type: string
-    - name: cr_no
-      admin_ui: {width: 200, order: 11}
+    title: Vehicles
+  insurance:
+    client: none
+    server: full
+    columns:
+    - name: plate_no
+      admin_ui: {width: 200, order: 0}
       type: string
-    - name: or_no
-      admin_ui: {width: 200, order: 13}
-      type: string
-    - name: date_renewed_or
-      admin_ui: {width: 200, order: 14}
-      type: date
-    - name: date_cr
-      admin_ui: {order: 12, width: 200}
-      type: date
-    - name: next_renewal
-      admin_ui: {width: 200, order: 15}
-      type: date
     - name: insurance_type
-      admin_ui: {width: 200, order: 16}
+      admin_ui: {order: 1, width: 200}
       type: string
     - name: insurance_name
-      admin_ui: {width: 200, order: 17}
+      admin_ui: {width: 200, order: 2}
       type: string
     - name: premium
-      admin_ui: {width: 200, order: 18}
+      admin_ui: {width: 200, order: 3}
       type: number
     - name: coverage
-      admin_ui: {width: 200, order: 19}
+      admin_ui: {width: 200, order: 4}
       type: number
     - name: expiry
-      admin_ui: {width: 200, order: 20}
+      admin_ui: {width: 200, order: 5}
       type: date
-    title: Vehicles
+    title: Insurance
+  registration:
+    client: none
+    server: full
+    columns:
+    - name: plate_no
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: cr_no
+      admin_ui: {order: 1, width: 200}
+      type: string
+    - name: date_cr
+      admin_ui: {width: 200, order: 2}
+      type: date
+    - name: or_no
+      admin_ui: {width: 200, order: 3}
+      type: string
+    - name: date_renewed_or
+      admin_ui: {width: 200, order: 4}
+      type: date
+    - name: next_renewal
+      admin_ui: {width: 200, order: 5}
+      type: date
+    title: Registration
 startup: {type: form, module: Main}
 name: PPG CFMD
 startup_form: null
