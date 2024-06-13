@@ -28,3 +28,5 @@ class RegisterVehicle(RegisterVehicleTemplate):
     
     anvil.server.call('register_vehicle', make, body_type, color, model, register_name, plate_no, engine_no, chasis_no, area_assigned, status, remarks)
     alert("Vehicle has been added successfully!")
+
+

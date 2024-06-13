@@ -1,5 +1,14 @@
 container: {type: ColumnPanel}
 components:
+- name: expandable_content
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'LBLGQX,DIBTHT'}
+  event_bindings: {hide: column_panel_1_hide}
+- name: button_1
+  properties: {text: button_1}
+  type: Button
+  layout_properties: {grid_position: 'TFDLAR,VPWGCK'}
 - name: card_1
   properties: {role: card, col_widths: '{"JNXLGM":5,"QZIGUF":25,"NLIOUB":5,"OCHNBE":25,"XZSXYK":15,"ADNDIP":15,"TJGRZQ":5,"TLQHEV":25}', background: 'theme:Gray 100'}
   type: ColumnPanel
