@@ -5,7 +5,7 @@ import anvil.server
 from datetime import datetime
 
 @anvil.server.callable
-def  register_vehicle(make, body_type, color, model, register_name, plate_no, engine_no, chasis_no, area_assigned, status, remarks):
+def register_vehicle(make, body_type, color, model, register_name, plate_no, engine_no, chasis_no, area_assigned, status, remarks):
   app_tables.vehicles.add_row(
     make=make,
     body_type=body_type,
@@ -19,4 +19,28 @@ def  register_vehicle(make, body_type, color, model, register_name, plate_no, en
     status=status,
     remarks=remarks
   )
+
+@anvil.server.callable
+def add_registration(plate_no, cr_no, date_cr, or_no, date_renewed_or, next_renewal):
+  app_tables.registration.add_row(
+    plate_no=plate_no,
+    cr_no=cr_no,
+    date_cr=date_cr,
+    or_no=or_no,
+    date_renewed_or=date_renewed_or,
+    next_renewal=next_renewal
+  )
+
+@anvil.server.callable
+def add_insurance(plate_no, insurance_type, insurance_name, premium, coverage, expiry):
+  app_tables.insurance.add_row(
+    plate_no=plate_no,
+    insurance_type=insurance_type,
+    insurance_name=insurance_name,
+    premium=premium,
+    coverage=coverage,
+    expiry=expiry
+  )
+
+
   

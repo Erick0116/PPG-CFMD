@@ -1,25 +1,20 @@
 container: {type: ColumnPanel}
 components:
 - name: card_1
-  properties: {role: card, col_widths: '{"JEQXOH":35,"NIHPFN":15,"OYNHCD":10,"DOAUZR":45,"GEXGER":15}', background: 'theme:Secondary 500'}
+  properties: {role: card, col_widths: '{"JEQXOH":40,"NIHPFN":10,"OYNHCD":10,"GEXGER":15}', background: 'theme:Gray 600'}
   type: ColumnPanel
   layout_properties: {grid_position: 'SBGAQA,IPMLEE', full_width_row: false}
   components:
-  - name: btn_details
-    properties: {text: View details, role: primary-color, font: Verdana, font_size: 15, bold: true, align: left, icon: 'fa:info-circle'}
-    type: Button
-    layout_properties: {grid_position: 'WGUFTL,JEQXOH OKMMSR,DOAUZR'}
-    event_bindings: {click: btn_details_click}
   - name: label_1
-    properties: {text: Plate No, align: right, font: Verdana, font_size: 15, bold: true, foreground: 'theme:White'}
+    properties: {text: Plate No, align: right, font: Verdana, font_size: 15, bold: true, foreground: 'theme:White', background: ''}
     type: Label
     layout_properties: {grid_position: 'WGUFTL,JEQXOH OKMMSR,GEXGER', full_width_row: true}
   - name: txt_search
-    properties: {font: Verdana, font_size: 15, background: 'theme:Gray 50'}
+    properties: {font: Verdana, font_size: 15, background: 'theme:Gray 50', role: null}
     type: TextBox
     layout_properties: {grid_position: 'WGUFTL,NIHPFN', full_width_row: true}
   - name: btn_search
-    properties: {text: SEARCH, align: full, font: Verdana, font_size: 15, bold: true, role: primary-color, icon: 'fa:search'}
+    properties: {text: SEARCH, align: left, font: Verdana, font_size: 15, bold: false, role: primary-color, icon: 'fa:search'}
     type: Button
     layout_properties: {grid_position: 'WGUFTL,OYNHCD'}
     event_bindings: {click: btn_search_click}
@@ -47,7 +42,7 @@ components:
       type: RepeatingPanel
     layout_properties: {grid_position: 'BMCQLI,DIHAPS', full_width_row: false}
 - name: expand_button
-  properties: {text: Details, role: primary-color, background: 'theme:Gray 600', font: Verdana, bold: true, font_size: 15, align: full}
+  properties: {text: Details, role: primary-color, background: 'theme:Gray 600', font: Verdana, bold: true, font_size: 15, align: full, icon: 'fa:info-circle'}
   type: Button
   layout_properties: {grid_position: 'BSDGOW,RSPGOW'}
   event_bindings: {click: expand_button_click}
@@ -150,7 +145,7 @@ components:
       properties: {text: CR No., font: Verdana}
       type: Label
       layout_properties: {grid_position: 'JEWARF,FMMYHE'}
-    - name: text_box_11
+    - name: txt_crno
       properties: {font: Verdana}
       type: TextBox
       layout_properties: {grid_position: 'JEWARF,SWMTDP'}
@@ -158,7 +153,7 @@ components:
       properties: {text: First. Date of CR, align: right, font: Verdana}
       type: Label
       layout_properties: {grid_position: 'JEWARF,FYZZDT'}
-    - name: text_box_12
+    - name: txt_fdatecr
       properties: {font: Verdana}
       type: TextBox
       layout_properties: {grid_position: 'JEWARF,YILZWR'}
@@ -166,7 +161,7 @@ components:
       properties: {text: OR No., font: Verdana}
       type: Label
       layout_properties: {grid_position: 'JDMOFG,DUUFIZ'}
-    - name: text_box_13
+    - name: txt_orno
       properties: {font: Verdana}
       type: TextBox
       layout_properties: {grid_position: 'JDMOFG,ZQTQFJ'}
@@ -174,7 +169,7 @@ components:
       properties: {text: Date Renewed, align: right, font: Verdana}
       type: Label
       layout_properties: {grid_position: 'JDMOFG,IQGQBV'}
-    - name: text_box_14
+    - name: txt_daterenew
       properties: {font: Verdana}
       type: TextBox
       layout_properties: {grid_position: 'JDMOFG,WPSTRW'}
@@ -182,7 +177,7 @@ components:
       properties: {text: Next Renewal Date, font: Verdana}
       type: Label
       layout_properties: {grid_position: 'JDMOFG,VDJUEU'}
-    - name: text_box_15
+    - name: txt_nextrenew
       properties: {font: Verdana}
       type: TextBox
       layout_properties: {grid_position: 'JDMOFG,ARRIVT'}

@@ -30,11 +30,10 @@ class VehicleList(VehicleListTemplate):
 
   def btn_search_click(self, **event_args):
     self.rp_vehicles.items  = anvil.server.call('search_vehicles', self.txt_search.text)
-
-  def btn_details_click(self, **event_args):
     search_plateno  = self.txt_search.text
     vehicle_record = app_tables.vehicles.search(plate_no=search_plateno)
-    if vehicle_record:
+    registration_record = app_tables.registration.search(plate_no=search_plateno)
+    if vehicle_record and registration_record:
       self.txt_make.text = vehicle_record[0]['make']
       self.txt_bodytype.text = vehicle_record[0]['body_type']
       self.txt_color.text = vehicle_record[0]['color']
@@ -44,26 +43,18 @@ class VehicleList(VehicleListTemplate):
       self.txt_plateno.text = vehicle_record[0]['plate_no']
       self.txt_engineno.text = vehicle_record[0]['engine_no']
       self.txt_chasisno.text = vehicle_record[0]['chasis_no']
-      self.txt_status.text = vehicle_record[0]['status']
+      self.txt_status.text = vehicle_record[0]['status']  
       
+      self.txt_crno.text = registration_record[0]['cr_no']
+      self.txt_fdatecr.text = registration_record[0]['date_cr']
+      self.txt_orno.text = registration_record[0]['or_no']
+      self.txt_daterenew.text = registration_record[0]['date_renewed_or']
+      self.txt_nextrenew.text = registration_record[0]['next_renewal']
     else:
       None
+
+  
 
   def expand_button_click(self, **event_args):
     self.toggle_expand()
 
-
-
-
-"""
-    if vehicle_info is not None and len(vehicle_info) >= 4:
-      make = vehicle_info[0]
-      body_type = vehicle_info[1]
-      color = vehicle_info[2]
-      plate_no = vehicle_info[3]
-        # Display the make in an alert
-      alert(f"Make: {make}, Body Type: {body_type}, Color: {color}, PlateNo: {plate_no}")
-    else:
-      alert('Plate number doesn\'t exist!')
-  
-"""

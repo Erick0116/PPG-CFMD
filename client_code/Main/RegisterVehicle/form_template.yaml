@@ -207,7 +207,7 @@ components:
     layout_properties: {grid_position: 'FBXFCX,LKXIFK'}
     event_bindings: {click: btn_save_click}
   - name: btn_cancel
-    properties: {text: Cancel, align: left, role: secondary-color, font: Verdana, font_size: 15, bold: true, icon: 'fa:close'}
+    properties: {text: Cancel, align: left, role: primary-color, font: Verdana, font_size: 15, bold: true, icon: 'fa:close'}
     type: Button
     layout_properties: {grid_position: 'FBXFCX,AHMTMI'}
 is_package: true
