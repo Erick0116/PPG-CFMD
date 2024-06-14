@@ -40,7 +40,7 @@ class VehicleList(VehicleListTemplate):
       #self.btn_history.icon = "fa:chevron-up"
     else:
       self.expandable_panel2.visible = False
-      self.expanded2d = False
+      self.expanded2 = False
      # self.btn_history.icon = "fa:chevron-down"
   
   def repair_expand(self, **event_args):
