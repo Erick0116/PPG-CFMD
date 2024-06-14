@@ -47,6 +47,9 @@ class RegisterVehicle(RegisterVehicleTemplate):
     anvil.server.call('add_insurance', plate_no, insurance_type, insurance_name, premium, coverage, expiry)
     alert("Vehicle has been added successfully!")
 
+  def btn_cancel_click(self, **event_args):
+    open_form('Main')
+
  
 
 

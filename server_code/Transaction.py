@@ -42,5 +42,27 @@ def add_insurance(plate_no, insurance_type, insurance_name, premium, coverage, e
     expiry=expiry
   )
 
+@anvil.server.callable
+def record_vechicle_history(plate_no, reason, status, area, date):
+  app_tables.transferhistory.add_row(
+    plate_no=plate_no,
+    reason=reason,
+    status=status,
+    area=area,
+    date=date
+  )
+  return True
+
+@anvil.server.callable
+def update_trans_veh_status(plate_no, area):
+  vehicle_record = app_tables.vehicles.get(plate_no=plate_no)
+  if vehicle_record is not None:
+    vehicle_record['area_assigned'] = area
+    vehicle_record.update()
+    return True
+  else:
+    return False
+
+
 
   

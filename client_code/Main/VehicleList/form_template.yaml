@@ -1,22 +1,27 @@
 container: {type: ColumnPanel}
 components:
 - name: card_1
-  properties: {role: card, col_widths: '{"JEQXOH":40,"NIHPFN":10,"OYNHCD":10,"GEXGER":15}', background: 'theme:Gray 600'}
+  properties: {role: card, col_widths: '{"JEQXOH":20,"NIHPFN":25,"OYNHCD":15,"GEXGER":15,"GXDSBB":20,"HGVRDS":40}', background: 'theme:Gray 600'}
   type: ColumnPanel
   layout_properties: {grid_position: 'SBGAQA,IPMLEE', full_width_row: false}
   components:
+  - name: btn_home
+    properties: {text: HOME, role: secondary-color, font: Verdana, bold: true, icon: 'fa:home', align: left}
+    type: Button
+    layout_properties: {grid_position: 'NEMEJZ,GXDSBB'}
+    event_bindings: {click: btn_home_click}
   - name: label_1
     properties: {text: Plate No, align: right, font: Verdana, font_size: 15, bold: true, foreground: 'theme:White', background: ''}
     type: Label
-    layout_properties: {grid_position: 'WGUFTL,JEQXOH OKMMSR,GEXGER', full_width_row: true}
+    layout_properties: {grid_position: 'NEMEJZ,HGVRDS WGUFTL,JEQXOH', full_width_row: true}
   - name: txt_search
     properties: {font: Verdana, font_size: 15, background: 'theme:Gray 50', role: null}
     type: TextBox
-    layout_properties: {grid_position: 'WGUFTL,NIHPFN', full_width_row: true}
+    layout_properties: {grid_position: 'NEMEJZ,HGVRDS WGUFTL,NIHPFN', full_width_row: true}
   - name: btn_search
-    properties: {text: SEARCH, align: left, font: Verdana, font_size: 15, bold: false, role: primary-color, icon: 'fa:search'}
+    properties: {text: SEARCH, align: left, font: Verdana, font_size: 15, bold: true, role: secondary-color, icon: 'fa:search'}
     type: Button
-    layout_properties: {grid_position: 'WGUFTL,OYNHCD'}
+    layout_properties: {grid_position: 'NEMEJZ,HGVRDS WGUFTL,OYNHCD'}
     event_bindings: {click: btn_search_click}
 - name: card_2
   properties: {role: card, background: 'theme:Gray 100'}
@@ -57,83 +62,83 @@ components:
     layout_properties: {grid_position: 'IQRGUP,KREXNX'}
     components:
     - name: label_3
-      properties: {text: Make, font: Verdana}
+      properties: {text: Make, font: Verdana, bold: true, font_size: 12}
       type: Label
       layout_properties: {grid_position: 'RISEWZ,RBTZIW WNDABU,GTKIND'}
     - name: txt_make
-      properties: {font: Verdana, enabled: false, background: 'theme:Gray 50'}
+      properties: {font: Verdana, enabled: false, background: 'theme:Gray 50', font_size: 12}
       type: TextBox
       layout_properties: {grid_position: 'RISEWZ,RBTZIW WNDABU,JVEMRG'}
     - name: label_4
-      properties: {text: Body Type, font: Verdana}
+      properties: {text: Body Type, font: Verdana, bold: true, font_size: 12}
       type: Label
       layout_properties: {grid_position: 'RISEWZ,RBTZIW UISXDD,EQUVIR'}
     - name: txt_bodytype
-      properties: {font: Verdana, enabled: false, background: 'theme:Gray 50'}
+      properties: {font: Verdana, enabled: false, background: 'theme:Gray 50', font_size: 12}
       type: TextBox
       layout_properties: {grid_position: 'RISEWZ,RBTZIW UISXDD,AXKHEZ'}
     - name: label_5
-      properties: {text: Color, font: Verdana}
+      properties: {text: Color, font: Verdana, bold: true, font_size: 12}
       type: Label
       layout_properties: {grid_position: 'RISEWZ,RBTZIW FSDJGT,WWIXMD'}
     - name: txt_color
-      properties: {font: Verdana, enabled: false, background: 'theme:Gray 50'}
+      properties: {font: Verdana, enabled: false, background: 'theme:Gray 50', font_size: 12}
       type: TextBox
       layout_properties: {grid_position: 'RISEWZ,RBTZIW FSDJGT,CTJMJS'}
     - name: label_6
-      properties: {text: Model, font: Verdana}
+      properties: {text: Model, font: Verdana, font_size: 12, bold: true}
       type: Label
       layout_properties: {grid_position: 'RISEWZ,RBTZIW LBYXTU,YERMHR'}
     - name: txt_model
-      properties: {font: Verdana, enabled: false, background: 'theme:Gray 50'}
+      properties: {font: Verdana, enabled: false, background: 'theme:Gray 50', font_size: 12}
       type: TextBox
       layout_properties: {grid_position: 'RISEWZ,RBTZIW LBYXTU,FZFJFW'}
     - name: label_11
-      properties: {text: Area Assigned, font: Verdana}
+      properties: {text: Area Assigned, font: Verdana, font_size: 12, bold: true}
       type: Label
       layout_properties: {grid_position: 'RISEWZ,RBTZIW JQZTKQ,QNZCMX'}
     - name: txt_area
-      properties: {font: Verdana}
+      properties: {font: Verdana, font_size: 12}
       type: TextBox
       layout_properties: {grid_position: 'RISEWZ,RBTZIW JQZTKQ,BPHWXF'}
     - name: label_7
-      properties: {text: Register Name, font: Verdana}
+      properties: {text: Register Name, font: Verdana, font_size: 12, bold: true}
       type: Label
       layout_properties: {grid_position: 'RISEWZ,XKFOYD CPCKAX,QLWLQA'}
     - name: txt_register_name
-      properties: {font: Verdana}
+      properties: {font: Verdana, font_size: 12, enabled: false}
       type: TextBox
       layout_properties: {grid_position: 'RISEWZ,XKFOYD CPCKAX,CZQPJD'}
     - name: label_8
-      properties: {text: Plate No., font: Verdana}
+      properties: {text: Plate No., font: Verdana, font_size: 12, bold: true}
       type: Label
       layout_properties: {grid_position: 'RISEWZ,XKFOYD GGWXTT,YECBOR'}
     - name: txt_plateno
-      properties: {font: Verdana}
+      properties: {font: Verdana, font_size: 12, enabled: false}
       type: TextBox
       layout_properties: {grid_position: 'RISEWZ,XKFOYD GGWXTT,YEYABN'}
     - name: label_9
-      properties: {text: Engine No., font: Verdana}
+      properties: {text: Engine No., font: Verdana, font_size: 12, bold: true}
       type: Label
       layout_properties: {grid_position: 'RISEWZ,XKFOYD RBYZJE,LTRAPJ'}
     - name: txt_engineno
-      properties: {font: Verdana}
+      properties: {font: Verdana, font_size: 12, enabled: false}
       type: TextBox
       layout_properties: {grid_position: 'RISEWZ,XKFOYD RBYZJE,GSUTLO'}
     - name: label_10
-      properties: {text: Chasis No., font: Verdana}
+      properties: {text: Chasis No., font: Verdana, font_size: 12, bold: true}
       type: Label
       layout_properties: {grid_position: 'RISEWZ,XKFOYD CIAHRO,YVXZFM'}
     - name: txt_chasisno
-      properties: {font: Verdana}
+      properties: {font: Verdana, font_size: 12, enabled: false}
       type: TextBox
       layout_properties: {grid_position: 'RISEWZ,XKFOYD CIAHRO,PAQUQU'}
     - name: label_12
-      properties: {text: Status, font: Verdana}
+      properties: {text: Status, font: Verdana, font_size: 12, bold: true}
       type: Label
       layout_properties: {grid_position: 'RISEWZ,XKFOYD ATLHMT,WCPBLQ'}
     - name: txt_status
-      properties: {font: Verdana}
+      properties: {font: Verdana, font_size: 12, enabled: false}
       type: TextBox
       layout_properties: {grid_position: 'RISEWZ,XKFOYD ATLHMT,IWVURQ'}
   - name: card_4
@@ -142,43 +147,119 @@ components:
     layout_properties: {grid_position: 'WHHSMW,CVGQLM'}
     components:
     - name: label_14
-      properties: {text: CR No., font: Verdana}
+      properties: {text: CR No., font: Verdana, font_size: 12, bold: true}
       type: Label
       layout_properties: {grid_position: 'JEWARF,FMMYHE'}
     - name: txt_crno
-      properties: {font: Verdana}
+      properties: {font: Verdana, font_size: 12, enabled: false}
       type: TextBox
       layout_properties: {grid_position: 'JEWARF,SWMTDP'}
     - name: label_15
-      properties: {text: First. Date of CR, align: right, font: Verdana}
+      properties: {text: First. Date of CR, align: right, font: Verdana, font_size: 12, bold: true}
       type: Label
       layout_properties: {grid_position: 'JEWARF,FYZZDT'}
     - name: txt_fdatecr
-      properties: {font: Verdana}
+      properties: {font: Verdana, font_size: 12, enabled: false}
       type: TextBox
       layout_properties: {grid_position: 'JEWARF,YILZWR'}
     - name: label_16
-      properties: {text: OR No., font: Verdana}
+      properties: {text: OR No., font: Verdana, font_size: 12, bold: true}
       type: Label
       layout_properties: {grid_position: 'JDMOFG,DUUFIZ'}
     - name: txt_orno
-      properties: {font: Verdana}
+      properties: {font: Verdana, font_size: 12, enabled: false}
       type: TextBox
       layout_properties: {grid_position: 'JDMOFG,ZQTQFJ'}
     - name: label_18
-      properties: {text: Date Renewed, align: right, font: Verdana}
+      properties: {text: Date Renewed, align: right, font: Verdana, font_size: 12, bold: true}
       type: Label
       layout_properties: {grid_position: 'JDMOFG,IQGQBV'}
     - name: txt_daterenew
-      properties: {font: Verdana}
+      properties: {font: Verdana, font_size: 12, enabled: false}
       type: TextBox
       layout_properties: {grid_position: 'JDMOFG,WPSTRW'}
     - name: label_19
-      properties: {text: Next Renewal Date, font: Verdana}
+      properties: {text: Next Renewal Date, font: Verdana, font_size: 12, bold: true}
       type: Label
       layout_properties: {grid_position: 'JDMOFG,VDJUEU'}
     - name: txt_nextrenew
-      properties: {font: Verdana}
+      properties: {font: Verdana, font_size: 12, enabled: false}
       type: TextBox
       layout_properties: {grid_position: 'JDMOFG,ARRIVT'}
+  - name: card_5
+    properties: {role: card, col_widths: '{"YCNKEC":10,"VSZXGP":20,"XHEZQI":10,"RNRJNB":20,"XWNLYH":10,"MZZZEY":10,"STQDWJ":10,"VANPDF":10,"NCBYNY":5,"AJTYQC":15}', background: 'theme:Gray 100'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'RVXRZM,AKUVCZ'}
+    components:
+    - name: label_2
+      properties: {text: Insurance Type, font: Verdana, font_size: 12, bold: true}
+      type: Label
+      layout_properties: {grid_position: 'JJCFYT,YCNKEC'}
+    - name: txt_insuranceType
+      properties: {font: Verdana, font_size: 12, enabled: false}
+      type: TextBox
+      layout_properties: {grid_position: 'JJCFYT,VSZXGP'}
+    - name: label_13
+      properties: {text: Insurance Name, font: Verdana, bold: true, font_size: 12}
+      type: Label
+      layout_properties: {grid_position: 'JJCFYT,XHEZQI'}
+    - name: txt_insuranceName
+      properties: {font: Verdana, font_size: 12, enabled: false}
+      type: TextBox
+      layout_properties: {grid_position: 'JJCFYT,RNRJNB'}
+    - name: label_17
+      properties: {text: Premium, font: Verdana, bold: true}
+      type: Label
+      layout_properties: {grid_position: 'VZTPWJ,XWNLYH'}
+    - name: txt_premium
+      properties: {font: Verdana, font_size: 12, enabled: false}
+      type: TextBox
+      layout_properties: {grid_position: 'VZTPWJ,MZZZEY'}
+    - name: label_20
+      properties: {text: Coverage, font: Verdana, bold: true, font_size: 12}
+      type: Label
+      layout_properties: {grid_position: 'VZTPWJ,STQDWJ'}
+    - name: txt_coverage
+      properties: {font: Verdana, font_size: 12, enabled: false}
+      type: TextBox
+      layout_properties: {grid_position: 'VZTPWJ,VANPDF'}
+    - name: label_21
+      properties: {text: Expiry, font: Verdana, font_size: 12, bold: true}
+      type: Label
+      layout_properties: {grid_position: 'VZTPWJ,NCBYNY'}
+    - name: txt_expiry
+      properties: {font: Verdana, font_size: 12, enabled: false}
+      type: TextBox
+      layout_properties: {grid_position: 'VZTPWJ,AJTYQC'}
+    - name: label_22
+      properties: {text: Remarks, font: Verdana, bold: true, font_size: 12}
+      type: Label
+      layout_properties: {grid_position: 'IURSPA,WDTMEP'}
+    - name: txt_remarks
+      properties: {height: 141.98828125, font: Verdana, font_size: 12, enabled: false}
+      type: TextArea
+      layout_properties: {grid_position: 'EVUQXO,GSWLFO'}
+    - name: btn_history
+      properties: {text: Transfer history, role: primary-color, icon: 'fa:history', font: Verdana, bold: true, align: left, font_size: 12}
+      type: Button
+      layout_properties: {grid_position: 'LFMWZO,VRHLKS'}
+      event_bindings: {click: btn_history_click}
+- name: expandable_panel2
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'SSDXSS,LGLLYP'}
+  components:
+  - name: card_6
+    properties: {role: card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'JXNZOT,HLDXFW'}
+    components:
+    - name: label_23
+      properties: {text: testing}
+      type: Label
+      layout_properties: {grid_position: 'MIIMMV,SYXFAT'}
+    - name: text_box_1
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'MIIMMV,UTMQGQ'}
 is_package: true

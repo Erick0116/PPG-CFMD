@@ -17,13 +17,16 @@ class Main(MainTemplate):
     # Any code you write here will run before the form opens.
 
   def btn_register_click(self, **event_args):
-    self.card_1.clear()
-    self.card_1.add_component(RegisterVehicle())
+   # self.card_1.clear()
+    #self.card_1.add_component(RegisterVehicle())
+    open_form('Main.RegisterVehicle')
 
   def btn_vehicleList_click(self, **event_args):
-    self.card_1.clear()
-    self.card_1.add_component(VehicleList())
+    #self.card_1.clear()
+    #self.card_1.add_component(VehicleList())
+    open_form('Main.VehicleList')
 
   def btn_transfer_click(self, **event_args):
-    self.card_1.clear()
-    self.card_1.add_component(TransferVehicle())
+    #self.card_1.clear()
+    #self.card_1.add_component(TransferVehicle())
+    open_form('Main.TransferVehicle')

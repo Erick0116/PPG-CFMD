@@ -20,3 +20,4 @@ def view_details(search_plateno):
     if results:
       return {'make': results[0]['make']}
   return None
+
