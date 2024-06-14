@@ -43,7 +43,7 @@ class VehicleList(VehicleListTemplate):
       self.expanded2d = False
      # self.btn_history.icon = "fa:chevron-down"
   
-   def repair_expand(self, **event_args):
+  def repair_expand(self, **event_args):
     if not self.expanded3:
       self.expand_repair_panel.visible = True
       self.expanded3 = True
@@ -52,7 +52,6 @@ class VehicleList(VehicleListTemplate):
       self.expand_repair_panel.visible = False
       self.expanded3 = False
      # self.btn_history.icon = "fa:chevron-down"
- 
 
   def btn_search_click(self, **event_args):
     self.rp_vehicles.items  = anvil.server.call('search_vehicles', self.txt_search.text)
@@ -99,4 +98,7 @@ class VehicleList(VehicleListTemplate):
   def btn_history_click(self, **event_args):
     self.history_expand()
     #self.expandable_panel2.visible = True
+
+  def btn_repair_click(self, **event_args):
+    self.repair_expand()
 
