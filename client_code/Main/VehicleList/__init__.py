@@ -13,11 +13,14 @@ class VehicleList(VehicleListTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.rp_vehicles.items  = anvil.server.call('vehicles_populate')
+    self.rp_history.items = anvil.server.call('history_populate')
     self.expanded = False
     self.expanded2 =  False
+    self.expanded3 =  False
     self.expandable_content.visible = False
     self.expand_button.visible = False
     self.expandable_panel2.visible = False
+    self.expand_repair_panel.visible = False
    
     
   def toggle_expand(self, **event_args):
@@ -38,6 +41,16 @@ class VehicleList(VehicleListTemplate):
     else:
       self.expandable_panel2.visible = False
       self.expanded2d = False
+     # self.btn_history.icon = "fa:chevron-down"
+  
+   def repair_expand(self, **event_args):
+    if not self.expanded3:
+      self.expand_repair_panel.visible = True
+      self.expanded3 = True
+      #self.btn_history.icon = "fa:chevron-up"
+    else:
+      self.expand_repair_panel.visible = False
+      self.expanded3 = False
      # self.btn_history.icon = "fa:chevron-down"
  
 

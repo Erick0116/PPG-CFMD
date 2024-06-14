@@ -21,3 +21,6 @@ def view_details(search_plateno):
       return {'make': results[0]['make']}
   return None
 
+@anvil.server.callable
+def history_populate():
+  return app_tables.transferhistory.search()

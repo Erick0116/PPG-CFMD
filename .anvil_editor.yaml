@@ -5,6 +5,9 @@ unique_ids:
     Main.TransferVehicle: '1718201820618646691377789.4016'
     Main.VehicleList: '1717678388156379049181025.60913'
     Main.VehicleList.RowTemplate1: '1717678753609822001368303.6414'
+    Main.VehicleList.RowTemplate2: '1718374251625674068696759.0466'
+    Main.VehicleList.RowTemplate3: '1718374286904443988567010.3352'
+    Main.VehicleList.RowTemplate4: '1718374915853589848497234.5675'
   modules: {}
   server_modules:
     Search: '1717679286175716578258382.1809'
