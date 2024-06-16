@@ -1,0 +1,105 @@
+container: {type: ColumnPanel}
+components:
+- name: card_3
+  properties: {role: card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'DYIIHX,EPUVVC'}
+  components:
+  - name: label_6
+    properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:car', font: Verdana, foreground: 'theme:White', font_size: 15, text: REPAIR APPROVAL}
+    type: Label
+    layout_properties: {grid_position: 'MPSDDN,OMEDPI', full_width_row: true}
+  - name: data_grid_1
+    properties:
+      columns:
+      - {id: JKSDUP, title: Date, data_key: date}
+      - {id: VJQQOR, title: Plate No, data_key: plate_no}
+      - {id: OJLQEN, title: Area, data_key: area}
+      - {id: AYZCAS, data_key: status, title: Status}
+    type: DataGrid
+    components:
+    - name: rp_repair
+      properties: {item_template: Main.RepairApproval.RowTemplate6}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'GCXQOZ,VLRCKU'}
+- name: card_1
+  properties: {role: card, col_widths: '{"MURDWQ":10,"HDINGD":10,"EPOKOL":4,"UKLXAE":35,"LSXDBG":10,"RJTVZT":15,"DIGOON":30,"YRNJMS":30,"MRKDAL":5,"GBZMAS":40}', background: 'theme:Gray 100'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'XNWZKX,EZJWLP'}
+  components:
+  - name: label_8
+    properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:info-circle', font: Verdana, foreground: 'theme:White', font_size: 15, text: DETAILS}
+    type: Label
+    layout_properties: {grid_position: 'AGZVPB,UWZREH', full_width_row: true}
+  - name: label_1
+    properties: {text: Plate No, align: left, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'APDSYX,MURDWQ'}
+  - name: txt_plateno
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'APDSYX,HDINGD'}
+    event_bindings: {pressed_enter: txt_plateno_pressed_enter}
+  - name: label_2
+    properties: {text: Name, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'APDSYX,MRKDAL'}
+  - name: txt_name
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'APDSYX,GBZMAS'}
+  - name: label_3
+    properties: {text: Area, align: left, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'DCKKFB,LSXDBG'}
+  - name: txt_area
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'DCKKFB,UKLXAE'}
+  - name: label_4
+    properties: {text: Date, align: right, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'DCKKFB,EPOKOL'}
+  - name: txt_date
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'DCKKFB,RJTVZT'}
+  - name: label_5
+    properties: {text: Description, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'KWHXZQ,HSNBKL'}
+  - name: txt_desc
+    properties: {height: 234.2109375, font: Verdana}
+    type: TextArea
+    layout_properties: {grid_position: 'UDZDJU,YGCWRZ'}
+  - name: button_1
+    properties: {text: AppRove, font: Verdana, bold: true, icon: 'fa:check', role: secondary-color, align: right}
+    type: Button
+    layout_properties: {grid_position: 'NMIREE,DIGOON'}
+  - name: button_2
+    properties: {text: disapprove, role: secondary-color, font: Verdana, bold: true, icon: 'fa:window-close', align: left}
+    type: Button
+    layout_properties: {grid_position: 'NMIREE,YRNJMS'}
+- name: exapand_panel
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'IIIQIC,MOWUFR'}
+  components:
+  - name: card_2
+    properties: {role: card, background: 'theme:Gray 100'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'JEIYXM,URDADT'}
+    components:
+    - name: label_7
+      properties: {text: Remarks, font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'JSZFYE,KAEWKN'}
+    - name: text_area_2
+      properties: {height: 135.99609375}
+      type: TextArea
+      layout_properties: {grid_position: 'UVDGPN,GNGGNP'}
+    - name: button_3
+      properties: {text: SAVE, icon: 'fa:save', role: secondary-color, align: right, font: Verdana, bold: true}
+      type: Button
+      layout_properties: {grid_position: 'WXRAHM,BDJIDS'}
+is_package: true

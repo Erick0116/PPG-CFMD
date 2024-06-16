@@ -63,33 +63,45 @@ class VehicleList(VehicleListTemplate):
     vehicle_record = app_tables.vehicles.search(plate_no=search_plateno)
     registration_record = app_tables.registration.search(plate_no=search_plateno)
     insurance_record = app_tables.insurance.search(plate_no=search_plateno)
-    if vehicle_record and registration_record:
-      self.txt_make.text = vehicle_record[0]['make']
-      self.txt_bodytype.text = vehicle_record[0]['body_type']
-      self.txt_color.text = vehicle_record[0]['color']
-      self.txt_area.text = vehicle_record[0]['area_assigned']
-      self.txt_model.text = vehicle_record[0]['model']
-      self.txt_register_name.text = vehicle_record[0]['register_name']
-      self.txt_plateno.text = vehicle_record[0]['plate_no']
-      self.txt_engineno.text = vehicle_record[0]['engine_no']
-      self.txt_chasisno.text = vehicle_record[0]['chasis_no']
-      self.txt_status.text = vehicle_record[0]['status']  
+    try:
+      if vehicle_record and registration_record and insurance_record:
+        self.txt_make.text = vehicle_record[0]['make']
+        self.txt_bodytype.text = vehicle_record[0]['body_type']
+        self.txt_color.text = vehicle_record[0]['color']
+        self.txt_area.text = vehicle_record[0]['area_assigned']
+        self.txt_model.text = vehicle_record[0]['model']
+        self.txt_register_name.text = vehicle_record[0]['register_name']
+        self.txt_plateno.text = vehicle_record[0]['plate_no']
+        self.txt_engineno.text = vehicle_record[0]['engine_no']
+        self.txt_chasisno.text = vehicle_record[0]['chasis_no']
+        self.txt_status.text = vehicle_record[0]['status']
+        self.expand_button.visible = True
+      else:
+        alert('Vechicle has no data')
       # Populate registration data in the textfield
-      self.txt_crno.text = registration_record[0]['cr_no']
-      self.txt_fdatecr.text = registration_record[0]['date_cr']
-      self.txt_orno.text = registration_record[0]['or_no']
-      self.txt_daterenew.text = registration_record[0]['date_renewed_or']
-      self.txt_nextrenew.text = registration_record[0]['next_renewal']
+      if registration_record:
+        self.txt_crno.text = registration_record[0]['cr_no']
+        self.txt_fdatecr.text = registration_record[0]['date_cr']
+        self.txt_orno.text = registration_record[0]['or_no']
+        self.txt_daterenew.text = registration_record[0]['date_renewed_or']
+        self.txt_nextrenew.text = registration_record[0]['next_renewal']
+      else:
+        alert('Vechicle has no registration data')
       # Populate insurance data in the textfield
-      self.txt_insuranceType.text = insurance_record[0]['insurance_type']
-      self.txt_insuranceName.text = insurance_record[0]['insurance_name']
-      self.txt_premium.text = insurance_record[0]['premium']
-      self.txt_coverage.text = insurance_record[0]['coverage']
-      self.txt_expiry.text = insurance_record[0]['expiry']
-      self.txt_remarks.text = vehicle_record[0]['remarks']
-      self.expand_button.visible = True
-    else:
-      None
+      if insurance_record:
+        self.txt_insuranceType.text = insurance_record[0]['insurance_type']
+        self.txt_insuranceName.text = insurance_record[0]['insurance_name']
+        self.txt_premium.text = insurance_record[0]['premium']
+        self.txt_coverage.text = insurance_record[0]['coverage']
+        self.txt_expiry.text = insurance_record[0]['expiry']
+        self.txt_remarks.text = vehicle_record[0]['remarks']
+        #self.expand_button.visible = True
+      else:
+       alert('Vechicle has no insurance data')
+    except IndexError as ex:
+      alert(ex)
+    
+    
 
   
 

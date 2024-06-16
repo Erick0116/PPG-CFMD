@@ -1,10 +1,14 @@
 container: {type: ColumnPanel}
 components:
 - name: card_1
-  properties: {role: card, col_widths: '{"NEZAGD":10,"XOHJNV":50,"UODVZR":10,"PZFIPT":20,"OEGUIL":5,"NDVKJV":25,"IJHYIP":30,"TKLUMU":30,"WRLDAQ":10,"DVDPAO":50}'}
+  properties: {role: card, col_widths: '{"NEZAGD":10,"XOHJNV":50,"UODVZR":10,"PZFIPT":20,"OEGUIL":5,"NDVKJV":25,"IJHYIP":30,"TKLUMU":30,"WRLDAQ":10,"DVDPAO":50}', background: 'theme:Gray 100'}
   type: ColumnPanel
   layout_properties: {grid_position: 'LXYMYN,YVYYEW'}
   components:
+  - name: label_6
+    properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:automobile', font: Verdana, foreground: 'theme:White', font_size: 15, text: REQUEST REPAIR FORM}
+    type: Label
+    layout_properties: {grid_position: 'TOBJWU,DKZQME', full_width_row: true}
   - name: label_1
     properties: {text: Name, font: Verdana}
     type: Label
@@ -45,13 +49,17 @@ components:
     properties: {height: 211.01953125, font: Verdana, font_size: null}
     type: TextArea
     layout_properties: {grid_position: 'MJKKXC,DVDPAO ASOPVY,ELHJMM'}
+  - name: file_loader_1
+    properties: {text: File attachment, role: primary-color, font: Verdana, bold: true}
+    type: FileLoader
+    layout_properties: {grid_position: 'MJKKXC,DVDPAO PWVQBR,QBZLZD'}
   - name: btn_submit
-    properties: {text: SUBMIT, role: primary-color, icon: 'fa:send', align: right}
+    properties: {text: SUBMIT, role: secondary-color, icon: 'fa:send', align: right}
     type: Button
     layout_properties: {grid_position: 'MJKKXC,DVDPAO QTIITJ,IKVLRU'}
     event_bindings: {click: btn_submit_click}
 - name: card_2
-  properties: {role: card}
+  properties: {role: card, background: 'theme:Gray 100'}
   type: ColumnPanel
   layout_properties: {grid_position: 'RBXPDR,STKGNE'}
   components:

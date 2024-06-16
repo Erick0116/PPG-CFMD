@@ -32,3 +32,6 @@ class Main(MainTemplate):
     #self.card_1.clear()
     #self.card_1.add_component(TransferVehicle())
     open_form('Main.TransferVehicle')
+
+  def btn_repair_approval_click(self, **event_args):
+    open_form('Main.RepairApproval')
