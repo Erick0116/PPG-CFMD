@@ -12,7 +12,7 @@ components:
     layout_properties: {grid_position: 'TPOCVI,QWQKDE'}
     components:
     - name: lbl_vechicle
-      properties: {text: VEHICLE DETAILS, align: center, font: Verdana, font_size: 15, bold: true, foreground: 'theme:White', background: 'theme:Gray 600', role: text}
+      properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:car', font: Verdana, foreground: 'theme:White', font_size: 15, text: VEHICLE DETAILS}
       type: Label
       layout_properties: {grid_position: 'BHQSAP,CCPRXD', full_width_row: true}
     - name: label_1
@@ -103,7 +103,7 @@ components:
   layout_properties: {grid_position: 'PEQEXM,PDCUHC'}
   components:
   - name: label_23
-    properties: {text: REGISTRATION DETAILS, align: center, font: Verdana, font_size: 15, bold: true, foreground: 'theme:White', role: text, background: 'theme:Gray 600'}
+    properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:book', font: Verdana, foreground: 'theme:White', font_size: 15, text: REGISTRATION DETAILS}
     type: Label
     layout_properties: {grid_position: 'BRJHVC,UKSJWX', full_width_row: true}
   - name: label_10
@@ -152,7 +152,7 @@ components:
   layout_properties: {grid_position: 'IPWYPI,URYVSL'}
   components:
   - name: label_24
-    properties: {text: INSURANCE DETAILS, align: center, font: Verdana, font_size: 15, bold: true, foreground: 'theme:White', background: 'theme:Gray 600', role: text}
+    properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:life-saver', font: Verdana, foreground: 'theme:White', font_size: 15, text: INSURANCE DETAILS}
     type: Label
     layout_properties: {grid_position: 'CJNZZD,YFZVHU', full_width_row: true}
   - name: label_15

@@ -1,0 +1,70 @@
+container: {type: ColumnPanel}
+components:
+- name: card_1
+  properties: {role: card, col_widths: '{"NEZAGD":10,"XOHJNV":50,"UODVZR":10,"PZFIPT":20,"OEGUIL":5,"NDVKJV":25,"IJHYIP":30,"TKLUMU":30,"WRLDAQ":10,"DVDPAO":50}'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'LXYMYN,YVYYEW'}
+  components:
+  - name: label_1
+    properties: {text: Name, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'LVLWXA,NEZAGD'}
+  - name: txt_name
+    properties: {font: Verdana, font_size: null}
+    type: TextBox
+    layout_properties: {grid_position: 'LVLWXA,XOHJNV'}
+  - name: label_2
+    properties: {text: Area, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'MKEORR,UODVZR'}
+  - name: dp_area
+    properties: {font: Verdana, font_size: null}
+    type: DropDown
+    layout_properties: {grid_position: 'MKEORR,PZFIPT'}
+  - name: label_3
+    properties: {text: Date}
+    type: Label
+    layout_properties: {grid_position: 'MKEORR,OEGUIL'}
+  - name: dp_date
+    properties: {font: Verdana, font_size: null}
+    type: DatePicker
+    layout_properties: {grid_position: 'MKEORR,NDVKJV'}
+  - name: label_4
+    properties: {text: Plate No., align: right, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'APMMQO,IJHYIP'}
+  - name: txt_plateno
+    properties: {font: Verdana, font_size: null}
+    type: TextBox
+    layout_properties: {grid_position: 'APMMQO,TKLUMU'}
+  - name: label_5
+    properties: {text: Description, font: Verdana, font_size: 12}
+    type: Label
+    layout_properties: {grid_position: 'MJKKXC,WRLDAQ'}
+  - name: txt_desc
+    properties: {height: 211.01953125, font: Verdana, font_size: null}
+    type: TextArea
+    layout_properties: {grid_position: 'MJKKXC,DVDPAO ASOPVY,ELHJMM'}
+  - name: btn_submit
+    properties: {text: SUBMIT, role: primary-color, icon: 'fa:send', align: right}
+    type: Button
+    layout_properties: {grid_position: 'MJKKXC,DVDPAO QTIITJ,IKVLRU'}
+    event_bindings: {click: btn_submit_click}
+- name: card_2
+  properties: {role: card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'RBXPDR,STKGNE'}
+  components:
+  - name: data_grid_1
+    properties:
+      columns:
+      - {id: JKSDUP, title: Plate No., data_key: plate_no}
+      - {id: VJQQOR, title: Date, data_key: date}
+      - {id: OJLQEN, title: Status, data_key: status}
+    type: DataGrid
+    components:
+    - name: rp_repairs
+      properties: {item_template: Main.AreaRequestRepair.RowTemplate5}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'ULNQES,RQSISD'}
+is_package: true

@@ -1,5 +1,6 @@
 from ._anvil_designer import VehicleListTemplate
 from anvil import *
+import anvil.users
 import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
@@ -13,7 +14,8 @@ class VehicleList(VehicleListTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.rp_vehicles.items  = anvil.server.call('vehicles_populate')
-    self.rp_history.items = anvil.server.call('history_populate')
+   # self.rp_history.items = anvil.server.call('history_populate')
+    # self.rp_repair.items = anvil.server.call('repair_populate')
     self.expanded = False
     self.expanded2 =  False
     self.expanded3 =  False
@@ -55,6 +57,8 @@ class VehicleList(VehicleListTemplate):
 
   def btn_search_click(self, **event_args):
     self.rp_vehicles.items  = anvil.server.call('search_vehicles', self.txt_search.text)
+    self.rp_history.items = anvil.server.call('search_history', self.txt_search.text)
+    self.rp_repair.items = anvil.server.call('search_repair', self.txt_search.text)
     search_plateno  = self.txt_search.text
     vehicle_record = app_tables.vehicles.search(plate_no=search_plateno)
     registration_record = app_tables.registration.search(plate_no=search_plateno)

@@ -285,9 +285,8 @@ components:
       - name: data_grid_3
         properties:
           columns:
-          - {id: JKSDUP, title: Details, data_key: column_1}
-          - {id: VJQQOR, title: Date Repair, data_key: column_2}
-          - {id: OJLQEN, title: Date Fix, data_key: column_3}
+          - {id: JKSDUP, title: Details, data_key: description}
+          - {id: VJQQOR, title: Date, data_key: date}
         type: DataGrid
         components:
         - name: rp_repair

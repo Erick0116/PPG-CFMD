@@ -1,3 +1,4 @@
+import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
@@ -41,6 +42,21 @@ def add_insurance(plate_no, insurance_type, insurance_name, premium, coverage, e
     coverage=coverage,
     expiry=expiry
   )
+
+@anvil.server.callable
+def request_repair(plate_no, name, area, date, descrription):
+  send_request = app_tables.repairapproval.add_row(
+    plate_no=plate_no,
+    name=name,
+    area=area,
+    date=date,
+    description=descrription,
+    status="Submitted"
+  )
+  if send_request:
+    return True
+  else: 
+    return False
 
 @anvil.server.callable
 def record_vechicle_history(plate_no, reason, status, area, date):

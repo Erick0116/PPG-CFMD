@@ -5,97 +5,105 @@ components:
   type: ColumnPanel
   layout_properties: {grid_position: 'EQKEBE,VQWEZL'}
   components:
+  - name: label_13
+    properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:ship', font: Verdana, foreground: 'theme:White', font_size: 15, text: TRANSFER VECHICLE}
+    type: Label
+    layout_properties: {grid_position: 'NXJNKV,BZAQDW', full_width_row: true}
   - name: label_1
-    properties: {text: Plate No., align: right, font: Verdana, bold: true}
+    properties: {text: Plate No., align: right, font: Verdana, bold: false}
     type: Label
     layout_properties: {grid_position: 'BJNKRK,WVSOPM'}
   - name: txt_plateno
-    properties: {background: 'theme:White', font: Verdana, font_size: 12}
+    properties: {background: 'theme:White', font: Verdana, font_size: null}
     type: TextBox
     layout_properties: {grid_position: 'BJNKRK,PNBQOW'}
     event_bindings: {pressed_enter: txt_plateno_pressed_enter}
   - name: label_2
-    properties: {text: Make, font: Verdana, bold: true}
+    properties: {text: Make, font: Verdana, bold: false}
     type: Label
     layout_properties: {grid_position: 'OTEYHL,WGVQEH'}
   - name: txt_make
-    properties: {background: 'theme:Gray 50', enabled: false, font: Verdana, font_size: 12}
+    properties: {background: 'theme:Gray 50', enabled: false, font: Verdana, font_size: null}
     type: TextBox
     layout_properties: {grid_position: 'OTEYHL,GAGSWP'}
   - name: label_6
-    properties: {text: Registered Name, font: Verdana, bold: true}
+    properties: {text: Registered Name, font: Verdana, bold: false}
     type: Label
     layout_properties: {grid_position: 'OTEYHL,QQBNJZ'}
   - name: txt_registerName
-    properties: {background: 'theme:Gray 50', enabled: false, font: Verdana, font_size: 12}
+    properties: {background: 'theme:Gray 50', enabled: false, font: Verdana, font_size: null}
     type: TextBox
     layout_properties: {grid_position: 'OTEYHL,TWHUOO'}
+  - name: label_12
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'APGPQZ,GNXVBO'}
   - name: label_3
-    properties: {text: Color, font: Verdana, bold: true}
+    properties: {text: Color, font: Verdana, bold: false, italic: false}
     type: Label
     layout_properties: {grid_position: 'APGPQZ,WQFTHT'}
   - name: txt_color
-    properties: {background: 'theme:Gray 50', enabled: false, font: Verdana, font_size: 12}
+    properties: {background: 'theme:Gray 50', enabled: false, font: Verdana, font_size: null}
     type: TextBox
     layout_properties: {grid_position: 'APGPQZ,SROVUO'}
   - name: label_7
-    properties: {text: Engine No., font: Verdana, bold: true}
+    properties: {text: Engine No., font: Verdana, bold: false}
     type: Label
     layout_properties: {grid_position: 'APGPQZ,THOIHA'}
   - name: txt_engineno
-    properties: {background: 'theme:Gray 50', enabled: false, font: Verdana, font_size: 12}
+    properties: {background: 'theme:Gray 50', enabled: false, font: Verdana, font_size: null}
     type: TextBox
     layout_properties: {grid_position: 'APGPQZ,EYSRZT'}
   - name: label_4
-    properties: {text: Model, font: Verdana, bold: true}
+    properties: {text: Model, font: Verdana, bold: false}
     type: Label
     layout_properties: {grid_position: 'RCILFC,DIQUHF'}
   - name: txt_model
-    properties: {background: 'theme:Gray 50', enabled: false, font: Verdana, font_size: 12}
+    properties: {background: 'theme:Gray 50', enabled: false, font: Verdana, font_size: null}
     type: TextBox
     layout_properties: {grid_position: 'RCILFC,RYQGYX'}
   - name: label_8
-    properties: {text: Chassis No., font: Verdana, bold: true}
+    properties: {text: Chassis No., font: Verdana, bold: false}
     type: Label
     layout_properties: {grid_position: 'RCILFC,IHGKRF'}
   - name: txt_chassisno
-    properties: {background: 'theme:Gray 50', enabled: false, font: Verdana, font_size: 12}
+    properties: {background: 'theme:Gray 50', enabled: false, font: Verdana, font_size: null}
     type: TextBox
     layout_properties: {grid_position: 'RCILFC,KCALDR'}
   - name: label_5
-    properties: {text: Body Type, align: left, font: Verdana, bold: true}
+    properties: {text: Body Type, align: left, font: Verdana, bold: false}
     type: Label
     layout_properties: {grid_position: 'ZUFOEE,NJOKSM'}
   - name: txt_bodytype
-    properties: {background: 'theme:Gray 50', enabled: false, font: Verdana, font_size: 12}
+    properties: {background: 'theme:Gray 50', enabled: false, font: Verdana, font_size: null}
     type: TextBox
     layout_properties: {grid_position: 'ZUFOEE,LXRTIW'}
   - name: label_9
-    properties: {text: Area Transfered, align: left, font: Verdana, bold: true}
+    properties: {text: Area Transfered, align: left, font: Verdana, bold: false}
     type: Label
     layout_properties: {grid_position: 'ZUFOEE,IRZZRB'}
   - name: dp_area
     properties:
       background: theme:White
       font: Verdana
-      font_size: 12
+      font_size: null
       items: [ANTIQUE, BATMARZON, BOHOL, CAPIZLANRON]
     type: DropDown
     layout_properties: {grid_position: 'ZUFOEE,OAEBMX'}
   - name: label_11
-    properties: {text: Date, align: right}
+    properties: {text: Date, align: right, font: Verdana}
     type: Label
     layout_properties: {grid_position: 'CHIGKM,RHCNIS'}
   - name: dp_date
-    properties: {}
+    properties: {font: Verdana}
     type: DatePicker
     layout_properties: {grid_position: 'CHIGKM,VOHLAH'}
   - name: label_10
-    properties: {text: Reason, font: Verdana, bold: true}
+    properties: {text: Reason, font: Verdana, bold: false}
     type: Label
     layout_properties: {grid_position: 'SALPQX,IVPYZC'}
   - name: txt_reason
-    properties: {height: 139.3828125, background: 'theme:White', font: Verdana, font_size: 12}
+    properties: {height: 139.3828125, background: 'theme:White', font: Verdana, font_size: null}
     type: TextArea
     layout_properties: {grid_position: 'YXDOZI,KEGGDP'}
   - name: btn_transfer

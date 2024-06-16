@@ -1,3 +1,4 @@
+import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
@@ -14,6 +15,16 @@ def search_vehicles(query):
   return results
 
 @anvil.server.callable
+def search_history(query):
+  results = app_tables.transferhistory.search(plate_no=query)
+  return results
+
+@anvil.server.callable
+def search_repair(query):
+  results = app_tables.repairapproval.search(plate_no=query)
+  return results
+
+@anvil.server.callable
 def view_details(search_plateno):
   if search_plateno:
     results = app_tables.vehicles.search(plate_no=search_plateno)
@@ -24,3 +35,7 @@ def view_details(search_plateno):
 @anvil.server.callable
 def history_populate():
   return app_tables.transferhistory.search()
+
+@anvil.server.callable
+def repair_populate():
+  return app_tables.repairapproval.search()
