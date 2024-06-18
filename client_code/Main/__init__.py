@@ -8,7 +8,7 @@ from anvil.tables import app_tables
 from  .RegisterVehicle import RegisterVehicle
 from .VehicleList import VehicleList
 from .TransferVehicle import TransferVehicle
-from anvil import open_form, alert
+
 
 
 class Main(MainTemplate):
@@ -20,8 +20,12 @@ class Main(MainTemplate):
     if user is not None:
       if user['role'] == 'area':
         self.btn_register.visible = False
+        self.btn_transfer.visible = False
+        self.btn_vehicleList.visible = False
+        self.btn_repair_approval.visible  = False
+        self.btn_request_repair.visible = True
       elif user['role'] == 'admin':
-        self.btn_register.visible = True
+        self.btn_request_repair.visible = False
       else:
         alert('You dont have the prreviledge to access the page')
   
