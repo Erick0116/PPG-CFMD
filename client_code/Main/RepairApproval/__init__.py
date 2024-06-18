@@ -12,6 +12,17 @@ class RepairApproval(RepairApprovalTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.rp_repair.items  = anvil.server.call('repair_populate')
+    self.expanded  = False
+    self.exapand_panel.visible = False
+
+  def toggle_expand(self, **event_args):
+    if not self.expanded:
+      self.exapand_panel.visible = True
+      self.expanded = True
+    else:
+      self.exapand_panel.visible = False
+      self.expanded = False
+    
 
     # Any code you write here will run before the form opens.
 
@@ -28,5 +39,8 @@ class RepairApproval(RepairApprovalTemplate):
         alert('Plate number not found')
     except IndexError:
       alert('Please check for any leading or trailing spaces in the Plate No text field.')
-      
+
+  def btn_disapprove_click(self, **event_args):
+    #self.toggle_expand()
+    self.toggle_expand()  
     

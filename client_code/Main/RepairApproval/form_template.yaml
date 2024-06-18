@@ -76,10 +76,11 @@ components:
     properties: {text: AppRove, font: Verdana, bold: true, icon: 'fa:check', role: secondary-color, align: right}
     type: Button
     layout_properties: {grid_position: 'NMIREE,DIGOON'}
-  - name: button_2
+  - name: btn_disapprove
     properties: {text: disapprove, role: secondary-color, font: Verdana, bold: true, icon: 'fa:window-close', align: left}
     type: Button
     layout_properties: {grid_position: 'NMIREE,YRNJMS'}
+    event_bindings: {click: btn_disapprove_click}
 - name: exapand_panel
   properties: {}
   type: ColumnPanel

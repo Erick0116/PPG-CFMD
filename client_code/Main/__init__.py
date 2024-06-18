@@ -8,6 +8,7 @@ from anvil.tables import app_tables
 from  .RegisterVehicle import RegisterVehicle
 from .VehicleList import VehicleList
 from .TransferVehicle import TransferVehicle
+from anvil import open_form, alert
 
 
 class Main(MainTemplate):
@@ -15,6 +16,18 @@ class Main(MainTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     anvil.users.login_with_form()
+    user = anvil.users.get_user()
+    if user is not None:
+      if user['role'] == 'area':
+        self.btn_register.visible = False
+      elif user['role'] == 'admin':
+        self.btn_register.visible = True
+      else:
+        alert('You dont have the prreviledge to access the page')
+  
+   
+      
+     
 
     # Any code you write here will run before the form opens.
 
