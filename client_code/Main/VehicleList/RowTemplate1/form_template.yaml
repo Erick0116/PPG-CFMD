@@ -1,5 +1,5 @@
 is_package: true
 container:
   type: DataRowPanel
-  properties: {font: Verdana}
+  properties: {font: Verdana, visible: true}
 components: []

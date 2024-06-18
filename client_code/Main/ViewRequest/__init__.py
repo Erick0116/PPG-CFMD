@@ -12,5 +12,9 @@ class ViewRequest(ViewRequestTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.rp_repairs.items  = anvil.server.call('repair_populate')
+    self.expanded = False
 
     # Any code you write here will run before the form opens.
+
+  def btn_home_click(self, **event_args):
+    open_form('Main')

@@ -1,10 +1,32 @@
 container: {type: ColumnPanel}
 components:
 - name: card_1
-  properties: {role: card}
+  properties: {role: card, background: 'theme:Gray 50'}
   type: ColumnPanel
   layout_properties: {grid_position: 'WSRJBB,THREYN'}
   components:
+  - name: card_2
+    properties: {role: card, col_widths: '{"OUDKHQ":20,"LTJCAN":20,"KUOYXH":20}', background: 'theme:Gray 600'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'BLTTOX,NWQINF'}
+    components:
+    - name: btn_home
+      properties: {text: Home, icon: 'fa:home', role: secondary-color, font: Verdana, bold: true}
+      type: Button
+      layout_properties: {grid_position: 'YVVPOZ,PLRSQQ'}
+      event_bindings: {click: btn_home_click}
+    - name: label_1
+      properties: {text: Plate No., font: Verdana, align: right, bold: true, foreground: 'theme:White'}
+      type: Label
+      layout_properties: {grid_position: 'YVVPOZ,OUDKHQ'}
+    - name: text_box_1
+      properties: {font: Verdana, foreground: '', background: 'theme:White'}
+      type: TextBox
+      layout_properties: {grid_position: 'YVVPOZ,LTJCAN'}
+    - name: btn_view
+      properties: {text: ViEW DETAILS, font: Verdana, icon: 'fa:search', role: secondary-color, bold: true}
+      type: Button
+      layout_properties: {grid_position: 'YVVPOZ,KUOYXH'}
   - name: data_grid_1
     properties:
       columns:
@@ -17,6 +39,56 @@ components:
       properties: {item_template: Main.ViewRequest.RowTemplate7}
       type: RepeatingPanel
     layout_properties: {grid_position: 'KMIKWE,VCNVFF'}
+- name: expanded_panel_details
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'WSJHWU,EAERGW'}
+  components:
+  - name: card_3
+    properties: {role: card, col_widths: '{"DFLLWD":15,"LHOLTW":15,"YBIOEN":15,"BYCFGM":15}', background: 'theme:Gray 50'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'EHSRTN,XANJZE'}
+    components:
+    - name: label_2
+      properties: {text: Plate No, font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'AOOBOC,DFLLWD LZBDGC,CUVMQF'}
+    - name: label_4
+      properties: {text: Area, font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'AOOBOC,DFLLWD NFADWQ,RKEOBY'}
+    - name: label_6
+      properties: {text: Description, font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'AOOBOC,DFLLWD BAYJJC,JFOLWP'}
+    - name: text_box_2
+      properties: {font: Verdana, enabled: false}
+      type: TextBox
+      layout_properties: {grid_position: 'AOOBOC,LHOLTW CDLOTA,MNFYSP'}
+    - name: text_box_4
+      properties: {font: Verdana, enabled: false}
+      type: TextBox
+      layout_properties: {grid_position: 'AOOBOC,LHOLTW LFCYZR,LXPLVR'}
+    - name: label_3
+      properties: {text: Name, font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'AOOBOC,YBIOEN YDBWSL,YNPHTM'}
+    - name: label_5
+      properties: {text: Date, font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'AOOBOC,YBIOEN YQURMZ,CCDBRB'}
+    - name: text_box_3
+      properties: {font: Verdana, enabled: false}
+      type: TextBox
+      layout_properties: {grid_position: 'AOOBOC,BYCFGM IUITVH,XWNMPF'}
+    - name: text_box_5
+      properties: {font: Verdana, enabled: false}
+      type: TextBox
+      layout_properties: {grid_position: 'AOOBOC,BYCFGM RAJCTD,AQCPUY'}
+    - name: text_area_1
+      properties: {height: 127.546875, font: Verdana, visible: true, enabled: true}
+      type: TextArea
+      layout_properties: {grid_position: 'KVLOJQ,ODFEJZ'}
 - name: item_template1_1
   properties: {}
   type: form:Main.ItemTemplate1

@@ -23,6 +23,8 @@ class Main(MainTemplate):
         self.btn_transfer.visible = False
         self.btn_vehicleList.visible = False
         self.btn_repair_approval.visible  = False
+        self.card_dashData.visible  = False
+        self.card_dashTitle.visible    = False
         self.btn_request_repair.visible = True
         self.btn_viewRequest.visible = True
       elif user['role'] == 'admin':
@@ -57,3 +59,6 @@ class Main(MainTemplate):
 
   def btn_viewRequest_click(self, **event_args):
     open_form('Main.ViewRequest')
+
+  def btn_request_repair_click(self, **event_args):
+    open_form('Main.AreaRequestRepair')
