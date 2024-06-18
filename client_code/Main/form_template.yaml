@@ -18,12 +18,12 @@ components:
       type: Label
       layout_properties: {grid_position: 'ZGHUFI,NCKOBK', full_width_row: true}
   - name: card_6
-    properties: {role: card, col_widths: '{"HLTIVI":45,"IXUUYK":15,"KUORIZ":20}'}
+    properties: {role: card, col_widths: '{"HLTIVI":45,"IXUUYK":15,"KUORIZ":20}', background: 'theme:Gray 100'}
     type: ColumnPanel
     layout_properties: {grid_position: 'VMJKMC,RGDTTS'}
     components:
     - name: label_1
-      properties: {font: Verdana, font_size: 20, align: center, bold: true, text: 'REPAIR REQUEST APPROVAL ', icon: 'fa:gears'}
+      properties: {font: Verdana, font_size: 20, align: left, bold: true, text: 'REPAIR REQUEST APPROVAL ', icon: 'fa:gears'}
       type: Label
       layout_properties: {grid_position: 'GNGNOG,HLTIVI YGTIFQ,QYVUZJ'}
     - name: label_2
@@ -76,3 +76,8 @@ components:
     properties: {text: REquest REPAIR, icon: 'fa:car', font: Verdana, bold: true, font_size: 20, role: secondary-color, align: full}
     type: Button
     layout_properties: {grid_position: 'SABCAH,KXVKHL', full_width_row: false}
+  - name: btn_viewRequest
+    properties: {text: VIEW REQUEST, font: Verdana, font_size: 20, bold: true, align: full, icon: 'fa:list-alt', role: primary-color}
+    type: Button
+    layout_properties: {grid_position: 'YAOFAA,CPEBAL'}
+    event_bindings: {click: btn_viewRequest_click}
