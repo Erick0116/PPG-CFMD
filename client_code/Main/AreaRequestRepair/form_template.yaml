@@ -1,66 +1,254 @@
 container: {type: ColumnPanel}
 components:
 - name: card_1
-  properties: {role: card, col_widths: '{"NEZAGD":10,"XOHJNV":50,"UODVZR":10,"PZFIPT":20,"OEGUIL":5,"NDVKJV":25,"IJHYIP":30,"TKLUMU":30,"WRLDAQ":10,"DVDPAO":50,"IKVLRU":30,"RHGJCP":30}', background: 'theme:Gray 100'}
+  properties: {role: card, col_widths: '{"NEZAGD":25,"EFWVNA":7,"PERHGF":8,"YCCYZI":10,"RYIHEL":4,"BPKPQL":17,"UIZNWJ":14,"BGMQMZ":5,"HYOKUR":10,"BJKPWU":20,"UCDAJU":40,"LUYQRV":10,"LZNPDK":15,"RDULAS":10,"EZUXIO":10,"RLXDQO":10,"OKGCOW":50,"AWPUFU":8,"SUQQPE":7,"CEXAAK":10,"WDUWNP":50,"GYLIIL":45,"JNYTTF":15,"JIWHYJ":30,"QMTETM":10,"VOORGN":40,"XVADCW":20,"YLYREL":15,"WZDPBX":45}', background: 'theme:Gray 100'}
   type: ColumnPanel
-  layout_properties: {grid_position: 'LXYMYN,YVYYEW'}
+  layout_properties: {grid_position: 'LXYMYN,RQYJUA'}
   components:
   - name: label_6
-    properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:automobile', font: Verdana, foreground: 'theme:White', font_size: 15, text: REQUEST REPAIR FORM}
+    properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:automobile', font: Verdana, foreground: 'theme:White', font_size: 15, text: REQUEST FOR REPAIR OF COMPANY VEHICLE}
     type: Label
     layout_properties: {grid_position: 'TOBJWU,DKZQME', full_width_row: true}
   - name: label_1
-    properties: {text: Name, font: Verdana}
+    properties: {text: Requesting Branch Area, font: Verdana}
     type: Label
-    layout_properties: {grid_position: 'LVLWXA,NEZAGD'}
-  - name: txt_name
-    properties: {font: Verdana, font_size: null}
-    type: TextBox
-    layout_properties: {grid_position: 'LVLWXA,XOHJNV'}
-  - name: label_2
-    properties: {text: Area, font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'MKEORR,UODVZR'}
+    layout_properties: {grid_position: 'LVLWXA,NEZAGD KWQRPQ,BJKPWU'}
   - name: dp_area
     properties: {font: Verdana, font_size: null}
     type: DropDown
-    layout_properties: {grid_position: 'MKEORR,PZFIPT'}
-  - name: label_3
-    properties: {text: Date}
+    layout_properties: {grid_position: 'LVLWXA,NEZAGD KWQRPQ,UCDAJU'}
+  - name: label_2
+    properties: {text: Make, font: Verdana}
     type: Label
-    layout_properties: {grid_position: 'MKEORR,OEGUIL'}
-  - name: dp_date
+    layout_properties: {grid_position: 'LVLWXA,NEZAGD TUYFKY,YCCYZI'}
+  - name: txt_name
     properties: {font: Verdana, font_size: null}
-    type: DatePicker
-    layout_properties: {grid_position: 'MKEORR,NDVKJV'}
+    type: TextBox
+    layout_properties: {grid_position: 'LVLWXA,NEZAGD TUYFKY,UIZNWJ'}
+  - name: label_7
+    properties: {text: Type}
+    type: Label
+    layout_properties: {grid_position: 'LVLWXA,NEZAGD TUYFKY,RYIHEL'}
+  - name: text_box_1
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'LVLWXA,NEZAGD TUYFKY,BPKPQL'}
+  - name: label_8
+    properties: {text: Model}
+    type: Label
+    layout_properties: {grid_position: 'LVLWXA,NEZAGD TUYFKY,BGMQMZ'}
+  - name: text_box_2
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'LVLWXA,NEZAGD TUYFKY,HYOKUR'}
+  - name: label_22
+    properties: {text: Present Mileage}
+    type: Label
+    layout_properties: {grid_position: 'LVLWXA,NEZAGD VOMGHF,YLYREL'}
+  - name: text_box_30
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'LVLWXA,NEZAGD VOMGHF,WZDPBX'}
   - name: label_4
     properties: {text: Plate No., align: right, font: Verdana}
     type: Label
-    layout_properties: {grid_position: 'APMMQO,IJHYIP'}
+    layout_properties: {grid_position: 'LVLWXA,EFWVNA ITFDGL,YEIRCD'}
+  - name: label_3
+    properties: {text: Date, align: right}
+    type: Label
+    layout_properties: {grid_position: 'LVLWXA,EFWVNA EFTOSG,CKFOLR'}
   - name: txt_plateno
     properties: {font: Verdana, font_size: null}
     type: TextBox
-    layout_properties: {grid_position: 'APMMQO,TKLUMU'}
+    layout_properties: {grid_position: 'LVLWXA,PERHGF AFYWIG,HTHKFB'}
+  - name: dp_date
+    properties: {font: Verdana, font_size: null}
+    type: DatePicker
+    layout_properties: {grid_position: 'LVLWXA,PERHGF HSAXAK,MQAMVM'}
   - name: label_5
-    properties: {text: Description, font: Verdana, font_size: 12}
+    properties: {text: Area Recommendation / Explanation, font: Verdana, font_size: 12}
     type: Label
-    layout_properties: {grid_position: 'MJKKXC,WRLDAQ'}
+    layout_properties: {grid_position: 'LYNCOB,QCCOSX'}
   - name: txt_desc
     properties: {height: 211.01953125, font: Verdana, font_size: null}
     type: TextArea
-    layout_properties: {grid_position: 'MJKKXC,DVDPAO ASOPVY,ELHJMM'}
-  - name: file_loader_1
-    properties: {text: File attachment, role: primary-color, font: Verdana, bold: true}
-    type: FileLoader
-    layout_properties: {grid_position: 'MJKKXC,DVDPAO PWVQBR,QBZLZD'}
-  - name: btn_submit
-    properties: {text: SUBMIT, role: secondary-color, icon: 'fa:send', align: right, font: Verdana, bold: true}
-    type: Button
-    layout_properties: {grid_position: 'MJKKXC,DVDPAO QTIITJ,IKVLRU'}
-    event_bindings: {click: btn_submit_click}
+    layout_properties: {grid_position: 'BWINZH,FJFTUJ'}
+  - name: label_9
+    properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:car', font: Verdana, foreground: 'theme:White', font_size: 15, text: VEHICLE REPAIR ESTIMATE}
+    type: Label
+    layout_properties: {grid_position: 'QSGTRC,GCXLUV', full_width_row: true}
+  - name: label_10
+    properties: {text: Name of Shop}
+    type: Label
+    layout_properties: {grid_position: 'DNRLZC,RLXDQO'}
+  - name: text_box_3
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'DNRLZC,OKGCOW'}
+  - name: label_11
+    properties: {text: Address}
+    type: Label
+    layout_properties: {grid_position: 'DFQZVR,CEXAAK'}
+  - name: text_box_4
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'DFQZVR,WDUWNP'}
+  - name: label_12
+    properties: {text: Contact Person}
+    type: Label
+    layout_properties: {grid_position: 'ONQVBP,LUYQRV'}
+  - name: text_box_5
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'ONQVBP,LZNPDK'}
+  - name: label_13
+    properties: {text: Contact No.}
+    type: Label
+    layout_properties: {grid_position: 'ONQVBP,RDULAS'}
+  - name: text_box_6
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'ONQVBP,EZUXIO'}
+  - name: label_14
+    properties: {text: Job Due on}
+    type: Label
+    layout_properties: {grid_position: 'ONQVBP,AWPUFU'}
+  - name: date_picker_1
+    properties: {}
+    type: DatePicker
+    layout_properties: {grid_position: 'ONQVBP,SUQQPE'}
+  - name: label_15
+    properties: {text: Job Order / Scope of Work}
+    type: Label
+    layout_properties: {grid_position: 'JNKKOQ,RJVWOK'}
+  - name: text_area_1
+    properties: {height: 252.60546875}
+    type: TextArea
+    layout_properties: {grid_position: 'ZADUDV,BRBRXQ'}
+  - name: label_16
+    properties: {text: Total Amount, align: right}
+    type: Label
+    layout_properties: {grid_position: 'BMUVDR,GYLIIL'}
+  - name: text_box_7
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'BMUVDR,JNYTTF'}
+  - name: label_17
+    properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:car', font: Verdana, foreground: 'theme:White', font_size: 15, text: ESTIMATED PARTS}
+    type: Label
+    layout_properties: {grid_position: 'WGUFVI,BBVPDI', full_width_row: true}
+  - name: label_18
+    properties: {text: Parts Name, align: center}
+    type: Label
+    layout_properties: {grid_position: 'DMRHAJ,VOORGN'}
+  - name: label_19
+    properties: {text: Amount, align: center}
+    type: Label
+    layout_properties: {grid_position: 'DMRHAJ,XVADCW'}
+  - name: text_box_8
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'JQNVZP,JIWHYJ XXCJAB,JPGSDJ'}
+  - name: text_box_10
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'JQNVZP,JIWHYJ UDQUOG,SOLGXC'}
+  - name: text_box_12
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'JQNVZP,JIWHYJ CZGYFZ,HMLRPB'}
+  - name: text_box_14
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'JQNVZP,JIWHYJ UZWVTN,QZDAKD'}
+  - name: text_box_16
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'JQNVZP,JIWHYJ EEJIOF,PVOLQW'}
+  - name: text_box_18
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'JQNVZP,JIWHYJ FWHXYH,KVEWIP'}
+  - name: text_box_22
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'JQNVZP,JIWHYJ ZBXQAC,VEDEPX'}
+  - name: text_box_24
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'JQNVZP,JIWHYJ JYOQBL,UAGURM'}
+  - name: text_box_26
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'JQNVZP,JIWHYJ XCVJMU,CWNEPM'}
+  - name: text_box_28
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'JQNVZP,JIWHYJ ZKDWMG,DAWUXK'}
+  - name: label_20
+    properties: {text: TOTAL AMOUNT OF PARTS, bold: true, align: right}
+    type: Label
+    layout_properties: {grid_position: 'JQNVZP,JIWHYJ HHUEYP,QQTYHD'}
+  - name: label_21
+    properties: {text: TOTAL LABOR & PARTS, align: right, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'JQNVZP,JIWHYJ JCSVDY,TWGMGU'}
+  - name: text_box_9
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'JQNVZP,QMTETM VHPYIA,ZSFUQQ'}
+  - name: text_box_11
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'JQNVZP,QMTETM JPBIMW,RUVDHW'}
+  - name: text_box_13
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'JQNVZP,QMTETM HDSVZQ,SECHBC'}
+  - name: text_box_15
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'JQNVZP,QMTETM YMYVEM,NESCLO'}
+  - name: text_box_17
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'JQNVZP,QMTETM YWYBBJ,FGTVIW'}
+  - name: text_box_19
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'JQNVZP,QMTETM FNZQIV,NKAQTJ'}
+  - name: text_box_23
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'JQNVZP,QMTETM PHVGID,TRWTAY'}
+  - name: text_box_25
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'JQNVZP,QMTETM MJCVZQ,TQOJVS'}
+  - name: text_box_20
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'JQNVZP,QMTETM AATVYO,ISQMYG'}
+  - name: text_box_27
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'JQNVZP,QMTETM VALXJD,HLOXNS'}
+  - name: text_box_29
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'JQNVZP,QMTETM OEKOCA,ELGMTC'}
+  - name: text_box_21
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'JQNVZP,QMTETM KETFUR,ZQAWHI'}
   - name: btn_cancel
-    properties: {text: Close, align: left, icon: 'fa:close', role: secondary-color, font: Verdana, bold: true}
+    properties: {text: Close, align: right, icon: 'fa:close', role: secondary-color, font: Verdana, bold: true}
     type: Button
-    layout_properties: {grid_position: 'MJKKXC,DVDPAO QTIITJ,RHGJCP'}
+    layout_properties: {grid_position: 'BTGVQZ,EKKKTV'}
     event_bindings: {click: btn_cancel_click}
+  - name: btn_submit
+    properties: {text: SUBMIT, role: secondary-color, icon: 'fa:send', align: left, font: Verdana, bold: true}
+    type: Button
+    layout_properties: {grid_position: 'BTGVQZ,AYHVMX'}
+    event_bindings: {click: btn_submit_click}
 is_package: true
