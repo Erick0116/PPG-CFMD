@@ -51,7 +51,7 @@ def request_repair(plate_no, name, area, date, descrription):
     area=area,
     date=date,
     description=descrription,
-    status="Submitted"
+    status="Requested"
   )
   if send_request:
     return True
@@ -88,6 +88,22 @@ def update_repair_status(plate_no):
     return True
   else:
     return False
+
+@anvil.server.callable
+def disapprove_repair(plateno, remarks):
+  record = app_tables.repairapproval.get(plate_no=plateno)
+  if record is not None:
+    record['status'] = "Disapproved"
+    record['remarks'] = remarks
+    record.update()
+    return True
+  else:
+    return False
+
+@anvil.server.callable
+def get_area():
+  area_name = [area['area_name']for area in app_tables.area.search()]
+  return area_name
 
 
 

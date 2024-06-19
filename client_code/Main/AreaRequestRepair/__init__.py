@@ -11,6 +11,12 @@ class AreaRequestRepair(AreaRequestRepairTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.refresh_dropdown()
+    
+
+  def refresh_dropdown(self):
+    area_name = anvil.server.call('get_area')
+    self.dp_area.items = area_name
     
 
     # Any code you write here will run before the form opens.

@@ -87,7 +87,7 @@ components:
       background: theme:White
       font: Verdana
       font_size: null
-      items: [ANTIQUE, BATMARZON, BOHOL, CAPIZLANRON]
+      items: ['', BOHOL, CAPIZLANRON]
     type: DropDown
     layout_properties: {grid_position: 'ZUFOEE,OAEBMX'}
   - name: label_11

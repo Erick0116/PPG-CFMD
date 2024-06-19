@@ -11,8 +11,12 @@ class TransferVehicle(TransferVehicleTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.refresh_dropdown()
 
     # Any code you write here will run before the form opens.
+  def refresh_dropdown(self):
+    area_name = anvil.server.call('get_area')
+    self.dp_area.items = area_name
 
   def button_2_click(self, **event_args):
     open_form('Main')

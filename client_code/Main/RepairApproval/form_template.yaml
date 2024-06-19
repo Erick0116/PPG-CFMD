@@ -5,6 +5,11 @@ components:
   type: ColumnPanel
   layout_properties: {grid_position: 'DYIIHX,EPUVVC'}
   components:
+  - name: btn_home
+    properties: {text: HoME, align: left, role: secondary-color, font: Verdana, bold: true, font_size: null, icon: 'fa:home'}
+    type: Button
+    layout_properties: {grid_position: 'YPLAGA,BULIZI'}
+    event_bindings: {click: btn_home_click}
   - name: label_6
     properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:car', font: Verdana, foreground: 'theme:White', font_size: 15, text: REPAIR APPROVAL}
     type: Label
@@ -45,7 +50,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'APDSYX,MRKDAL'}
   - name: txt_name
-    properties: {font: Verdana}
+    properties: {font: Verdana, enabled: false}
     type: TextBox
     layout_properties: {grid_position: 'APDSYX,GBZMAS'}
   - name: label_3
@@ -53,7 +58,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'DCKKFB,LSXDBG'}
   - name: txt_area
-    properties: {font: Verdana}
+    properties: {font: Verdana, enabled: false}
     type: TextBox
     layout_properties: {grid_position: 'DCKKFB,UKLXAE'}
   - name: label_4
@@ -61,7 +66,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'DCKKFB,EPOKOL'}
   - name: txt_date
-    properties: {font: Verdana}
+    properties: {font: Verdana, enabled: false}
     type: TextBox
     layout_properties: {grid_position: 'DCKKFB,RJTVZT'}
   - name: label_5
@@ -69,7 +74,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'KWHXZQ,HSNBKL'}
   - name: txt_desc
-    properties: {height: 234.2109375, font: Verdana}
+    properties: {height: 234.2109375, font: Verdana, visible: true}
     type: TextArea
     layout_properties: {grid_position: 'UDZDJU,YGCWRZ'}
   - name: btn_approve
@@ -96,12 +101,13 @@ components:
       properties: {text: Remarks, font: Verdana}
       type: Label
       layout_properties: {grid_position: 'JSZFYE,KAEWKN'}
-    - name: text_area_2
+    - name: txt_remarks
       properties: {height: 135.99609375}
       type: TextArea
       layout_properties: {grid_position: 'UVDGPN,GNGGNP'}
-    - name: button_3
+    - name: btn_save
       properties: {text: SAVE, icon: 'fa:save', role: secondary-color, align: right, font: Verdana, bold: true}
       type: Button
       layout_properties: {grid_position: 'WXRAHM,BDJIDS'}
+      event_bindings: {click: btn_save_click}
 is_package: true

@@ -59,7 +59,7 @@ components:
     layout_properties: {grid_position: 'MJKKXC,DVDPAO QTIITJ,IKVLRU'}
     event_bindings: {click: btn_submit_click}
   - name: btn_cancel
-    properties: {text: Cancel, align: left, icon: 'fa:close', role: secondary-color, font: Verdana, bold: true}
+    properties: {text: Close, align: left, icon: 'fa:close', role: secondary-color, font: Verdana, bold: true}
     type: Button
     layout_properties: {grid_position: 'MJKKXC,DVDPAO QTIITJ,RHGJCP'}
     event_bindings: {click: btn_cancel_click}
