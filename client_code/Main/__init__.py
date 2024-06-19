@@ -32,6 +32,29 @@ class Main(MainTemplate):
         self.btn_viewRequest.visible = False
       else:
         alert('You dont have the prreviledge to access the page')
+        
+    self.total_repair_approval()
+    self.total_vehicle()
+    
+  def total_repair_approval(self, **event_args):
+    results = app_tables.repairapproval.search(status="Requested")
+    count = 0
+    for record in results:
+        count += 1  # Increment count for each record found    
+    self.txt_count_repair.text = str(count)  # Convert count to string for assignment
+
+  def total_vehicle(self, **event_args):
+    results = app_tables.vehicles.search(status="Active")
+    count = 0
+    for record in results:
+      count += 1
+    self.txt_total_vehicle.text = str(count)
+
+      
+      
+    
+
+  
   
    
       
@@ -62,3 +85,6 @@ class Main(MainTemplate):
 
   def btn_request_repair_click(self, **event_args):
     open_form('Main.AreaRequestRepair')
+
+  def btn_view_repair_click(self, **event_args):
+    open_form('Main.RepairApproval')
