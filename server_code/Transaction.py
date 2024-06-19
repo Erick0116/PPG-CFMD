@@ -79,6 +79,16 @@ def update_trans_veh_status(plate_no, area):
   else:
     return False
 
+@anvil.server.callable
+def update_repair_status(plate_no):
+  record = app_tables.repairapproval.get(plate_no=plate_no)
+  if record is not None:
+    record['status'] = "Approve"
+    record.update()
+    return True
+  else:
+    return False
+
 
 
   

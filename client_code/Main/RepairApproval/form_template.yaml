@@ -72,10 +72,11 @@ components:
     properties: {height: 234.2109375, font: Verdana}
     type: TextArea
     layout_properties: {grid_position: 'UDZDJU,YGCWRZ'}
-  - name: button_1
+  - name: btn_approve
     properties: {text: AppRove, font: Verdana, bold: true, icon: 'fa:check', role: secondary-color, align: right}
     type: Button
     layout_properties: {grid_position: 'NMIREE,DIGOON'}
+    event_bindings: {click: btn_approve_click}
   - name: btn_disapprove
     properties: {text: disapprove, role: secondary-color, font: Verdana, bold: true, icon: 'fa:window-close', align: left}
     type: Button

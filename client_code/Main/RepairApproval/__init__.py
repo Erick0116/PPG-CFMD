@@ -43,4 +43,13 @@ class RepairApproval(RepairApprovalTemplate):
   def btn_disapprove_click(self, **event_args):
     #self.toggle_expand()
     self.toggle_expand()  
+
+  def btn_approve_click(self, **event_args):
+    plate_no = self.txt_plateno.text
+    record = anvil.server.call('update_repair_status', plate_no)
+    if record:
+      alert(f'{plate_no} repair request has been approve succesfully!')
+      self.rp_repair.items  = anvil.server.call('repair_populate')
+    else:
+      alert('Approval Failed!')
     
