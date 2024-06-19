@@ -26,5 +26,8 @@ class AreaRequestRepair(AreaRequestRepairTemplate):
       alert(f"Your request for {plate_no} has been successfully submitted. Please wait for approval from the approver. You can check the request status for updates on approval.")
     else:
       alert("The submission of your request failed. Please try again")
+
+  def btn_cancel_click(self, **event_args):
+    open_form('Main')
     
     
