@@ -1,9 +1,9 @@
 container: {type: ColumnPanel}
 components:
 - name: card_1
-  properties: {role: card, col_widths: '{"NEZAGD":34,"EFWVNA":6,"PERHGF":9,"YCCYZI":5,"UIZNWJ":21,"BJKPWU":20,"UCDAJU":40,"LUYQRV":10,"LZNPDK":15,"RDULAS":10,"EZUXIO":10,"RLXDQO":10,"OKGCOW":50,"AWPUFU":8,"SUQQPE":7,"CEXAAK":10,"WDUWNP":50,"GYLIIL":45,"JNYTTF":15,"JIWHYJ":30,"QMTETM":10,"VOORGN":40,"XVADCW":20}', background: 'theme:Gray 100'}
+  properties: {role: card, col_widths: '{"NEZAGD":34,"EFWVNA":6,"PERHGF":9,"YCCYZI":5,"UIZNWJ":21,"BJKPWU":20,"UCDAJU":40,"LUYQRV":10,"LZNPDK":15,"RDULAS":10,"EZUXIO":10,"RLXDQO":10,"OKGCOW":50,"AWPUFU":8,"SUQQPE":7,"CEXAAK":10,"WDUWNP":50,"GYLIIL":45,"JNYTTF":15,"KWKENX":10,"JPGSDJ":50,"SQZRGC":50,"CHKXQP":10,"QQTYHD":50,"KSXUKJ":10,"TWGMGU":50,"UWYZPB":10}', background: 'theme:Gray 100'}
   type: ColumnPanel
-  layout_properties: {grid_position: 'LXYMYN,VMWOKB'}
+  layout_properties: {grid_position: 'OOALYN,MJGHPN'}
   components:
   - name: label_6
     properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:automobile', font: Verdana, foreground: 'theme:White', font_size: 15, text: REQUEST FOR REPAIR OF COMPANY VEHICLE}
@@ -140,107 +140,52 @@ components:
   - name: label_18
     properties: {text: Parts Name, align: center}
     type: Label
-    layout_properties: {grid_position: 'DMRHAJ,VOORGN'}
-  - name: label_19
-    properties: {text: Amount, align: center}
-    type: Label
-    layout_properties: {grid_position: 'DMRHAJ,XVADCW'}
+    layout_properties: {grid_position: 'XXCJAB,KWKENX'}
   - name: txt_item1
     properties: {font: Verdana}
     type: TextBox
-    layout_properties: {grid_position: 'JQNVZP,JIWHYJ XXCJAB,JPGSDJ'}
-  - name: txt_item2
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'JQNVZP,JIWHYJ UDQUOG,SOLGXC'}
-  - name: txt_item3
-    properties: {text: '', font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'JQNVZP,JIWHYJ CZGYFZ,HMLRPB'}
-  - name: txt_item4
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'JQNVZP,JIWHYJ UZWVTN,QZDAKD'}
-  - name: txt
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'JQNVZP,JIWHYJ EEJIOF,PVOLQW'}
-  - name: text_box_18
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'JQNVZP,JIWHYJ FWHXYH,KVEWIP'}
-  - name: text_box_22
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'JQNVZP,JIWHYJ ZBXQAC,VEDEPX'}
-  - name: text_box_24
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'JQNVZP,JIWHYJ JYOQBL,UAGURM'}
-  - name: text_box_26
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'JQNVZP,JIWHYJ XCVJMU,CWNEPM'}
-  - name: text_box_28
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'JQNVZP,JIWHYJ ZKDWMG,DAWUXK'}
-  - name: label_20
-    properties: {text: TOTAL AMOUNT OF PARTS, bold: true, align: right, font: Verdana}
+    layout_properties: {grid_position: 'XXCJAB,JPGSDJ'}
+  - name: label_19
+    properties: {text: Amount, align: right}
     type: Label
-    layout_properties: {grid_position: 'JQNVZP,JIWHYJ HHUEYP,QQTYHD'}
-  - name: label_21
-    properties: {text: TOTAL LABOR & PARTS, align: right, bold: true, font: Verdana}
-    type: Label
-    layout_properties: {grid_position: 'JQNVZP,JIWHYJ JCSVDY,TWGMGU'}
+    layout_properties: {grid_position: 'WHTOIE,SQZRGC'}
   - name: txt_amount1
     properties: {font: Verdana}
     type: TextBox
-    layout_properties: {grid_position: 'JQNVZP,QMTETM VHPYIA,ZSFUQQ'}
-  - name: txt_amount2
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'JQNVZP,QMTETM JPBIMW,RUVDHW'}
-  - name: txt_amount3
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'JQNVZP,QMTETM HDSVZQ,SECHBC'}
-  - name: txt_amount4
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'JQNVZP,QMTETM YMYVEM,NESCLO'}
-  - name: text_box_17
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'JQNVZP,QMTETM YWYBBJ,FGTVIW'}
-  - name: text_box_19
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'JQNVZP,QMTETM FNZQIV,NKAQTJ'}
-  - name: text_box_23
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'JQNVZP,QMTETM PHVGID,TRWTAY'}
-  - name: text_box_25
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'JQNVZP,QMTETM MJCVZQ,TQOJVS'}
-  - name: text_box_20
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'JQNVZP,QMTETM AATVYO,ISQMYG'}
-  - name: text_box_27
-    properties: {font: Verdana}
-    type: TextBox
-    layout_properties: {grid_position: 'JQNVZP,QMTETM VALXJD,HLOXNS'}
+    layout_properties: {grid_position: 'WHTOIE,CHKXQP BCNNXW,SEHWTX'}
+  - name: button_1
+    properties: {text: Add, role: primary-color, icon: 'fa:plus', font: Verdana, bold: true, font_size: 10, align: right}
+    type: Button
+    layout_properties: {grid_position: 'WHTOIE,CHKXQP SJPIAZ,TRHJGQ'}
+  - name: data_grid_1
+    properties:
+      columns:
+      - {id: VJQQOR, title: Parts Name, data_key: column_2}
+      - {id: OJLQEN, title: Amount, data_key: column_3}
+      auto_header: true
+      show_page_controls: false
+    type: DataGrid
+    components:
+    - name: repeating_panel_1
+      properties: {item_template: Main.AreaRequestRepair.RowTemplate9}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'AZUBTD,BIASGV'}
+  - name: label_20
+    properties: {text: TOTAL AMOUNT OF PARTS, bold: true, align: right, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'HHUEYP,QQTYHD'}
   - name: text_box_29
     properties: {font: Verdana}
     type: TextBox
-    layout_properties: {grid_position: 'JQNVZP,QMTETM OEKOCA,ELGMTC'}
+    layout_properties: {grid_position: 'HHUEYP,KSXUKJ'}
+  - name: label_21
+    properties: {text: TOTAL LABOR & PARTS, align: right, bold: true, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'JCSVDY,TWGMGU'}
   - name: text_box_21
     properties: {font: Verdana}
     type: TextBox
-    layout_properties: {grid_position: 'JQNVZP,QMTETM KETFUR,ZQAWHI'}
+    layout_properties: {grid_position: 'JCSVDY,UWYZPB'}
   - name: btn_cancel
     properties: {text: Close, align: right, icon: 'fa:close', role: secondary-color, font: Verdana, bold: true}
     type: Button

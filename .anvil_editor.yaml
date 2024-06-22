@@ -8,12 +8,14 @@ unique_ids:
     Main.ViewRequest.RowTemplate7: '1718709965765943776698217.6844'
     Main.VehicleList.RowTemplate1: '1717678753609822001368303.6414'
     Main.VehicleList.RowTemplate4: '1718374915853589848497234.5675'
+    Main.AreaRequestRepair.RowTemplate8: '1719022895880761028192530.8899'
     Main.RepairApproval: '1718548957889322233197518.5793'
     Main.AreaRequestRepair: '1718541863903576941182581.6841'
     Main.AreaRequestRepair.RowTemplate5: '1718542193619663114742008.2744'
     Main.RegisterVehicle: '1717592262910827305254866.9521'
     Main.RepairApproval.RowTemplate6: '1718550048923614369033126.1853'
     Main.VehicleList.RowTemplate3: '1718374286904443988567010.3352'
+    Main.AreaRequestRepair.RowTemplate9: '1719023082232317454241089.02954'
     Main.TransferVehicle: '1718201820618646691377789.4016'
   modules: {}
   server_modules:
