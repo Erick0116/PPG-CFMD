@@ -32,9 +32,17 @@ class Main(MainTemplate):
         self.btn_viewRequest.visible = False
       else:
         alert('You dont have the prreviledge to access the page')
-        
+    self.check_user()    
     self.total_repair_approval()
     self.total_vehicle()
+
+  def check_user(self):
+    userlogin = anvil.users.get_user()
+    if userlogin:
+     # self.txt_user.text = userlogin['email']  # Display user's email (or username, if applicable)
+      self.user_login.text = userlogin['email']
+    else:
+      self.txt_user.text = "Not logged in"  # Handle case where no user is logged in
     
   def total_repair_approval(self, **event_args):
     results = app_tables.repairapproval.search(status="Requested")

@@ -44,19 +44,44 @@ def add_insurance(plate_no, insurance_type, insurance_name, premium, coverage, e
   )
 
 @anvil.server.callable
-def request_repair(plate_no, name, area, date, descrription):
+def request_repair(requesting_area, make, type, model, date, plate_no, mileage, explanation, shop_name, address, contact_person, contact_no, due_date, scope, labor_amount):
   send_request = app_tables.repairapproval.add_row(
+    requesting_area=requesting_area,
+    make=make,
+    type=type,
+    model=model,
     plate_no=plate_no,
-    name=name,
-    area=area,
-    date=date,
-    description=descrription,
+    mileage=mileage,
+    explanation=explanation,
+    shop_name=shop_name,
+    address=address,
+    contact_person=contact_person,
+    contact_no=contact_no,
+    due_date=due_date,
+    scope=scope,
+    labor_amount=labor_amount,
     status="Requested"
   )
   if send_request:
     return True
   else: 
     return False
+
+@anvil.server.callable
+def add_parts_item(id, plate_no, item, amount, date):
+  part_items = app_tables.partsitem.add_row(
+    id=id,
+    plate_no=plate_no,
+    item=item,
+    amount=amount,
+    date=date,
+    status='Requested'
+  )
+  if part_items:
+    return True
+  else:
+    return False
+  
 
 @anvil.server.callable
 def record_vechicle_history(plate_no, reason, status, area, date):
@@ -104,6 +129,11 @@ def disapprove_repair(plateno, remarks):
 def get_area():
   area_name = [area['area_name']for area in app_tables.area.search()]
   return area_name
+
+@anvil.server.callable
+def get_plateno(area):
+  plate_no = [plateno['plate_no']for plateno in app_tables.vehicles.search(area_assigned=area)]
+  return plate_no
 
 
 

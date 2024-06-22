@@ -29,7 +29,7 @@ components:
     properties: {text: Model, font: Verdana}
     type: Label
     layout_properties: {grid_position: 'LVLWXA,NEZAGD TUYFKY,YCCYZI BXNRNM,KRRVFX'}
-  - name: txt_name
+  - name: txt_make
     properties: {font: Verdana, font_size: null}
     type: TextBox
     layout_properties: {grid_position: 'LVLWXA,NEZAGD TUYFKY,UIZNWJ TZKZYT,FAZMLP'}
@@ -53,10 +53,11 @@ components:
     properties: {text: Present Mileage, font: Verdana, align: right}
     type: Label
     layout_properties: {grid_position: 'LVLWXA,EFWVNA CSJZML,PHGQQC'}
-  - name: txt_plateno
-    properties: {font: Verdana, font_size: null}
-    type: TextBox
-    layout_properties: {grid_position: 'LVLWXA,PERHGF AFYWIG,HTHKFB'}
+  - name: dp_plateno
+    properties: {}
+    type: DropDown
+    layout_properties: {grid_position: 'LVLWXA,PERHGF TGJYVI,AEZUJX'}
+    event_bindings: {change: dp_plateno_change}
   - name: dp_date
     properties: {font: Verdana, font_size: null}
     type: DatePicker
@@ -69,7 +70,7 @@ components:
     properties: {text: Area Recommendation / Explanation, font: Verdana, font_size: null}
     type: Label
     layout_properties: {grid_position: 'LYNCOB,QCCOSX'}
-  - name: txt_explaination
+  - name: txt_explanation
     properties: {height: 211.01953125, font: Verdana, font_size: null}
     type: TextArea
     layout_properties: {grid_position: 'BWINZH,FJFTUJ'}
@@ -81,7 +82,7 @@ components:
     properties: {text: Name of Shop, font: Verdana}
     type: Label
     layout_properties: {grid_position: 'DNRLZC,RLXDQO'}
-  - name: text_box_3
+  - name: txt_shopname
     properties: {font: Verdana}
     type: TextBox
     layout_properties: {grid_position: 'DNRLZC,OKGCOW'}
@@ -89,7 +90,7 @@ components:
     properties: {text: Address, font: Verdana}
     type: Label
     layout_properties: {grid_position: 'DFQZVR,CEXAAK'}
-  - name: text_box_4
+  - name: txt_address
     properties: {font: Verdana}
     type: TextBox
     layout_properties: {grid_position: 'DFQZVR,WDUWNP'}
@@ -97,7 +98,7 @@ components:
     properties: {text: Contact Person, font: Verdana}
     type: Label
     layout_properties: {grid_position: 'ONQVBP,LUYQRV'}
-  - name: text_box_5
+  - name: txt_contactP
     properties: {font: Verdana}
     type: TextBox
     layout_properties: {grid_position: 'ONQVBP,LZNPDK'}
@@ -105,7 +106,7 @@ components:
     properties: {text: Contact No., font: Verdana}
     type: Label
     layout_properties: {grid_position: 'ONQVBP,RDULAS'}
-  - name: text_box_6
+  - name: txt_contactNo
     properties: {font: Verdana}
     type: TextBox
     layout_properties: {grid_position: 'ONQVBP,EZUXIO'}
@@ -113,7 +114,7 @@ components:
     properties: {text: Job Due on, font: Verdana}
     type: Label
     layout_properties: {grid_position: 'ONQVBP,AWPUFU'}
-  - name: date_picker_1
+  - name: dp_due
     properties: {font: Verdana}
     type: DatePicker
     layout_properties: {grid_position: 'ONQVBP,SUQQPE'}
@@ -121,7 +122,7 @@ components:
     properties: {text: Job Order / Scope of Work, font: Verdana}
     type: Label
     layout_properties: {grid_position: 'JNKKOQ,RJVWOK'}
-  - name: text_area_1
+  - name: txt_scope
     properties: {height: 252.60546875, font: Verdana}
     type: TextArea
     layout_properties: {grid_position: 'ZADUDV,BRBRXQ'}
@@ -129,7 +130,7 @@ components:
     properties: {text: Total Amount, align: right, font: Verdana}
     type: Label
     layout_properties: {grid_position: 'BMUVDR,GYLIIL'}
-  - name: text_box_7
+  - name: txt_amountlabor
     properties: {font: Verdana}
     type: TextBox
     layout_properties: {grid_position: 'BMUVDR,JNYTTF'}
@@ -141,7 +142,7 @@ components:
     properties: {text: Parts Name, align: center}
     type: Label
     layout_properties: {grid_position: 'XXCJAB,KWKENX'}
-  - name: txt_item1
+  - name: txt_item
     properties: {font: Verdana}
     type: TextBox
     layout_properties: {grid_position: 'XXCJAB,JPGSDJ'}
@@ -149,50 +150,58 @@ components:
     properties: {text: Amount, align: right}
     type: Label
     layout_properties: {grid_position: 'WHTOIE,SQZRGC'}
-  - name: txt_amount1
+  - name: txt_amount
     properties: {font: Verdana}
     type: TextBox
     layout_properties: {grid_position: 'WHTOIE,CHKXQP BCNNXW,SEHWTX'}
-  - name: button_1
+  - name: btn_add_items
     properties: {text: Add, role: primary-color, icon: 'fa:plus', font: Verdana, bold: true, font_size: 10, align: right}
     type: Button
     layout_properties: {grid_position: 'WHTOIE,CHKXQP SJPIAZ,TRHJGQ'}
-  - name: data_grid_1
-    properties:
-      columns:
-      - {id: VJQQOR, title: Parts Name, data_key: column_2}
-      - {id: OJLQEN, title: Amount, data_key: column_3}
-      auto_header: true
-      show_page_controls: false
-    type: DataGrid
+    event_bindings: {click: btn_add_items_click}
+  - name: card_2
+    properties: {role: card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'IOBHXE,ITAXYJ'}
     components:
-    - name: repeating_panel_1
-      properties: {item_template: Main.AreaRequestRepair.RowTemplate9}
-      type: RepeatingPanel
-    layout_properties: {grid_position: 'AZUBTD,BIASGV'}
+    - name: data_grid_1
+      properties:
+        columns:
+        - {id: VJQQOR, title: ID, data_key: id}
+        - {id: OJLQEN, title: Parts Name, data_key: item}
+        - {id: NQNSNJ, data_key: amount, title: Amount}
+        auto_header: true
+        show_page_controls: false
+      type: DataGrid
+      components:
+      - name: rp_parts
+        properties: {item_template: Main.AreaRequestRepair.RowTemplate9}
+        type: RepeatingPanel
+      layout_properties: {grid_position: 'DVKYBK,XFWWZU'}
   - name: label_20
     properties: {text: TOTAL AMOUNT OF PARTS, bold: true, align: right, font: Verdana}
     type: Label
     layout_properties: {grid_position: 'HHUEYP,QQTYHD'}
-  - name: text_box_29
+  - name: txt_amountParts
     properties: {font: Verdana}
     type: TextBox
     layout_properties: {grid_position: 'HHUEYP,KSXUKJ'}
+    event_bindings: {pressed_enter: txt_amountParts_pressed_enter}
   - name: label_21
     properties: {text: TOTAL LABOR & PARTS, align: right, bold: true, font: Verdana}
     type: Label
     layout_properties: {grid_position: 'JCSVDY,TWGMGU'}
-  - name: text_box_21
+  - name: txt_overalltotal
     properties: {font: Verdana}
     type: TextBox
     layout_properties: {grid_position: 'JCSVDY,UWYZPB'}
-  - name: btn_cancel
-    properties: {text: Close, align: right, icon: 'fa:close', role: secondary-color, font: Verdana, bold: true}
+  - name: btn_validation
+    properties: {text: Validation, align: full, icon: 'fa:check', role: secondary-color, font: Verdana, bold: true, background: 'theme:Gray 600'}
     type: Button
-    layout_properties: {grid_position: 'BTGVQZ,EKKKTV'}
-    event_bindings: {click: btn_cancel_click}
+    layout_properties: {grid_position: 'IMYGFO,BNIVUA', full_width_row: false}
+    event_bindings: {click: btn_validation_click}
   - name: btn_submit
-    properties: {text: SUBMIT, role: secondary-color, icon: 'fa:send', align: left, font: Verdana, bold: true}
+    properties: {text: SUBMIT, role: secondary-color, icon: 'fa:send', align: full, font: Verdana, bold: true}
     type: Button
     layout_properties: {grid_position: 'BTGVQZ,AYHVMX'}
     event_bindings: {click: btn_submit_click}
