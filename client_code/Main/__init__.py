@@ -9,8 +9,6 @@ from  .RegisterVehicle import RegisterVehicle
 from .VehicleList import VehicleList
 from .TransferVehicle import TransferVehicle
 
-
-
 class Main(MainTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
@@ -96,3 +94,7 @@ class Main(MainTemplate):
 
   def btn_view_repair_click(self, **event_args):
     open_form('Main.RepairApproval')
+
+  def login_click(self, **event_args):
+    anvil.users.logout()
+    open_form('Main')

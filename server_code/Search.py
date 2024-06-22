@@ -46,7 +46,7 @@ def get_next_id():
 
 @anvil.server.callable
 def parts_item_populate(plate_no, date):
-  return app_tables.partsitem.search(plate_no=plate_no, date=date)
+  return app_tables.partsitem.search(plate_no=plate_no, date=date, status='Requested')
 
 @anvil.server.callable
 def history_populate():

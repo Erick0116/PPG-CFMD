@@ -122,7 +122,7 @@ class AreaRequestRepair(AreaRequestRepairTemplate):
     plate_no = self.dp_plateno.selected_value
     parts_item = anvil.server.call('add_parts_item', next_id_no, plate_no, item, amount, date)
     if parts_item:
-      self.rp_parts.items = anvil.server.call('parts_item_populate', plate_no, date, status='Requested')
+      self.rp_parts.items = anvil.server.call('parts_item_populate', plate_no, date)
     else:
       alert('Failed to add Please check the Plate No and Date is empty!')
 
