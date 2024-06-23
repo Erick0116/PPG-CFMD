@@ -182,9 +182,8 @@ components:
   - name: data_grid_2
     properties:
       columns:
-      - {id: JKSDUP, title: Parts Name, data_key: column_1}
-      - {id: VJQQOR, title: Amount, data_key: column_2}
-      - {id: OJLQEN, title: Status, data_key: column_3}
+      - {id: JKSDUP, title: Parts Name, data_key: item}
+      - {id: VJQQOR, title: Amount, data_key: amount}
     type: DataGrid
     components:
     - name: rp_parts

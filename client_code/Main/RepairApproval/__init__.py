@@ -5,6 +5,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from datetime import datetime
 
 
 class RepairApproval(RepairApprovalTemplate):
@@ -14,6 +15,7 @@ class RepairApproval(RepairApprovalTemplate):
     self.rp_repair.items  = anvil.server.call('repair_populate')
     self.expanded  = False
     self.exapand_panel.visible = False
+ #   self.txt_plateno.set_event_handler("pressed_enter", self.txt_plateno_pressed_enter)
 
   def toggle_expand(self, **event_args):
     if not self.expanded:
@@ -56,6 +58,9 @@ class RepairApproval(RepairApprovalTemplate):
 
   def btn_search_click(self, **event_args):
     search_plateno =  self.txt_search.text
+    date_str = self.txt_date.text
+   
+   # date_obj = datetime.strptime(date_str, '%Y-%m-%d').date()
     repair_details = app_tables.repairapproval.search(plate_no=search_plateno)
     try:
       if repair_details:
@@ -75,6 +80,7 @@ class RepairApproval(RepairApprovalTemplate):
         self.txt_amountlabor.text = repair_details[0]['labor_amount']
         self.txt_amountParts.text = repair_details[0]['total_parts']
         self.txt_overalltotal.text = repair_details[0]['overall_total']
+        self.rp_parts.items = app_tables.partsitem.search(plate_no=search_plateno)
       else:
         alert('Plate number not found')
     except IndexError:

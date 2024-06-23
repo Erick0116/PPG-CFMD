@@ -59,7 +59,7 @@ def history_populate():
 
 @anvil.server.callable
 def repair_populate():
-  return app_tables.repairapproval.search(status="Requested")
+  return app_tables.repairapproval.search()
 
 @anvil.server.callable
 def user_account():

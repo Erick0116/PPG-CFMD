@@ -39,10 +39,6 @@ components:
       properties: {text: TOTAL ACTIVE VEHICLES, icon: '', font: Verdana, font_size: null, bold: true, align: left, spacing_above: none, spacing_below: none}
       type: Label
       layout_properties: {grid_position: 'KMKUEM,FWXVTX'}
-    - name: button_1
-      properties: {role: primary-color, bold: true, align: full, spacing_above: none, background: 'theme:Gray 600', font: Verdana, spacing_below: none, font_size: 8, text: View}
-      type: Button
-      layout_properties: {grid_position: 'WHSUSY,AZPDCM'}
   - name: card_total_sold
     properties: {role: card, background: 'theme:Gray 100'}
     type: ColumnPanel
@@ -56,10 +52,6 @@ components:
       properties: {text: TOTAL SOLD VEHICLES, font: Verdana, bold: true, spacing_above: none, spacing_below: none}
       type: Label
       layout_properties: {grid_position: 'PJRWKR,ATFPQB'}
-    - name: button_2
-      properties: {bold: true, align: full, spacing_above: none, background: 'theme:Gray 600', font: Verdana, foreground: 'theme:White', spacing_below: none, font_size: 8, text: VIEW}
-      type: Button
-      layout_properties: {grid_position: 'CBZPSL,CYWMLH'}
   - name: card_2
     properties: {role: card}
     type: ColumnPanel

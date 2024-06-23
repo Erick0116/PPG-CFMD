@@ -6,12 +6,12 @@ components:
   layout_properties: {grid_position: 'WSRJBB,THREYN'}
   components:
   - name: card_2
-    properties: {role: card, col_widths: '{"OUDKHQ":30,"LTJCAN":10,"KUOYXH":20,"PLRSQQ":15}', background: '#006400'}
+    properties: {role: card, col_widths: '{"OUDKHQ":35,"KUOYXH":20,"PLRSQQ":15,"WMAHNL":10}', background: '#006400', spacing_above: none, spacing_below: none}
     type: ColumnPanel
     layout_properties: {grid_position: 'BLTTOX,NWQINF'}
     components:
     - name: btn_home
-      properties: {text: Home, icon: 'fa:home', role: secondary-color, font: Verdana, bold: true, background: 'theme:Gray 600'}
+      properties: {text: Home, icon: 'fa:home', role: secondary-color, font: Verdana, bold: true, background: 'theme:Gray 600', align: left}
       type: Button
       layout_properties: {grid_position: 'YVVPOZ,PLRSQQ'}
       event_bindings: {click: btn_home_click}
@@ -19,14 +19,14 @@ components:
       properties: {text: Plate No., font: Verdana, align: right, bold: true, foreground: 'theme:White'}
       type: Label
       layout_properties: {grid_position: 'YVVPOZ,OUDKHQ'}
-    - name: txt_searchplateno
-      properties: {font: Verdana, foreground: '', background: 'theme:White'}
-      type: TextBox
-      layout_properties: {grid_position: 'YVVPOZ,LTJCAN'}
+    - name: dp_plateno
+      properties: {background: 'theme:White', spacing_above: small, spacing_below: small}
+      type: DropDown
+      layout_properties: {grid_position: 'YVVPOZ,WMAHNL'}
     - name: btn_view
-      properties: {text: ViEW DETAILS, font: Verdana, icon: 'fa:search', role: secondary-color, bold: true, background: 'theme:Gray 600'}
+      properties: {text: ViEW DETAILS, font: Verdana, icon: 'fa:search', role: secondary-color, bold: true, background: 'theme:Gray 600', align: right}
       type: Button
-      layout_properties: {grid_position: 'YVVPOZ,KUOYXH'}
+      layout_properties: {grid_position: 'YVVPOZ,KUOYXH', full_width_row: true}
       event_bindings: {click: btn_view_click}
   - name: data_grid_1
     properties:
@@ -46,50 +46,169 @@ components:
   layout_properties: {grid_position: 'WSJHWU,EAERGW'}
   components:
   - name: card_3
-    properties: {role: card, col_widths: '{"DFLLWD":15,"LHOLTW":15,"YBIOEN":15,"BYCFGM":15}', background: 'theme:Gray 50'}
+    properties: {role: card, col_widths: '{"DFLLWD":20,"LHOLTW":12,"CUVMQF":25,"ERUYAO":35,"CGEZPX":25,"FBFARL":35,"YBNCZE":25,"OKIKZW":35,"HUUFBQ":50,"HDODDD":10,"FNGZRK":50,"CZLIFQ":10,"FEBJTK":10,"KQBGKK":50,"OHDMXU":10,"IQZRPI":15,"CIFRPP":5,"UOAZVS":15,"IIYJYQ":5,"UFQJAF":10}', background: 'theme:Gray 50'}
     type: ColumnPanel
-    layout_properties: {grid_position: 'EHSRTN,XANJZE'}
+    layout_properties: {grid_position: 'ZGJGCA,DDESFJ'}
     components:
+    - name: label_10
+      properties: {text: REQUEST FOR REPAIR OF COMPANY VEHICLE, role: text, icon: 'fa:car', font: Verdana, bold: true, align: center, background: '#006400', foreground: 'theme:White'}
+      type: Label
+      layout_properties: {grid_position: 'RYVBUA,FFCWXC', full_width_row: true}
     - name: label_2
-      properties: {text: Plate No, font: Verdana}
+      properties: {text: Requesting Branch Area, font: Verdana}
       type: Label
       layout_properties: {grid_position: 'AOOBOC,DFLLWD LZBDGC,CUVMQF'}
-    - name: label_4
-      properties: {text: Area, font: Verdana}
-      type: Label
-      layout_properties: {grid_position: 'AOOBOC,DFLLWD NFADWQ,RKEOBY'}
-    - name: label_6
-      properties: {text: Description, font: Verdana}
-      type: Label
-      layout_properties: {grid_position: 'AOOBOC,DFLLWD BAYJJC,JFOLWP'}
-    - name: txt_platenno
-      properties: {font: Verdana, enabled: false}
-      type: TextBox
-      layout_properties: {grid_position: 'AOOBOC,LHOLTW CDLOTA,MNFYSP'}
     - name: txt_area
       properties: {font: Verdana, enabled: false}
       type: TextBox
-      layout_properties: {grid_position: 'AOOBOC,LHOLTW LFCYZR,LXPLVR'}
+      layout_properties: {grid_position: 'AOOBOC,DFLLWD LZBDGC,ERUYAO'}
     - name: label_3
-      properties: {text: Name, font: Verdana}
+      properties: {text: Make, font: Verdana}
       type: Label
-      layout_properties: {grid_position: 'AOOBOC,YBIOEN YDBWSL,YNPHTM'}
+      layout_properties: {grid_position: 'AOOBOC,DFLLWD KCPSNX,CGEZPX'}
+    - name: txt_make
+      properties: {font: Verdana, enabled: false}
+      type: TextBox
+      layout_properties: {grid_position: 'AOOBOC,DFLLWD KCPSNX,FBFARL'}
+    - name: label_7
+      properties: {text: Type}
+      type: Label
+      layout_properties: {grid_position: 'AOOBOC,DFLLWD UHQAKO,YBNCZE CWWKNS,BFVFHJ'}
+    - name: label_8
+      properties: {text: Model}
+      type: Label
+      layout_properties: {grid_position: 'AOOBOC,DFLLWD UHQAKO,YBNCZE ORASOV,DIUYWY'}
+    - name: txt_type
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'AOOBOC,DFLLWD UHQAKO,OKIKZW CIWKSS,JOUSPV'}
+    - name: txt_model
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'AOOBOC,DFLLWD UHQAKO,OKIKZW WYZQRU,WVDBUF'}
+    - name: label_6
+      properties: {text: Area Recommendation / Explanation, font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'AOOBOC,DFLLWD BAYJJC,JFOLWP'}
+    - name: label_4
+      properties: {text: Plate No., font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'AOOBOC,LHOLTW CDLOTA,BMLVRA ALQZYO,JDVQZG'}
     - name: label_5
       properties: {text: Date, font: Verdana}
       type: Label
-      layout_properties: {grid_position: 'AOOBOC,YBIOEN YQURMZ,CCDBRB'}
-    - name: txt_name
+      layout_properties: {grid_position: 'AOOBOC,LHOLTW CDLOTA,BMLVRA DNMOKI,VSMMZO'}
+    - name: label_9
+      properties: {text: Present Mileage}
+      type: Label
+      layout_properties: {grid_position: 'AOOBOC,LHOLTW CDLOTA,BMLVRA UUVOIB,CLPKMA'}
+    - name: txt_platenno
       properties: {font: Verdana, enabled: false}
       type: TextBox
-      layout_properties: {grid_position: 'AOOBOC,BYCFGM IUITVH,XWNMPF'}
+      layout_properties: {grid_position: 'AOOBOC,LHOLTW CDLOTA,TUOIWP FXKTCK,ROVJVM'}
     - name: txt_date
       properties: {font: Verdana, enabled: false}
       type: TextBox
-      layout_properties: {grid_position: 'AOOBOC,BYCFGM RAJCTD,AQCPUY'}
-    - name: txt_desc
-      properties: {height: 127.546875, font: Verdana, visible: true, enabled: false}
+      layout_properties: {grid_position: 'AOOBOC,LHOLTW CDLOTA,TUOIWP VHWHKB,PVYHHH'}
+    - name: txt_mileage
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'AOOBOC,LHOLTW CDLOTA,TUOIWP WLAZIF,ACMFFS'}
+    - name: txt_explanation
+      properties: {height: 184.65625, font: Verdana, visible: true, enabled: false}
       type: TextArea
       layout_properties: {grid_position: 'KVLOJQ,ODFEJZ'}
+    - name: label_11
+      properties: {text: VEHICLE REPAIR ESTIMATE, role: text, icon: 'fa:car', font: Verdana, bold: true, background: '#006400', foreground: 'theme:White', align: center}
+      type: Label
+      layout_properties: {grid_position: 'UNCEHH,YDGBUU', full_width_row: true}
+    - name: label_12
+      properties: {text: Name of Shop}
+      type: Label
+      layout_properties: {grid_position: 'CPUQMO,FEBJTK JDTQSE,VWENGJ'}
+    - name: label_13
+      properties: {text: Address}
+      type: Label
+      layout_properties: {grid_position: 'CPUQMO,FEBJTK HJXBRH,ZOJIOR'}
+    - name: txt_shopname
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'CPUQMO,KQBGKK KCKFXG,YKQJVD'}
+    - name: txt_address
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'CPUQMO,KQBGKK TJRQVM,ONEAKK'}
+    - name: label_14
+      properties: {text: Contact Person}
+      type: Label
+      layout_properties: {grid_position: 'JFAYBW,OHDMXU'}
+    - name: txt_contactP
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'JFAYBW,IQZRPI'}
+    - name: label_15
+      properties: {text: Contact No., align: right}
+      type: Label
+      layout_properties: {grid_position: 'JFAYBW,CIFRPP'}
+    - name: txt_contactNo
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'JFAYBW,UOAZVS'}
+    - name: label_16
+      properties: {text: Job Due on}
+      type: Label
+      layout_properties: {grid_position: 'JFAYBW,IIYJYQ'}
+    - name: txt_due
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'JFAYBW,UFQJAF'}
+    - name: label_17
+      properties: {text: Job Order / Scope of Work}
+      type: Label
+      layout_properties: {grid_position: 'RRTCCS,GZCCYY'}
+    - name: txt_scope
+      properties: {height: 191.58984375}
+      type: TextArea
+      layout_properties: {grid_position: 'AKURJZ,CEOJGW'}
+    - name: label_18
+      properties: {align: right, text: Total Labor Amount}
+      type: Label
+      layout_properties: {grid_position: 'TDTSDN,HUUFBQ'}
+    - name: txt_amountlabor
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'TDTSDN,HDODDD'}
+    - name: label_19
+      properties: {text: ESTIMATED PARTS, icon: 'fa:car', role: text, background: '#006400', foreground: 'theme:White', font: Verdana, bold: true, align: center}
+      type: Label
+      layout_properties: {grid_position: 'EDZBPK,IFUZJQ'}
+    - name: data_grid_2
+      properties:
+        columns:
+        - {id: JKSDUP, title: Parts Name, data_key: item, width: 778.75, expand: false}
+        - {id: VJQQOR, title: Amount, data_key: amount}
+      type: DataGrid
+      components:
+      - name: rp_partsitem
+        properties: {item_template: Main.ViewRequest.RowTemplate12}
+        type: RepeatingPanel
+      layout_properties: {grid_position: 'COLMNP,CMJRZT'}
+    - name: label_20
+      properties: {align: right, text: TOTAL AMOUNT OF PARTS}
+      type: Label
+      layout_properties: {grid_position: 'JZNTAI,FNGZRK OJQQNJ,IOSSGC'}
+    - name: label_21
+      properties: {align: right, text: TOTAL LABOR & PARTS}
+      type: Label
+      layout_properties: {grid_position: 'JZNTAI,FNGZRK YNDDLP,MZHGOF'}
+    - name: txt_amountParts
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'JZNTAI,CZLIFQ TFLFEL,SZGWYL'}
+    - name: txt_overalltotal
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'JZNTAI,CZLIFQ DXOEJJ,UFHCJC'}
 - name: item_template1_1
   properties: {}
   type: form:Main.ItemTemplate1
