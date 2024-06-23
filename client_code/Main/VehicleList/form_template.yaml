@@ -1,12 +1,12 @@
 container: {type: ColumnPanel}
 components:
 - name: card_1
-  properties: {role: card, col_widths: '{"JEQXOH":35,"NIHPFN":10,"OYNHCD":15,"GXDSBB":20,"HGVRDS":40}', background: 'theme:Gray 600'}
+  properties: {role: card, col_widths: '{"JEQXOH":35,"NIHPFN":10,"OYNHCD":15,"GXDSBB":20,"HGVRDS":40}', background: '#006400'}
   type: ColumnPanel
   layout_properties: {grid_position: 'SBGAQA,IPMLEE', full_width_row: false}
   components:
   - name: btn_home
-    properties: {text: HOME, role: secondary-color, font: Verdana, bold: true, icon: 'fa:home', align: left}
+    properties: {text: HOME, role: secondary-color, font: Verdana, bold: true, icon: 'fa:home', align: left, background: 'theme:Gray 600'}
     type: Button
     layout_properties: {grid_position: 'NEMEJZ,GXDSBB'}
     event_bindings: {click: btn_home_click}
@@ -19,7 +19,7 @@ components:
     type: TextBox
     layout_properties: {grid_position: 'NEMEJZ,HGVRDS WGUFTL,NIHPFN', full_width_row: true}
   - name: btn_search
-    properties: {text: SEARCH, align: left, font: Verdana, font_size: null, bold: true, role: secondary-color, icon: 'fa:search'}
+    properties: {text: SEARCH, align: left, font: Verdana, font_size: null, bold: true, role: secondary-color, icon: 'fa:search', background: 'theme:Gray 600'}
     type: Button
     layout_properties: {grid_position: 'NEMEJZ,HGVRDS WGUFTL,OYNHCD'}
     event_bindings: {click: btn_search_click}
@@ -47,7 +47,7 @@ components:
       type: RepeatingPanel
     layout_properties: {grid_position: 'BMCQLI,DIHAPS', full_width_row: false}
 - name: expand_button
-  properties: {text: Details, role: primary-color, background: 'theme:Gray 600', font: Verdana, bold: true, font_size: 15, align: full, icon: 'fa:info-circle'}
+  properties: {text: Details, role: primary-color, background: '#006400', font: Verdana, bold: true, font_size: 15, align: full, icon: 'fa:info-circle'}
   type: Button
   layout_properties: {grid_position: 'BSDGOW,RSPGOW'}
   event_bindings: {click: expand_button_click}
@@ -62,7 +62,7 @@ components:
     layout_properties: {grid_position: 'IQRGUP,KREXNX'}
     components:
     - name: label_24
-      properties: {text: VEHICLE DETAILS, role: text, icon: 'fa:car', background: 'theme:Gray 600', foreground: 'theme:White', font: Verdana, bold: true, align: center}
+      properties: {text: VEHICLE DETAILS, role: text, icon: 'fa:car', background: '#006400', foreground: 'theme:White', font: Verdana, bold: true, align: center}
       type: Label
       layout_properties: {grid_position: 'FRBMGZ,FPQQOI', full_width_row: true}
     - name: label_3
@@ -159,7 +159,7 @@ components:
     layout_properties: {grid_position: 'WHHSMW,CVGQLM'}
     components:
     - name: label_25
-      properties: {text: REGISTRATION DETAILS, role: text, icon: 'fa:car', background: 'theme:Gray 600', foreground: 'theme:White', font: Verdana, bold: true, align: center}
+      properties: {text: REGISTRATION DETAILS, role: text, icon: 'fa:car', background: '#006400', foreground: 'theme:White', font: Verdana, bold: true, align: center}
       type: Label
       layout_properties: {grid_position: 'TGJBUT,VLPXZV', full_width_row: true}
     - name: label_14
@@ -208,7 +208,7 @@ components:
     layout_properties: {grid_position: 'RVXRZM,AKUVCZ'}
     components:
     - name: label_26
-      properties: {text: INSURANCE DETAILS, icon: 'fa:car', role: text, font: Verdana, bold: true, background: 'theme:Gray 600', foreground: 'theme:White', align: center}
+      properties: {text: INSURANCE DETAILS, icon: 'fa:car', role: text, font: Verdana, bold: true, background: '#006400', foreground: 'theme:White', align: center}
       type: Label
       layout_properties: {grid_position: 'PRQGMV,WTZFVW', full_width_row: true}
     - name: label_2
@@ -260,7 +260,7 @@ components:
       type: TextArea
       layout_properties: {grid_position: 'EVUQXO,GSWLFO'}
     - name: btn_history
-      properties: {text: Transfer history, role: primary-color, icon: 'fa:history', font: Verdana, bold: true, align: left, font_size: 12}
+      properties: {text: Transfer history, role: primary-color, icon: 'fa:history', font: Verdana, bold: true, align: left, font_size: 12, background: 'theme:Gray 600'}
       type: Button
       layout_properties: {grid_position: 'LFMWZO,VRHLKS'}
       event_bindings: {click: btn_history_click}
@@ -288,7 +288,7 @@ components:
         type: RepeatingPanel
       layout_properties: {grid_position: 'JLQGKV,ZPHODW'}
     - name: btn_repair
-      properties: {text: Repair history, role: primary-color, icon: 'fa:gears', font: Verdana, font_size: 12, bold: true, align: left}
+      properties: {text: Repair history, role: primary-color, icon: 'fa:gears', font: Verdana, font_size: 12, bold: true, align: left, background: 'theme:Gray 600'}
       type: Button
       layout_properties: {grid_position: 'KYGGYK,UGOXHB'}
       event_bindings: {click: btn_repair_click}

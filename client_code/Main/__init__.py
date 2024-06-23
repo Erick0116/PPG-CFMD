@@ -22,7 +22,7 @@ class Main(MainTemplate):
         self.btn_vehicleList.visible = False
         self.btn_repair_approval.visible  = False
         self.card_dashData.visible  = False
-        self.card_dashTitle.visible    = False
+        #self.card_dashTitle.visible    = False
         self.btn_request_repair.visible = True
         self.btn_viewRequest.visible = True
       elif user['role'] == 'admin':
@@ -47,14 +47,14 @@ class Main(MainTemplate):
     count = 0
     for record in results:
         count += 1  # Increment count for each record found    
-    self.txt_count_repair.text = str(count)  # Convert count to string for assignment
+    self.lbl_count.text= str(count)  # Convert count to string for assignment
 
   def total_vehicle(self, **event_args):
     results = app_tables.vehicles.search(status="Active")
     count = 0
     for record in results:
       count += 1
-    self.txt_total_vehicle.text = str(count)
+    self.lbl_count_vehicle.text = str(count)
 
       
       

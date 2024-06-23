@@ -6,7 +6,7 @@ components:
   layout_properties: {grid_position: 'EQKEBE,VQWEZL'}
   components:
   - name: label_13
-    properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:ship', font: Verdana, foreground: 'theme:White', font_size: 15, text: TRANSFER VECHICLE}
+    properties: {role: text, bold: true, align: center, background: '#006400', icon: 'fa:ship', font: Verdana, foreground: 'theme:White', font_size: 15, text: TRANSFER VECHICLE}
     type: Label
     layout_properties: {grid_position: 'NXJNKV,BZAQDW', full_width_row: true}
   - name: label_1
@@ -103,12 +103,12 @@ components:
     type: TextArea
     layout_properties: {grid_position: 'YXDOZI,KEGGDP'}
   - name: btn_transfer
-    properties: {text: TRANSFER, role: secondary-color, font: Verdana, bold: true, icon: 'fa:ship', align: right}
+    properties: {text: TRANSFER, role: secondary-color, font: Verdana, bold: true, icon: 'fa:ship', align: right, background: 'theme:Gray 600'}
     type: Button
     layout_properties: {grid_position: ''}
     event_bindings: {click: btn_transfer_click}
   - name: button_2
-    properties: {text: Cancel, role: secondary-color, icon: 'fa:close', font: Verdana, bold: true, align: left}
+    properties: {text: Cancel, role: secondary-color, icon: 'fa:close', font: Verdana, bold: true, align: left, background: 'theme:Gray 600'}
     type: Button
     layout_properties: {grid_position: ',VWDHHL'}
     event_bindings: {click: button_2_click}

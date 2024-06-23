@@ -1,48 +1,69 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html', background: 'theme:Gray 50'}
+  properties: {html: '@theme:standard-page.html', background: 'theme:Gray 50', foreground: 'theme:Black'}
 components:
 - type: ColumnPanel
   properties: {}
   name: content_panel
   layout_properties: {slot: default}
   components:
-  - name: card_dashTitle
-    properties: {role: card, background: 'theme:Gray 600'}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'ZIOYPA,BTEIZY'}
-    components:
-    - name: headline_1
-      properties: {role: headline, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:dashboard', font: Verdana, foreground: 'theme:White', font_size: 20, text: DASHBOARD}
-      type: Label
-      layout_properties: {grid_position: 'ZGHUFI,NCKOBK', full_width_row: true}
   - name: card_dashData
-    properties: {role: card, col_widths: '{"HLTIVI":50,"KUORIZ":15,"QYVUZJ":65,"VPDEDV":65,"AGQMMS":15,"MEKBHF":15}', background: 'theme:Gray 100'}
+    properties: {role: card, col_widths: '{"WUFKVY":60}', background: 'theme:Gray 100'}
     type: ColumnPanel
-    layout_properties: {grid_position: 'VMJKMC,RGDTTS'}
+    layout_properties: {grid_position: 'VMJKMC,RGDTTS', full_width_row: false}
     components:
+    - name: lbl_count
+      properties: {font: Verdana, font_size: 90, foreground: '', role: null, bold: true, spacing_above: none, spacing_below: none}
+      type: Label
+      layout_properties: {grid_position: 'QXHUAS,WUFKVY', full_width_row: false}
     - name: label_1
-      properties: {font: Verdana, font_size: 20, align: left, bold: true, text: 'REPAIR REQUEST APPROVAL ', icon: 'fa:gears'}
+      properties: {bold: true, align: left, spacing_above: none, icon: '', font: Verdana, foreground: '', spacing_below: none, font_size: null, text: 'REPAIR REQUEST APPROVAL '}
       type: Label
-      layout_properties: {grid_position: 'GNGNOG,HLTIVI YGTIFQ,QYVUZJ'}
-    - name: txt_count_repair
-      properties: {font: Verdana, font_size: 20, enabled: false, bold: true, align: center}
-      type: TextBox
-      layout_properties: {grid_position: 'GNGNOG,HLTIVI YGTIFQ,AGQMMS'}
-    - name: label_2
-      properties: {text: TOTAL VECHICLES, icon: 'fa:car', font: Verdana, font_size: 20, bold: true, align: left}
-      type: Label
-      layout_properties: {grid_position: 'GNGNOG,HLTIVI WFLTBR,VPDEDV'}
-    - name: txt_total_vehicle
-      properties: {font: Verdana, bold: true, font_size: 20, align: center, enabled: false}
-      type: TextBox
-      layout_properties: {grid_position: 'GNGNOG,HLTIVI WFLTBR,MEKBHF'}
+      layout_properties: {grid_position: 'IOZEMP,LCOOQB'}
     - name: btn_view_repair
-      properties: {text: VIEW, icon: 'fa:street-view', role: primary-color, font: Verdana, font_size: null, bold: true}
+      properties: {role: primary-color, bold: true, align: full, spacing_above: none, background: 'theme:Gray 600', icon: '', font: Verdana, spacing_below: none, font_size: 8, text: VIEW}
       type: Button
-      layout_properties: {grid_position: 'GNGNOG,KUORIZ'}
+      layout_properties: {grid_position: 'QIZQIU,RNSVZQ'}
       event_bindings: {click: btn_view_repair_click}
+  - name: card_1
+    properties: {role: card, background: 'theme:Gray 100'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'VMJKMC,YJBYPX'}
+    components:
+    - name: lbl_count_vehicle
+      properties: {background: '', font: Verdana, font_size: 90, bold: true, spacing_above: none, spacing_below: none}
+      type: Label
+      layout_properties: {grid_position: 'NZBLAD,JDGQHU'}
+    - name: label_2
+      properties: {text: TOTAL ACTIVE VEHICLES, icon: '', font: Verdana, font_size: null, bold: true, align: left, spacing_above: none, spacing_below: none}
+      type: Label
+      layout_properties: {grid_position: 'KMKUEM,FWXVTX'}
+    - name: button_1
+      properties: {role: primary-color, bold: true, align: full, spacing_above: none, background: 'theme:Gray 600', font: Verdana, spacing_below: none, font_size: 8, text: View}
+      type: Button
+      layout_properties: {grid_position: 'WHSUSY,AZPDCM'}
+  - name: card_3
+    properties: {role: card, background: 'theme:Gray 100'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'VMJKMC,EYAFUP'}
+    components:
+    - name: label_3
+      properties: {text: '0', font: Verdana, font_size: 90, bold: true, spacing_above: none, spacing_below: none}
+      type: Label
+      layout_properties: {grid_position: 'ZJBLLK,LKUDBL'}
+    - name: label_4
+      properties: {text: TOTAL SOLD VEHICLES, font: Verdana, bold: true, spacing_above: none, spacing_below: none}
+      type: Label
+      layout_properties: {grid_position: 'PJRWKR,ATFPQB'}
+    - name: button_2
+      properties: {bold: true, align: full, spacing_above: none, background: 'theme:Gray 600', font: Verdana, foreground: 'theme:White', spacing_below: none, font_size: 8, text: VIEW}
+      type: Button
+      layout_properties: {grid_position: 'CBZPSL,CYWMLH'}
+  - name: card_2
+    properties: {role: card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'VMJKMC,FWEPGI'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
@@ -59,7 +80,7 @@ components:
   layout_properties: {slot: left-nav}
   components:
   - name: btn_register
-    properties: {text: register vehicle, role: secondary-color, align: left, bold: true, font: Verdana, font_size: 15, icon: 'fa:car'}
+    properties: {role: secondary-color, bold: true, align: left, background: '#FFD700', icon: 'fa:car', font: Verdana, foreground: 'theme:Black', font_size: 15, text: register vehicle}
     type: Button
     layout_properties: {grid_position: 'YVGIBN,TIEGVO'}
     event_bindings: {click: btn_register_click}

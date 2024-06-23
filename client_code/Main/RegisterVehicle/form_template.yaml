@@ -12,7 +12,7 @@ components:
     layout_properties: {grid_position: 'TPOCVI,QWQKDE'}
     components:
     - name: lbl_vechicle
-      properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:car', font: Verdana, foreground: 'theme:White', font_size: 15, text: VEHICLE DETAILS}
+      properties: {role: text, bold: true, align: center, background: '#006400', icon: 'fa:car', font: Verdana, foreground: 'theme:White', font_size: 15, text: VEHICLE DETAILS}
       type: Label
       layout_properties: {grid_position: 'BHQSAP,CCPRXD', full_width_row: true}
     - name: label_1
@@ -111,7 +111,7 @@ components:
   layout_properties: {grid_position: 'PEQEXM,PDCUHC'}
   components:
   - name: label_23
-    properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:book', font: Verdana, foreground: 'theme:White', font_size: 15, text: REGISTRATION DETAILS}
+    properties: {role: text, bold: true, align: center, background: '#006400', icon: 'fa:book', font: Verdana, foreground: 'theme:White', font_size: 15, text: REGISTRATION DETAILS}
     type: Label
     layout_properties: {grid_position: 'BRJHVC,UKSJWX', full_width_row: true}
   - name: label_10
@@ -160,7 +160,7 @@ components:
   layout_properties: {grid_position: 'IPWYPI,URYVSL'}
   components:
   - name: label_24
-    properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:life-saver', font: Verdana, foreground: 'theme:White', font_size: 15, text: INSURANCE DETAILS}
+    properties: {role: text, bold: true, align: center, background: '#006400', icon: 'fa:life-saver', font: Verdana, foreground: 'theme:White', font_size: 15, text: INSURANCE DETAILS}
     type: Label
     layout_properties: {grid_position: 'CJNZZD,YFZVHU', full_width_row: true}
   - name: label_15
@@ -212,12 +212,12 @@ components:
     type: TextArea
     layout_properties: {grid_position: 'KUTSGG,XWWOIF'}
   - name: btn_save
-    properties: {text: Save, role: secondary-color, align: right, font: Verdana, font_size: 15, bold: true, icon: 'fa:save'}
+    properties: {text: Save, role: secondary-color, align: right, font: Verdana, font_size: 15, bold: true, icon: 'fa:save', background: 'theme:Gray 600'}
     type: Button
     layout_properties: {grid_position: 'FBXFCX,LKXIFK'}
     event_bindings: {click: btn_save_click}
   - name: btn_cancel
-    properties: {text: Cancel, align: left, role: secondary-color, font: Verdana, font_size: 15, bold: true, icon: 'fa:close'}
+    properties: {text: Cancel, align: left, role: secondary-color, font: Verdana, font_size: 15, bold: true, icon: 'fa:close', background: 'theme:Gray 600'}
     type: Button
     layout_properties: {grid_position: 'FBXFCX,AHMTMI'}
     event_bindings: {click: btn_cancel_click}

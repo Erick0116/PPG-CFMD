@@ -6,12 +6,12 @@ components:
   layout_properties: {grid_position: 'WSRJBB,THREYN'}
   components:
   - name: card_2
-    properties: {role: card, col_widths: '{"OUDKHQ":20,"LTJCAN":20,"KUOYXH":20}', background: 'theme:Gray 600'}
+    properties: {role: card, col_widths: '{"OUDKHQ":30,"LTJCAN":10,"KUOYXH":20,"PLRSQQ":15}', background: '#006400'}
     type: ColumnPanel
     layout_properties: {grid_position: 'BLTTOX,NWQINF'}
     components:
     - name: btn_home
-      properties: {text: Home, icon: 'fa:home', role: secondary-color, font: Verdana, bold: true}
+      properties: {text: Home, icon: 'fa:home', role: secondary-color, font: Verdana, bold: true, background: 'theme:Gray 600'}
       type: Button
       layout_properties: {grid_position: 'YVVPOZ,PLRSQQ'}
       event_bindings: {click: btn_home_click}
@@ -24,7 +24,7 @@ components:
       type: TextBox
       layout_properties: {grid_position: 'YVVPOZ,LTJCAN'}
     - name: btn_view
-      properties: {text: ViEW DETAILS, font: Verdana, icon: 'fa:search', role: secondary-color, bold: true}
+      properties: {text: ViEW DETAILS, font: Verdana, icon: 'fa:search', role: secondary-color, bold: true, background: 'theme:Gray 600'}
       type: Button
       layout_properties: {grid_position: 'YVVPOZ,KUOYXH'}
       event_bindings: {click: btn_view_click}
