@@ -45,7 +45,7 @@ def add_insurance(plate_no, insurance_type, insurance_name, premium, coverage, e
   )
 
 @anvil.server.callable
-def request_repair(requesting_area, make, type, model, date, plate_no, mileage, explanation, shop_name, address, contact_person, contact_no, due_date, scope, labor_amount, total_parts, overall_total):
+def request_repair(requesting_area, make, type, model, date, plate_no, mileage, explanation, shop_name, address, contact_person, contact_no, due_date, scope, labor_amount, total_parts, overall_total, request_no):
   send_request = app_tables.repairapproval.add_row(
     requesting_area=requesting_area,
     make=make,
@@ -64,7 +64,8 @@ def request_repair(requesting_area, make, type, model, date, plate_no, mileage, 
     labor_amount=labor_amount,
     total_parts=total_parts,
     overall_total=overall_total,
-    status="Requested"
+    status="Requested",
+    request_no=request_no
   )
   if send_request:
     return True
@@ -121,16 +122,13 @@ def update_user(email, role, area):
 
 @anvil.server.callable
 def update_repair_status(plate_no):
-  records = app_tables.repairapproval.get(plate_no=plate_no)
-  updated = False
-  for record in records:
-    if record['status'] == 'Requested':
-      record['status'] = "Approved"
-      record.update()
-      updated = True
-      return updated
-    else:
-      return False
+  record = app_tables.repairapproval.get(plate_no=plate_no)
+  if record:
+    record['status'] = "Approved"
+    record.update()
+    return True
+  else:
+    return False
 
 @anvil.server.callable
 def update_parts_status(plate_no):

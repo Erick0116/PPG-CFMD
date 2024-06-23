@@ -5,6 +5,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from datetime import datetime
 
 
 class AreaRequestRepair(AreaRequestRepairTemplate):
@@ -98,8 +99,11 @@ class AreaRequestRepair(AreaRequestRepairTemplate):
     labor_amount = int(self.txt_amountlabor.text)
     total_parts = int(self.txt_amountParts.text)
     overall_total = int(self.txt_overalltotal.text)
+    next_id_no = anvil.server.call('get_next_id')
+    current_time = datetime.now().strftime('%Y%m%d')
+    request_no = f"{current_time}_{plate_no}_{next_id_no}"
     
-    send_request = anvil.server.call('request_repair', requesting_area, make, type, model, date, plate_no, mileage, explanation, shop_name, address, contact_person, contact_no, due_date, scope, labor_amount, total_parts, overall_total)
+    send_request = anvil.server.call('request_repair', requesting_area, make, type, model, date, plate_no, mileage, explanation, shop_name, address, contact_person, contact_no, due_date, scope, labor_amount, total_parts, overall_total, request_no)
     if send_request:
       alert(f"Your request for {plate_no} has been successfully submitted. Please wait for approval from the approver. You can check the request status for updates on approval.")
     else:
