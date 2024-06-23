@@ -1,7 +1,7 @@
 container: {type: ColumnPanel}
 components:
 - name: card_1
-  properties: {role: card, col_widths: '{"JEQXOH":20,"NIHPFN":25,"OYNHCD":15,"GEXGER":15,"GXDSBB":20,"HGVRDS":40}', background: 'theme:Gray 600'}
+  properties: {role: card, col_widths: '{"JEQXOH":35,"NIHPFN":10,"OYNHCD":15,"GXDSBB":20,"HGVRDS":40}', background: 'theme:Gray 600'}
   type: ColumnPanel
   layout_properties: {grid_position: 'SBGAQA,IPMLEE', full_width_row: false}
   components:
