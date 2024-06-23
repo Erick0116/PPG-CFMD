@@ -38,6 +38,7 @@ class RepairApproval(RepairApprovalTemplate):
     plate_no = self.txt_plateno.text
     record = anvil.server.call('update_repair_status', plate_no)
     if record:
+     # anvil.server.call('update_parts_status', plate_no)
       alert(f'{plate_no} repair request has been approve succesfully!')
       self.rp_repair.items  = anvil.server.call('repair_populate')
     else:
@@ -58,10 +59,10 @@ class RepairApproval(RepairApprovalTemplate):
 
   def btn_search_click(self, **event_args):
     search_plateno =  self.txt_search.text
-    date_str = self.txt_date.text
+    #date_str = self.txt_date.text
    
    # date_obj = datetime.strptime(date_str, '%Y-%m-%d').date()
-    repair_details = app_tables.repairapproval.search(plate_no=search_plateno)
+    repair_details = app_tables.repairapproval.search(plate_no=search_plateno, status='Requested')
     try:
       if repair_details:
         self.txt_area.text = repair_details[0]['requesting_area']

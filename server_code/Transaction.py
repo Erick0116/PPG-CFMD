@@ -121,14 +121,27 @@ def update_user(email, role, area):
 
 @anvil.server.callable
 def update_repair_status(plate_no):
-  record = app_tables.repairapproval.get(plate_no=plate_no)
-  if record is not None:
-    record['status'] = "Approve"
-    record.update()
+  records = app_tables.repairapproval.get(plate_no=plate_no)
+  updated = False
+  for record in records:
+    if record['status'] == 'Requested':
+      record['status'] = "Approved"
+      record.update()
+      updated = True
+      return updated
+    else:
+      return False
+
+@anvil.server.callable
+def update_parts_status(plate_no):
+  parts_item = app_tables.partsitem.get(plate_no=plate_no)
+  if parts_item['status'] == 'Requested':
+    parts_item['status'] = 'Approved'
+    parts_item.update()
     return True
   else:
     return False
-
+    
 @anvil.server.callable
 def disapprove_repair(plateno, remarks):
   record = app_tables.repairapproval.get(plate_no=plateno)
