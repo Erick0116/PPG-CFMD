@@ -35,6 +35,11 @@ def view_details(search_plateno):
   return None
 
 @anvil.server.callable
+def search_user(email):
+  results = app_tables.users.search(email=email)
+  return results
+  
+@anvil.server.callable
 def get_next_id():
   all_ids = app_tables.partsitem.search()
   if all_ids:
@@ -55,3 +60,7 @@ def history_populate():
 @anvil.server.callable
 def repair_populate():
   return app_tables.repairapproval.search(status="Requested")
+
+@anvil.server.callable
+def user_account():
+  return app_tables.users.search()

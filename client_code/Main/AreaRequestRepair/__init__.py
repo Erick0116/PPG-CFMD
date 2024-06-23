@@ -134,6 +134,9 @@ class AreaRequestRepair(AreaRequestRepairTemplate):
 
   def dp_plateno_change(self, **event_args):
     self.validate_details()
+
+  def btn_cancel_click(self, **event_args):
+    open_form('Main')
       
     
     

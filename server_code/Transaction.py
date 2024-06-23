@@ -109,6 +109,17 @@ def update_trans_veh_status(plate_no, area):
     return False
 
 @anvil.server.callable
+def update_user(email, role, area):
+  users = app_tables.users.get(email=email)
+  if users:
+    users['role'] = role
+    users['area'] = area
+    users.update()
+    return True
+  else:
+    return False
+
+@anvil.server.callable
 def update_repair_status(plate_no):
   record = app_tables.repairapproval.get(plate_no=plate_no)
   if record is not None:

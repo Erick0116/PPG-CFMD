@@ -1,0 +1,75 @@
+container: {type: ColumnPanel}
+components:
+- name: card_1
+  properties: {role: card, col_widths: '{"EGSHPK":10,"PTEJRH":50,"VDYMAL":20,"ROXUHT":10,"SPPJJP":30,"TWJJRU":45,"MJTQWW":15}', background: 'theme:Gray 100'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'EBRNUQ,ZYNOFD'}
+  components:
+  - name: label_4
+    properties: {text: USER ACCOUNT MANAGEMENT, role: text, background: '#006400', foreground: 'theme:White', icon: 'fa:user-circle-o', align: center, bold: true, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'VTRRLC,XZGZXH', full_width_row: true}
+  - name: label_1
+    properties: {text: Email, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'CDZUCL,EGSHPK MNEPGV,FIMASU'}
+  - name: label_2
+    properties: {text: Role, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'CDZUCL,EGSHPK PQVZOF,XWUYDW'}
+  - name: txt_email
+    properties: {font: Verdana, background: 'theme:White'}
+    type: TextBox
+    layout_properties: {grid_position: 'CDZUCL,PTEJRH FMBEPY,TWJJRU'}
+  - name: btn_search
+    properties: {text: search, icon: 'fa:search', background: 'theme:Gray 600', foreground: 'theme:White', font: Verdana, bold: true}
+    type: Button
+    layout_properties: {grid_position: 'CDZUCL,PTEJRH FMBEPY,MJTQWW'}
+    event_bindings: {click: btn_search_click}
+  - name: dp_role
+    properties:
+      items: ['---', admin, area]
+      font: Verdana
+      background: theme:White
+    type: DropDown
+    layout_properties: {grid_position: 'CDZUCL,PTEJRH EYLIGZ,VDYMAL'}
+  - name: label_3
+    properties: {text: Area, align: right, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'CDZUCL,PTEJRH EYLIGZ,ROXUHT'}
+  - name: dp_area
+    properties:
+      items: ['---']
+      font: Verdana
+      background: theme:White
+    type: DropDown
+    layout_properties: {grid_position: 'CDZUCL,PTEJRH EYLIGZ,SPPJJP'}
+- name: card_2
+  properties: {role: card, background: 'theme:Gray 100', col_widths: '{"JAOHOT":50,"XUUVOK":10}'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'INCFJA,JWJQMW'}
+  components:
+  - name: data_grid_1
+    properties:
+      columns:
+      - {id: JKSDUP, title: Email, data_key: email}
+      - {id: VJQQOR, title: Area, data_key: area}
+      - {id: OJLQEN, title: Role, data_key: role}
+      background: theme:White
+    type: DataGrid
+    components:
+    - name: rp_users
+      properties: {item_template: Main.UserAccount.RowTemplate11}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'DIROAM,YFCEQX', row_background: ''}
+  - name: btn_update
+    properties: {text: update, font: Verdana, font_size: null, bold: true, icon: 'fa:save', background: 'theme:Gray 600', foreground: 'theme:White', align: right}
+    type: Button
+    layout_properties: {grid_position: 'PNVSMM,JAOHOT'}
+    event_bindings: {click: btn_update_click}
+  - name: btn_cancel
+    properties: {text: Cancel, role: primary-color, font: Verdana, bold: true, background: 'theme:Gray 600', icon: 'fa:close'}
+    type: Button
+    layout_properties: {grid_position: 'PNVSMM,XUUVOK'}
+    event_bindings: {click: btn_cancel_click}
+is_package: true

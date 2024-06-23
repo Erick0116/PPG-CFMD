@@ -21,8 +21,11 @@ class Main(MainTemplate):
         self.btn_transfer.visible = False
         self.btn_vehicleList.visible = False
         self.btn_repair_approval.visible  = False
-        self.card_dashData.visible  = False
-        #self.card_dashTitle.visible    = False
+        self.card_count_approval.visible = False
+        self.card_total_vehicle.visible = False
+        self.card_total_sold.visible = False
+        self.card_2.visible = False
+        self.btn_acount.visible = False
         self.btn_request_repair.visible = True
         self.btn_viewRequest.visible = True
       elif user['role'] == 'admin':
@@ -98,3 +101,6 @@ class Main(MainTemplate):
   def login_click(self, **event_args):
     anvil.users.logout()
     open_form('Main')
+
+  def btn_acount_click(self, **event_args):
+    open_form('Main.UserAccount')

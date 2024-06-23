@@ -6,7 +6,7 @@ components:
   layout_properties: {grid_position: 'OOALYN,MJGHPN'}
   components:
   - name: label_6
-    properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:automobile', font: Verdana, foreground: 'theme:White', font_size: 15, text: REQUEST FOR REPAIR OF COMPANY VEHICLE}
+    properties: {role: text, bold: true, align: center, background: '#006400', icon: 'fa:automobile', font: Verdana, foreground: 'theme:White', font_size: 15, text: REQUEST FOR REPAIR OF COMPANY VEHICLE}
     type: Label
     layout_properties: {grid_position: 'TOBJWU,DKZQME', full_width_row: true}
   - name: label_1
@@ -75,7 +75,7 @@ components:
     type: TextArea
     layout_properties: {grid_position: 'BWINZH,FJFTUJ'}
   - name: label_9
-    properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:car', font: Verdana, foreground: 'theme:White', font_size: 15, text: VEHICLE REPAIR ESTIMATE}
+    properties: {role: text, bold: true, align: center, background: '#006400', icon: 'fa:car', font: Verdana, foreground: 'theme:White', font_size: 15, text: VEHICLE REPAIR ESTIMATE}
     type: Label
     layout_properties: {grid_position: 'QSGTRC,GCXLUV', full_width_row: true}
   - name: label_10
@@ -135,7 +135,7 @@ components:
     type: TextBox
     layout_properties: {grid_position: 'BMUVDR,JNYTTF'}
   - name: label_17
-    properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:car', font: Verdana, foreground: 'theme:White', font_size: 15, text: ESTIMATED PARTS}
+    properties: {role: text, bold: true, align: center, background: '#006400', icon: 'fa:car', font: Verdana, foreground: 'theme:White', font_size: 15, text: ESTIMATED PARTS}
     type: Label
     layout_properties: {grid_position: 'WGUFVI,BBVPDI', full_width_row: true}
   - name: label_18
@@ -155,7 +155,7 @@ components:
     type: TextBox
     layout_properties: {grid_position: 'WHTOIE,CHKXQP BCNNXW,SEHWTX'}
   - name: btn_add_items
-    properties: {text: Add, role: primary-color, icon: 'fa:plus', font: Verdana, bold: true, font_size: 10, align: right}
+    properties: {text: Add, role: primary-color, icon: 'fa:plus', font: Verdana, bold: true, font_size: 10, align: right, background: 'theme:Gray 600'}
     type: Button
     layout_properties: {grid_position: 'WHTOIE,CHKXQP SJPIAZ,TRHJGQ'}
     event_bindings: {click: btn_add_items_click}
@@ -201,8 +201,13 @@ components:
     layout_properties: {grid_position: 'IMYGFO,BNIVUA', full_width_row: false}
     event_bindings: {click: btn_validation_click}
   - name: btn_submit
-    properties: {text: SUBMIT, role: secondary-color, icon: 'fa:send', align: full, font: Verdana, bold: true}
+    properties: {text: SUBMIT, role: secondary-color, icon: 'fa:send', align: full, font: Verdana, bold: true, background: 'theme:Gray 600'}
     type: Button
-    layout_properties: {grid_position: 'BTGVQZ,AYHVMX'}
+    layout_properties: {grid_position: 'IMYGFO,JDWFCZ'}
     event_bindings: {click: btn_submit_click}
+  - name: btn_cancel
+    properties: {text: CANCEL, icon: 'fa:window-close', role: primary-color, background: 'theme:Gray 600', font: Verdana, bold: true, align: full}
+    type: Button
+    layout_properties: {grid_position: 'IMYGFO,MYNQFN', full_width_row: false}
+    event_bindings: {click: btn_cancel_click}
 is_package: true

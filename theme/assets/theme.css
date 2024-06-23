@@ -656,7 +656,7 @@ body>div[data-notify="container"].alert-warning>span[data-notify="title"]{
 /* Component: TextBox + TextArea */
 
 input.anvil-component, textarea.anvil-component, .anvil-component select, .anvil-datepicker input {
-  font-size: 16px;
+  font-size: 13px;
   line-height: 1.5;
   border-radius: 0;
   background-color: transparent;
@@ -666,7 +666,7 @@ input.anvil-component, textarea.anvil-component, .anvil-component select, .anvil
 }
 
 .anvil-dropdown {
-  font-size: 16px;
+  font-size: 13px;
 }
 .anvil-component select {
   font-size: inherit;
@@ -684,7 +684,7 @@ input.anvil-component, .anvil-component select, .anvil-datepicker input {
 textarea.anvil-component {
   padding: 4px 8px;
   border: 1px solid rgba(0,0,0,0.42);
-  border-radius: 2px;
+  border-radius: 8px;
   transition: border 0.2s, padding 0.2s;
   -moz-transition: none; /* Firefox is jumpy, so disable transitions */
 }
@@ -797,4 +797,3 @@ textarea.anvil-component[disabled] {
 /* Shadow values taken from 
 https://stackoverflow.com/questions/30533055/calculating-shadow-values-for-all-material-design-elevations
 */
-
