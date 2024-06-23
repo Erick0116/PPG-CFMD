@@ -127,7 +127,7 @@ components:
     type: TextArea
     layout_properties: {grid_position: 'ZADUDV,BRBRXQ'}
   - name: label_16
-    properties: {text: Total Amount, align: right, font: Verdana}
+    properties: {text: Total Labor Amount, align: right, font: Verdana}
     type: Label
     layout_properties: {grid_position: 'BMUVDR,GYLIIL'}
   - name: txt_amountlabor

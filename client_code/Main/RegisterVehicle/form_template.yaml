@@ -7,7 +7,7 @@ components:
   event_bindings: {hide: column_panel_1_hide}
   components:
   - name: card_1
-    properties: {role: card, col_widths: '{"JNXLGM":5,"QZIGUF":25,"NLIOUB":5,"OCHNBE":25,"XZSXYK":15,"ADNDIP":15,"TJGRZQ":5,"TLQHEV":25}', background: 'theme:Gray 100'}
+    properties: {role: card, col_widths: '{"JNXLGM":5,"QZIGUF":25,"NLIOUB":5,"OCHNBE":25,"XZSXYK":15,"ADNDIP":15,"TJGRZQ":5,"TLQHEV":25,"NEDMMD":10,"JLVEBI":50}', background: 'theme:Gray 100'}
     type: ColumnPanel
     layout_properties: {grid_position: 'TPOCVI,QWQKDE'}
     components:
@@ -97,6 +97,14 @@ components:
         items: [Active, Sold]
       type: DropDown
       layout_properties: {grid_position: 'VYMTLX,TLQHEV'}
+    - name: label_6
+      properties: {text: Ownership, font: Verdana}
+      type: Label
+      layout_properties: {grid_position: 'OZTURS,NEDMMD'}
+    - name: txt_ownership
+      properties: {font: Verdana}
+      type: TextBox
+      layout_properties: {grid_position: 'OZTURS,JLVEBI'}
 - name: card_2
   properties: {role: card, col_widths: '{"HAPWEM":5,"BUEULE":20,"BCNHUH":5,"PGKRNA":20,"NQIGZK":10,"AUBIWX":25,"PDUQYM":10,"MJGIGF":10,"OIYLZR":5,"CEGBWW":10}', background: 'theme:Gray 50'}
   type: ColumnPanel

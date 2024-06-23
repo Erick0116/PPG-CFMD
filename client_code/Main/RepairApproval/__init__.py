@@ -26,19 +26,7 @@ class RepairApproval(RepairApprovalTemplate):
 
     # Any code you write here will run before the form opens.
 
-  def txt_plateno_pressed_enter(self, **event_args):
-    search_plateno =  self.txt_plateno.text
-    repair_details = app_tables.repairapproval.search(plate_no=search_plateno)
-    try:
-      if repair_details:
-        self.txt_name.text = repair_details[0]['name']
-        self.txt_area.text = repair_details[0]['area']
-        self.txt_date.text = repair_details[0]['date']
-        self.txt_desc.text = repair_details[0]['description']
-      else:
-        alert('Plate number not found')
-    except IndexError:
-      alert('Please check for any leading or trailing spaces in the Plate No text field.')
+    
 
   def btn_disapprove_click(self, **event_args):
     #self.toggle_expand()
@@ -65,4 +53,30 @@ class RepairApproval(RepairApprovalTemplate):
 
   def btn_home_click(self, **event_args):
     open_form('Main')
+
+  def btn_search_click(self, **event_args):
+    search_plateno =  self.txt_search.text
+    repair_details = app_tables.repairapproval.search(plate_no=search_plateno)
+    try:
+      if repair_details:
+        self.txt_area.text = repair_details[0]['requesting_area']
+        self.txt_plateno.text = repair_details[0]['plate_no']
+        self.txt_date.text = repair_details[0]['date']
+        self.txt_make.text = repair_details[0]['make']
+        self.txt_type.text = repair_details[0]['type']
+        self.txt_model.text = repair_details[0]['model']
+        self.txt_explanation.text = repair_details[0]['explanation']
+        self.txt_shopname.text = repair_details[0]['shop_name']
+        self.txt_address.text = repair_details[0]['address']
+        self.txt_contactP.text = repair_details[0]['contact_person']
+        self.txt_contactNo.text = repair_details[0]['contact_no']
+        self.txt_due.text = repair_details[0]['due_date']
+        self.txt_scope.text = repair_details[0]['scope']
+        self.txt_amountlabor.text = repair_details[0]['labor_amount']
+        self.txt_amountParts.text = repair_details[0]['total_parts']
+        self.txt_overalltotal.text = repair_details[0]['overall_total']
+      else:
+        alert('Plate number not found')
+    except IndexError:
+      alert('Please check for any leading or trailing spaces in the Plate No text field.')
     

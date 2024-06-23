@@ -6,7 +6,7 @@ import anvil.server
 from datetime import datetime
 
 @anvil.server.callable
-def register_vehicle(make, body_type, color, model, register_name, plate_no, engine_no, chasis_no, area_assigned, status, remarks):
+def register_vehicle(make, body_type, color, model, register_name, plate_no, engine_no, chasis_no, area_assigned, ownership, status, remarks):
   app_tables.vehicles.add_row(
     make=make,
     body_type=body_type,
@@ -17,6 +17,7 @@ def register_vehicle(make, body_type, color, model, register_name, plate_no, eng
     engine_no=engine_no,
     chasis_no=chasis_no,
     area_assigned=area_assigned,
+    ownership=ownership,
     status=status,
     remarks=remarks
   )
@@ -44,7 +45,7 @@ def add_insurance(plate_no, insurance_type, insurance_name, premium, coverage, e
   )
 
 @anvil.server.callable
-def request_repair(requesting_area, make, type, model, date, plate_no, mileage, explanation, shop_name, address, contact_person, contact_no, due_date, scope, labor_amount):
+def request_repair(requesting_area, make, type, model, date, plate_no, mileage, explanation, shop_name, address, contact_person, contact_no, due_date, scope, labor_amount, total_parts, overall_total):
   send_request = app_tables.repairapproval.add_row(
     requesting_area=requesting_area,
     make=make,
@@ -61,6 +62,8 @@ def request_repair(requesting_area, make, type, model, date, plate_no, mileage, 
     due_date=due_date,
     scope=scope,
     labor_amount=labor_amount,
+    total_parts=total_parts,
+    overall_total=overall_total,
     status="Requested"
   )
   if send_request:

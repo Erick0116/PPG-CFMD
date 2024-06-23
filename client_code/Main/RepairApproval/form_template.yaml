@@ -1,15 +1,37 @@
 container: {type: ColumnPanel}
 components:
+- name: card_4
+  properties: {role: card, col_widths: '{"AJILGO":10,"HXNGMX":50}'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'JNCOCX,ZAWCFU'}
+  components:
+  - name: btn_home
+    properties: {text: HoME, align: center, role: secondary-color, font: Verdana, bold: true, font_size: null, icon: 'fa:home'}
+    type: Button
+    layout_properties: {grid_position: 'MEPYXG,AJILGO'}
+    event_bindings: {click: btn_home_click}
+  - name: button_1
+    properties: {text: AI ANALYZER, icon: 'fa:crosshairs', align: left, font: Verdana, bold: true, role: secondary-color}
+    type: Button
+    layout_properties: {grid_position: 'MEPYXG,HXNGMX'}
 - name: card_3
-  properties: {role: card}
+  properties: {role: card, col_widths: '{"XWFGAH":10,"MGLOGX":15,"DSFYOV":10}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'DYIIHX,EPUVVC'}
   components:
-  - name: btn_home
-    properties: {text: HoME, align: left, role: secondary-color, font: Verdana, bold: true, font_size: null, icon: 'fa:home'}
+  - name: label_22
+    properties: {text: Plate No., align: right, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'YPLAGA,DSFYOV'}
+  - name: txt_search
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'YPLAGA,XWFGAH'}
+  - name: btn_search
+    properties: {text: SEARCH, role: primary-color, icon: 'fa:search', font: Verdana, bold: true, background: 'theme:Gray 600', foreground: 'theme:White', align: left}
     type: Button
-    layout_properties: {grid_position: 'YPLAGA,BULIZI'}
-    event_bindings: {click: btn_home_click}
+    layout_properties: {grid_position: 'YPLAGA,MGLOGX'}
+    event_bindings: {click: btn_search_click}
   - name: label_6
     properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:car', font: Verdana, foreground: 'theme:White', font_size: 15, text: REPAIR APPROVAL}
     type: Label
@@ -28,7 +50,7 @@ components:
       type: RepeatingPanel
     layout_properties: {grid_position: 'GCXQOZ,VLRCKU'}
 - name: card_1
-  properties: {role: card, col_widths: '{"MURDWQ":10,"HDINGD":10,"EPOKOL":4,"UKLXAE":35,"LSXDBG":10,"RJTVZT":15,"DIGOON":30,"YRNJMS":30,"MRKDAL":5,"GBZMAS":40}', background: 'theme:Gray 100'}
+  properties: {role: card, col_widths: '{"DIGOON":30,"YRNJMS":30,"MXHLDN":31,"CAXXEX":4,"PETBWH":12,"CJLJSB":20,"TZUEGS":40,"ZRCUDW":20,"ZUKVIB":40,"SNSEZE":20,"AYENLO":40,"GNFSVM":20,"JVCNTX":40,"TMJBVO":10,"HVMZVK":20,"YXMOVW":5,"UCRIOB":10,"MEKELT":5,"QOZTYZ":10,"TDGJXK":45,"PQAPEJ":15,"BCZZJQ":50,"GHYQEG":10,"PHGEUW":10,"HSJGYE":50}', background: 'theme:Gray 100'}
   type: ColumnPanel
   layout_properties: {grid_position: 'XNWZKX,EZJWLP'}
   components:
@@ -36,47 +58,155 @@ components:
     properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:info-circle', font: Verdana, foreground: 'theme:White', font_size: 15, text: DETAILS}
     type: Label
     layout_properties: {grid_position: 'AGZVPB,UWZREH', full_width_row: true}
-  - name: label_1
-    properties: {text: Plate No, align: left, font: Verdana}
+  - name: label_9
+    properties: {text: Requesting Branch Area, font: Verdana}
     type: Label
-    layout_properties: {grid_position: 'APDSYX,MURDWQ'}
-  - name: txt_plateno
+    layout_properties: {grid_position: 'CYTFDD,MXHLDN HSPGWE,GNFSVM'}
+  - name: txt_area
     properties: {font: Verdana}
     type: TextBox
-    layout_properties: {grid_position: 'APDSYX,HDINGD'}
-    event_bindings: {pressed_enter: txt_plateno_pressed_enter}
+    layout_properties: {grid_position: 'CYTFDD,MXHLDN HSPGWE,JVCNTX'}
   - name: label_2
-    properties: {text: Name, font: Verdana}
+    properties: {text: Make, font: Verdana}
     type: Label
-    layout_properties: {grid_position: 'APDSYX,MRKDAL'}
-  - name: txt_name
+    layout_properties: {grid_position: 'CYTFDD,MXHLDN HIGVQP,SNSEZE'}
+  - name: txt_make
     properties: {font: Verdana, enabled: false}
     type: TextBox
-    layout_properties: {grid_position: 'APDSYX,GBZMAS'}
+    layout_properties: {grid_position: 'CYTFDD,MXHLDN HIGVQP,AYENLO'}
   - name: label_3
-    properties: {text: Area, align: left, font: Verdana}
+    properties: {text: Type, align: left, font: Verdana}
     type: Label
-    layout_properties: {grid_position: 'DCKKFB,LSXDBG'}
-  - name: txt_area
+    layout_properties: {grid_position: 'CYTFDD,MXHLDN PPFWAY,ZRCUDW'}
+  - name: txt_type
     properties: {font: Verdana, enabled: false}
     type: TextBox
-    layout_properties: {grid_position: 'DCKKFB,UKLXAE'}
+    layout_properties: {grid_position: 'CYTFDD,MXHLDN PPFWAY,ZUKVIB'}
+  - name: label_10
+    properties: {text: Model, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'CYTFDD,MXHLDN XKZZEG,CJLJSB'}
+  - name: txt_model
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'CYTFDD,MXHLDN XKZZEG,TZUEGS'}
+  - name: label_1
+    properties: {text: Plate No, align: right, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'CYTFDD,CAXXEX RXDHGY,RGGMQF'}
   - name: label_4
     properties: {text: Date, align: right, font: Verdana}
     type: Label
-    layout_properties: {grid_position: 'DCKKFB,EPOKOL'}
+    layout_properties: {grid_position: 'CYTFDD,CAXXEX JJVAXG,YHMFCQ'}
+  - name: txt_plateno
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'CYTFDD,PETBWH PUASVZ,IFWPYT'}
+    event_bindings: {pressed_enter: txt_plateno_pressed_enter}
   - name: txt_date
     properties: {font: Verdana, enabled: false}
     type: TextBox
-    layout_properties: {grid_position: 'DCKKFB,RJTVZT'}
+    layout_properties: {grid_position: 'CYTFDD,PETBWH ZFGRWS,XHZWSN'}
   - name: label_5
-    properties: {text: Description, font: Verdana}
+    properties: {text: Area Recommendation / Explanation, font: Verdana}
     type: Label
     layout_properties: {grid_position: 'KWHXZQ,HSNBKL'}
-  - name: txt_desc
+  - name: txt_explanation
     properties: {height: 234.2109375, font: Verdana, visible: true}
     type: TextArea
     layout_properties: {grid_position: 'UDZDJU,YGCWRZ'}
+  - name: label_11
+    properties: {text: VEHICLE REPAIR ESTIMATE, icon: 'fa:car', font: Verdana, role: text, background: 'theme:Gray 600', foreground: 'theme:White', bold: true, align: center}
+    type: Label
+    layout_properties: {grid_position: 'VTENPR,UNFRHG', full_width_row: true}
+  - name: label_12
+    properties: {text: Name of Shop, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'TIVALR,PHGEUW IVEIBQ,FNSSTM'}
+  - name: label_13
+    properties: {text: Address, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'TIVALR,PHGEUW ZOWAMY,LYXGRQ'}
+  - name: txt_shopname
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'TIVALR,HSJGYE EANWUZ,ABGBUV'}
+  - name: txt_address
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'TIVALR,HSJGYE XTJURL,ZGSBOG'}
+  - name: label_14
+    properties: {text: Contact Person, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'VGIJBV,TMJBVO'}
+  - name: txt_contactP
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'VGIJBV,HVMZVK'}
+  - name: label_15
+    properties: {text: Contact No., align: right, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'VGIJBV,YXMOVW'}
+  - name: txt_contactNo
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'VGIJBV,UCRIOB'}
+  - name: label_16
+    properties: {text: Job Due on, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'VGIJBV,MEKELT'}
+  - name: txt_due
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'VGIJBV,QOZTYZ'}
+  - name: label_17
+    properties: {text: Job Order / Scope of Work, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'UYMHBA,CMLMCT'}
+  - name: txt_scope
+    properties: {height: 190.71875, font: Verdana}
+    type: TextArea
+    layout_properties: {grid_position: 'IJWNNI,FWAKNV'}
+  - name: label_18
+    properties: {text: Total Labor Amount, align: right, font: Verdana}
+    type: Label
+    layout_properties: {grid_position: 'DHMGDK,TDGJXK'}
+  - name: txt_amountlabor
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'DHMGDK,PQAPEJ'}
+  - name: label_19
+    properties: {text: ESTIMATED PARTS, role: text, icon: 'fa:car', background: 'theme:Gray 600', foreground: 'theme:White', font: Verdana, bold: true, align: center}
+    type: Label
+    layout_properties: {grid_position: 'EYZZQD,VTEKKN', full_width_row: true}
+  - name: data_grid_2
+    properties:
+      columns:
+      - {id: JKSDUP, title: Parts Name, data_key: column_1}
+      - {id: VJQQOR, title: Amount, data_key: column_2}
+      - {id: OJLQEN, title: Status, data_key: column_3}
+    type: DataGrid
+    components:
+    - name: rp_parts
+      properties: {item_template: Main.RepairApproval.RowTemplate10}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'YMKBLN,IYGINA'}
+  - name: label_20
+    properties: {text: TOTAL AMOUNT OF PARTS, align: right, font: Verdana, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'COFCCH,BCZZJQ GJMZJQ,TLMCYM'}
+  - name: label_21
+    properties: {text: TOTAL LABOR & PARTS, align: right, font: Verdana, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'COFCCH,BCZZJQ HKEIYU,BDNDFK'}
+  - name: txt_amountParts
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'COFCCH,GHYQEG IGCECV,DYSUBS'}
+  - name: txt_overalltotal
+    properties: {font: Verdana}
+    type: TextBox
+    layout_properties: {grid_position: 'COFCCH,GHYQEG IOCLFQ,EFEACJ'}
   - name: btn_approve
     properties: {text: AppRove, font: Verdana, bold: true, icon: 'fa:check', role: secondary-color, align: right}
     type: Button

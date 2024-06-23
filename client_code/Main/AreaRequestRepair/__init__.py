@@ -96,8 +96,10 @@ class AreaRequestRepair(AreaRequestRepairTemplate):
     due_date = self.dp_date.date
     scope = self.txt_scope.text
     labor_amount = int(self.txt_amountlabor.text)
+    total_parts = int(self.txt_amountParts.text)
+    overall_total = int(self.txt_overalltotal.text)
     
-    send_request = anvil.server.call('request_repair', requesting_area, make, type, model, date, plate_no, mileage, explanation, shop_name, address, contact_person, contact_no, due_date, scope, labor_amount)
+    send_request = anvil.server.call('request_repair', requesting_area, make, type, model, date, plate_no, mileage, explanation, shop_name, address, contact_person, contact_no, due_date, scope, labor_amount, total_parts, overall_total)
     if send_request:
       alert(f"Your request for {plate_no} has been successfully submitted. Please wait for approval from the approver. You can check the request status for updates on approval.")
     else:

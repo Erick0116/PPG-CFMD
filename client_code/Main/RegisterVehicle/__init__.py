@@ -29,6 +29,7 @@ class RegisterVehicle(RegisterVehicleTemplate):
     engine_no = self.txt_engineno.text
     chasis_no = self.txt_chasisno.text
     area_assigned = self.dp_area.selected_value
+    ownership = self.txt_ownership.text
     status = self.dp_status.selected_value
     remarks = self.txt_remarks.text
     # Add entry for registration
@@ -43,7 +44,7 @@ class RegisterVehicle(RegisterVehicleTemplate):
     premium = int(self.txt_premium.text)
     coverage = int(self.txt_coverage.text)
     expiry = self.dp_expiry.date
-    anvil.server.call('register_vehicle', make, body_type, color, model, register_name, plate_no, engine_no, chasis_no, area_assigned, status, remarks)
+    anvil.server.call('register_vehicle', make, body_type, color, model, register_name, plate_no, engine_no, chasis_no, area_assigned, ownership, status, remarks)
     anvil.server.call('add_registration', plate_no, cr_no, date_cr, or_no, date_renewed_or, next_renewal)
     anvil.server.call('add_insurance', plate_no, insurance_type, insurance_name, premium, coverage, expiry)
     alert("Vehicle has been added successfully!")
