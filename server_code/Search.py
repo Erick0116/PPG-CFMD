@@ -62,5 +62,13 @@ def repair_populate():
   return app_tables.repairapproval.search()
 
 @anvil.server.callable
+def repair_populate_open():
+  return app_tables.repairapproval.search(ticket_status="Open")
+
+@anvil.server.callable
+def repair_populate_pending():
+  return app_tables.repairapproval.search(ticket_status="On Hold")
+
+@anvil.server.callable
 def user_account():
   return app_tables.users.search()

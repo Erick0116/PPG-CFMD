@@ -1,0 +1,101 @@
+is_package: true
+container:
+  type: DataRowPanel
+  properties: {visible: true, auto_display_data: false}
+components:
+- name: data_row_panel_read_view_pending
+  properties: {}
+  type: DataRowPanel
+  layout_properties: {}
+  components:
+  - name: button_3
+    properties: {text: '', background: 'theme:Primary 700', foreground: 'theme:White', font: Verdana, font_size: 10, bold: true, enabled: false}
+    type: Button
+    layout_properties: {column: JKSDUP}
+    data_bindings:
+    - {property: text, code: 'self.item[''ticket_status'']', writeback: false}
+  - name: flow_panel_1
+    properties: {}
+    type: FlowPanel
+    layout_properties: {column: PSLHBI}
+    components:
+    - name: btn_edit_onhold
+      properties: {text: '', icon: 'fa:edit'}
+      type: Button
+      layout_properties: {}
+      event_bindings: {click: btn_edit_onhold_click}
+    - name: button_2
+      properties: {text: '', icon: 'fa:file'}
+      type: Button
+      layout_properties: {}
+  - name: label_3
+    properties: {}
+    type: Label
+    layout_properties: {column: VJQQOR}
+    data_bindings:
+    - {property: text, code: 'self.item[''plate_no'']', writeback: false}
+  - name: label_4
+    properties: {}
+    type: Label
+    layout_properties: {column: OJLQEN}
+    data_bindings:
+    - {property: text, code: 'self.item[''requesting_area'']', writeback: false}
+  - name: label_5
+    properties: {}
+    type: Label
+    layout_properties: {column: SOEZQZ}
+    data_bindings:
+    - {property: text, code: 'self.item[''request_no'']', writeback: false}
+  - name: label_6
+    properties: {}
+    type: Label
+    layout_properties: {column: ARGPIM}
+    data_bindings:
+    - {property: text, code: 'self.item[''date'']', writeback: false}
+- name: data_row_panel_write_view_pending
+  properties: {}
+  type: DataRowPanel
+  layout_properties: {column: 'null'}
+  components:
+  - name: dp_status_onhold
+    properties:
+      items: ['', Open, Approved, Canceled]
+    type: DropDown
+    layout_properties: {column: JKSDUP}
+  - name: flow_panel_2
+    properties: {}
+    type: FlowPanel
+    layout_properties: {column: PSLHBI}
+    components:
+    - name: button_4
+      properties: {text: '', icon: 'fa:check'}
+      type: Button
+      layout_properties: {}
+    - name: button_5
+      properties: {text: '', icon: 'fa:close'}
+      type: Button
+      layout_properties: {}
+  - name: lbl_plateno
+    properties: {}
+    type: Label
+    layout_properties: {column: VJQQOR}
+    data_bindings:
+    - {property: text, code: 'self.item[''plate_no'']', writeback: false}
+  - name: label_1
+    properties: {}
+    type: Label
+    layout_properties: {column: OJLQEN}
+    data_bindings:
+    - {property: text, code: 'self.item[''requesting_area'']', writeback: false}
+  - name: lbl_requestnoOnhold
+    properties: {}
+    type: Label
+    layout_properties: {column: SOEZQZ}
+    data_bindings:
+    - {property: text, code: 'self.item[''request_no'']', writeback: false}
+  - name: label_2
+    properties: {}
+    type: Label
+    layout_properties: {column: ARGPIM}
+    data_bindings:
+    - {property: text, code: 'self.item[''date'']', writeback: false}

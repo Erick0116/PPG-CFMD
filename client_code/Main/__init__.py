@@ -36,6 +36,8 @@ class Main(MainTemplate):
     self.check_user()    
     self.total_repair_approval()
     self.total_vehicle()
+    self.rp_items.items = anvil.server.call('repair_populate_open')
+    self.rp_pending.items = anvil.server.call('repair_populate_pending')
 
   def check_user(self):
     userlogin = anvil.users.get_user()

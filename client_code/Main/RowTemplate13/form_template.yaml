@@ -1,3 +1,88 @@
 is_package: true
-container: {type: DataRowPanel}
-components: []
+container:
+  type: DataRowPanel
+  properties: {visible: true, auto_display_data: false}
+components:
+- name: data_row_panel_write_view
+  properties: {underline: false}
+  type: DataRowPanel
+  layout_properties: {column: 'null'}
+  components:
+  - name: dp_status
+    properties:
+      items: ['', On Hold, Approved, Canceled]
+    type: DropDown
+    layout_properties: {column: JKSDUP}
+  - name: lbl_plateno
+    properties: {font: Verdana}
+    type: Label
+    layout_properties: {column: VJQQOR}
+    data_bindings:
+    - {property: text, code: 'self.item[''plate_no'']', writeback: false}
+  - name: flow_panel_1
+    properties: {align: center}
+    type: FlowPanel
+    layout_properties: {column: NPBANC}
+    components:
+    - name: btn_approve
+      properties: {text: '', icon: 'fa:check'}
+      type: Button
+      layout_properties: {}
+      event_bindings: {click: btn_approve_click}
+    - name: btn_close
+      properties: {text: '', icon: 'fa:close'}
+      type: Button
+      layout_properties: {}
+      event_bindings: {click: btn_close_click}
+  - name: lbl_requestno
+    properties: {font: Verdana}
+    type: Label
+    layout_properties: {column: YLGXPU}
+    data_bindings:
+    - {property: text, code: 'self.item[''request_no'']', writeback: false}
+  data_bindings: []
+- name: data_row_panel_read_view
+  properties: {align: left, font_size: null}
+  type: DataRowPanel
+  layout_properties: {}
+  components:
+  - name: button_1
+    properties: {role: null, bold: true, align: center, spacing_above: medium, background: '#FF0000', font: Verdana, foreground: 'theme:White', enabled: false, font_size: 10, text: ''}
+    type: Button
+    layout_properties: {column: JKSDUP}
+    data_bindings:
+    - {property: text, code: 'self.item[''ticket_status'']', writeback: false}
+  - name: label_1
+    properties: {font: Verdana}
+    type: Label
+    layout_properties: {column: VJQQOR}
+    data_bindings:
+    - {property: text, code: 'self.item[''plate_no'']', writeback: false}
+  - name: label_2
+    properties: {font: Verdana}
+    type: Label
+    layout_properties: {column: OJLQEN}
+    data_bindings:
+    - {property: text, code: 'self.item[''requesting_area'']', writeback: false}
+  - name: flow_panel_2
+    properties: {align: center}
+    type: FlowPanel
+    layout_properties: {column: NPBANC}
+    components:
+    - name: btn_edit
+      properties: {text: '', icon: 'fa:edit'}
+      type: Button
+      layout_properties: {}
+      event_bindings: {click: btn_edit_click}
+    - name: btn_view
+      properties: {text: '', icon: 'fa:file'}
+      type: Button
+      layout_properties: {}
+  - name: label_3
+    properties: {}
+    type: Label
+    layout_properties: {column: YLGXPU}
+    data_bindings:
+    - {property: text, code: 'self.item[''request_no'']', writeback: false}
+  data_bindings:
+  - {property: item, code: self.item, writeback: false}
