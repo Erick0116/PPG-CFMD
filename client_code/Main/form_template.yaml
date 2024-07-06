@@ -62,9 +62,9 @@ components:
       - {id: JKSDUP, title: Ticket Status, data_key: ticket_status, width: 130.03515625, expand: false}
       - {id: VJQQOR, title: Plate No, data_key: plate_no, width: 105.90625, expand: false}
       - {id: OJLQEN, title: requesting_area, data_key: requesting_area, width: '180'}
-      - {id: YLGXPU, data_key: request_no, title: Request No, width: '290'}
-      - {id: WSWLDK, data_key: date, title: Date, width: '130'}
-      - {id: NPBANC, data_key: '', title: '', width: '130'}
+      - {id: YLGXPU, data_key: request_no, title: Request No, width: '251'}
+      - {id: WSWLDK, data_key: date, title: Date, width: '100'}
+      - {id: NPBANC, data_key: '', title: '', width: '200'}
       auto_header: false
       show_page_controls: false
       rows_per_page: null

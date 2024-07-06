@@ -67,10 +67,11 @@ components:
     type: FlowPanel
     layout_properties: {column: PSLHBI}
     components:
-    - name: button_4
+    - name: btn_updateOnhold
       properties: {text: '', icon: 'fa:check'}
       type: Button
       layout_properties: {}
+      event_bindings: {click: btn_updateOnhold_click}
     - name: button_5
       properties: {text: '', icon: 'fa:close'}
       type: Button

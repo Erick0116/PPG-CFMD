@@ -13,6 +13,7 @@ components:
       items: ['', On Hold, Approved, Canceled]
     type: DropDown
     layout_properties: {column: JKSDUP}
+    event_bindings: {change: dp_status_change}
   - name: lbl_plateno
     properties: {font: Verdana}
     type: Label
@@ -24,15 +25,14 @@ components:
     type: FlowPanel
     layout_properties: {column: NPBANC}
     components:
-    - name: btn_approve
-      properties: {text: '', icon: 'fa:check'}
+    - name: btn_save
+      properties: {text: '', icon: 'fa:save'}
       type: Button
       layout_properties: {}
-      event_bindings: {click: btn_approve_click}
+      event_bindings: {click: btn_save_click}
     - name: btn_close
       properties: {text: '', icon: 'fa:close'}
       type: Button
-      layout_properties: {}
       event_bindings: {click: btn_close_click}
   - name: lbl_requestno
     properties: {font: Verdana}
@@ -78,6 +78,7 @@ components:
       properties: {text: '', icon: 'fa:file'}
       type: Button
       layout_properties: {}
+      event_bindings: {click: btn_view_click}
   - name: label_3
     properties: {}
     type: Label
@@ -86,3 +87,192 @@ components:
     - {property: text, code: 'self.item[''request_no'']', writeback: false}
   data_bindings:
   - {property: item, code: self.item, writeback: false}
+- name: expanded_panel_1
+  properties: {col_widths: '{"ADTWFX":10,"LEDGAP":20,"NUSUDO":15,"QCXKDE":15,"QVXAMP":10,"UWEIOK":50,"MPETTQ":45,"BJFTKA":15,"HFIXWH":10,"ZZRNCX":50,"ETNFZJ":10,"HOXGVE":50,"FFVRJR":35,"NISXTY":25,"JPLCKE":45,"KZFOIR":15,"QZARBK":45,"AVGAPB":15,"JSPNJB":45,"GPUMSH":15,"KPAPFK":50,"XDMHYN":10,"FEPRVI":50,"UMMTBO":10}'}
+  type: ColumnPanel
+  layout_properties: {column: 'null'}
+  components:
+  - name: label_4
+    properties: {text: DETAILS, icon: 'fa:info-circle', role: text, align: center, background: '#006400', foreground: 'theme:White', font: Verdana, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'OENJGQ,LBEKCE'}
+  - name: label_5
+    properties: {text: Requesting Branch Area}
+    type: Label
+    layout_properties: {grid_position: 'EOYZCV,ADTWFX'}
+  - name: text_box_1
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'EOYZCV,LEDGAP'}
+  - name: label_6
+    properties: {text: Plate No., align: right}
+    type: Label
+    layout_properties: {grid_position: 'EOYZCV,NUSUDO'}
+  - name: text_box_2
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'EOYZCV,QCXKDE'}
+  - name: label_7
+    properties: {text: Make/Type/Model}
+    type: Label
+    layout_properties: {grid_position: 'CPIFZM,QVXAMP'}
+  - name: text_box_3
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'CPIFZM,UWEIOK'}
+  - name: label_8
+    properties: {text: Date, align: right}
+    type: Label
+    layout_properties: {grid_position: 'ZMGXBM,MPETTQ'}
+  - name: text_box_4
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'ZMGXBM,BJFTKA'}
+  - name: label_9
+    properties: {text: Area Recommendation / Explanation}
+    type: Label
+    layout_properties: {grid_position: 'OCRIUR,BEDOPH'}
+  - name: text_area_1
+    properties: {height: 150.19921875}
+    type: TextArea
+    layout_properties: {grid_position: 'IQYZAN,LONAQU'}
+  - name: label_10
+    properties: {text: VEHICLE REPAIR ESTIMATE, icon: 'fa:car', align: center, font: Verdana, bold: true, role: text, background: '#006400', foreground: 'theme:White'}
+    type: Label
+    layout_properties: {grid_position: 'OCSJFC,MCNITF'}
+  - name: label_11
+    properties: {text: Name of Shop}
+    type: Label
+    layout_properties: {grid_position: 'PMNLWT,HFIXWH'}
+  - name: text_box_5
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'PMNLWT,ZZRNCX'}
+  - name: label_12
+    properties: {text: Address}
+    type: Label
+    layout_properties: {grid_position: 'RLSNYL,ETNFZJ'}
+  - name: text_box_6
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'RLSNYL,HOXGVE'}
+  - name: label_13
+    properties: {text: Contact Person, align: right}
+    type: Label
+    layout_properties: {grid_position: 'IBYJNQ,FFVRJR'}
+  - name: text_box_7
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'IBYJNQ,NISXTY'}
+  - name: label_14
+    properties: {text: Contact No., align: right}
+    type: Label
+    layout_properties: {grid_position: 'VLFMEB,JPLCKE'}
+  - name: text_box_8
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'VLFMEB,KZFOIR'}
+  - name: label_15
+    properties: {text: Job Due on, align: right}
+    type: Label
+    layout_properties: {grid_position: 'ZRRQYA,QZARBK'}
+  - name: text_box_9
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'ZRRQYA,AVGAPB'}
+  - name: label_16
+    properties: {text: Job Order / Scope of Work}
+    type: Label
+    layout_properties: {grid_position: 'XNTNON,TKJEYI'}
+  - name: text_area_2
+    properties: {height: 171.31640625}
+    type: TextArea
+    layout_properties: {grid_position: 'NFTMJD,HWJLJF'}
+  - name: label_17
+    properties: {text: Total Labor Amount, align: right}
+    type: Label
+    layout_properties: {grid_position: 'AWSFLL,JSPNJB'}
+  - name: text_box_11
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'AWSFLL,GPUMSH'}
+  - name: label_18
+    properties: {text: ESTIMATED PARTS, role: text, icon: 'fa:car', align: center, background: '#006400', foreground: 'theme:White'}
+    type: Label
+    layout_properties: {grid_position: 'BUDKGP,VMMCJB'}
+  - name: data_grid_1
+    properties:
+      columns:
+      - {id: VJQQOR, title: Column 2, data_key: column_2}
+      - {id: OJLQEN, title: Column 3, data_key: column_3}
+      auto_header: false
+      show_page_controls: false
+      rows_per_page: null
+    type: DataGrid
+    components:
+    - name: data_row_panel_1
+      properties: {background: '#006400', foreground: 'theme:White', font: Verdana, bold: true, align: center, role: null, font_size: null}
+      type: DataRowPanel
+      components:
+      - name: label_19
+        properties: {text: Parts Name, spacing_above: none, align: center, role: null}
+        type: Label
+        layout_properties: {column: VJQQOR}
+      - name: label_20
+        properties: {text: Amount, spacing_above: none, align: center}
+        type: Label
+        layout_properties: {column: OJLQEN}
+      layout_properties: {}
+    - name: repeating_panel_1
+      properties: {item_template: Main.RowTemplate13.RowTemplate16}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'ZFHJAO,MXTGCI'}
+  - name: label_21
+    properties: {text: TOTAL AMOUNT OF PARTS, align: right}
+    type: Label
+    layout_properties: {grid_position: 'RHVIYI,KPAPFK'}
+  - name: text_box_10
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'RHVIYI,XDMHYN'}
+  - name: label_22
+    properties: {text: TOTAL LABOR & PARTS, align: right}
+    type: Label
+    layout_properties: {grid_position: 'JFRESI,FEPRVI'}
+  - name: text_box_12
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'JFRESI,UMMTBO'}
+  - name: label_23
+    properties: {role: text, background: '#006400'}
+    type: Label
+    layout_properties: {grid_position: 'QIZUGM,SWMEFD'}
+- name: expanded_panel_remarks
+  properties: {col_widths: '{"RZJWBS":35,"HLACZX":15,"QYLCCT":10}'}
+  type: ColumnPanel
+  layout_properties: {column: 'null'}
+  components:
+  - name: label_24
+    properties: {text: Approval No., align: right}
+    type: Label
+    layout_properties: {grid_position: 'AJKRLW,RZJWBS'}
+  - name: text_box_13
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'AJKRLW,HLACZX'}
+  - name: button_2
+    properties: {text: Generate}
+    type: Button
+    layout_properties: {grid_position: 'AJKRLW,QYLCCT'}
+  - name: label_25
+    properties: {text: Remarks}
+    type: Label
+    layout_properties: {grid_position: 'IHCETW,QFLSOV'}
+  - name: text_area_3
+    properties: {height: 164.48046875}
+    type: TextArea
+    layout_properties: {grid_position: 'KITADV,IOLIPF'}
+  - name: button_3
+    properties: {text: '', align: right, icon: 'fa:check', role: primary-color}
+    type: Button
+    layout_properties: {grid_position: 'BIWTJU,UMFXQE'}
