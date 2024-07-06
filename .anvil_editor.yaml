@@ -21,6 +21,7 @@ unique_ids:
     Main.VehicleList.RowTemplate3: '1718374286904443988567010.3352'
     Main.AreaRequestRepair.RowTemplate9: '1719023082232317454241089.02954'
     Main.TransferVehicle: '1718201820618646691377789.4016'
+    Main.RowTemplate13: '1720260858857267936105364.32834'
   modules: {}
   server_modules:
     Search: '1717679286175716578258382.1809'

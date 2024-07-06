@@ -56,6 +56,42 @@ components:
     properties: {role: card}
     type: ColumnPanel
     layout_properties: {grid_position: 'VMJKMC,FWEPGI'}
+  - name: data_grid_1
+    properties:
+      columns:
+      - {id: JKSDUP, title: Ticket Status, data_key: ticket_status}
+      - {id: VJQQOR, title: Plate No, data_key: plate_no}
+      - {id: OJLQEN, title: requesting_area, data_key: column_3}
+      - {id: YLGXPU, data_key: date, title: Date}
+      - {id: WSWLDK, data_key: '', title: ''}
+      auto_header: false
+    type: DataGrid
+    components:
+    - name: data_row_panel_1
+      properties: {background: '#006400', foreground: 'theme:White', font: Verdana, bold: true}
+      type: DataRowPanel
+      components:
+      - name: label_5
+        properties: {text: Ticket Status}
+        type: Label
+        layout_properties: {column: JKSDUP}
+      - name: label_6
+        properties: {text: Plate No}
+        type: Label
+        layout_properties: {column: VJQQOR}
+      - name: label_7
+        properties: {text: Requester}
+        type: Label
+        layout_properties: {column: OJLQEN}
+      - name: label_8
+        properties: {text: Date}
+        type: Label
+        layout_properties: {column: YLGXPU}
+      layout_properties: {}
+    - name: repeating_panel_1
+      properties: {item_template: Main.RowTemplate13}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'HAIMXB,EDJPWD'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
