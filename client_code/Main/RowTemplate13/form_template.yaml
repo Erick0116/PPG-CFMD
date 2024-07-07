@@ -88,116 +88,116 @@ components:
   data_bindings:
   - {property: item, code: self.item, writeback: false}
 - name: expanded_panel_1
-  properties: {col_widths: '{"ADTWFX":10,"LEDGAP":20,"NUSUDO":15,"QCXKDE":15,"QVXAMP":10,"UWEIOK":50,"MPETTQ":45,"BJFTKA":15,"HFIXWH":10,"ZZRNCX":50,"ETNFZJ":10,"HOXGVE":50,"FFVRJR":35,"NISXTY":25,"JPLCKE":45,"KZFOIR":15,"QZARBK":45,"AVGAPB":15,"JSPNJB":45,"GPUMSH":15,"KPAPFK":50,"XDMHYN":10,"FEPRVI":50,"UMMTBO":10}'}
+  properties: {col_widths: '{"ADTWFX":10,"LEDGAP":20,"NUSUDO":15,"QCXKDE":15,"QVXAMP":10,"UWEIOK":50,"MPETTQ":45,"BJFTKA":15,"HFIXWH":10,"ZZRNCX":50,"ETNFZJ":10,"HOXGVE":50,"FFVRJR":15,"NISXTY":20,"JSPNJB":45,"GPUMSH":15,"KPAPFK":50,"XDMHYN":10,"FEPRVI":50,"UMMTBO":10,"YIPEYO":10,"ZWRNLJ":15,"KXRWJX":5,"EAGUSX":15}'}
   type: ColumnPanel
   layout_properties: {column: 'null'}
   components:
   - name: label_4
-    properties: {text: DETAILS, icon: 'fa:info-circle', role: text, align: center, background: '#006400', foreground: 'theme:White', font: Verdana, bold: true}
+    properties: {role: text, bold: true, align: center, background: '#006400', icon: 'fa:info-circle', font: Verdana, foreground: 'theme:White', font_size: 12, text: DETAILS}
     type: Label
     layout_properties: {grid_position: 'OENJGQ,LBEKCE'}
   - name: label_5
-    properties: {text: Requesting Branch Area}
+    properties: {text: Requesting Branch Area, font: Verdana, font_size: 10}
     type: Label
     layout_properties: {grid_position: 'EOYZCV,ADTWFX'}
-  - name: text_box_1
-    properties: {}
+  - name: txt_requestArea
+    properties: {font: Verdana, font_size: 10}
     type: TextBox
     layout_properties: {grid_position: 'EOYZCV,LEDGAP'}
   - name: label_6
-    properties: {text: Plate No., align: right}
+    properties: {text: Plate No., align: right, font: Verdana, font_size: 10}
     type: Label
     layout_properties: {grid_position: 'EOYZCV,NUSUDO'}
-  - name: text_box_2
-    properties: {}
+  - name: txt_plateno
+    properties: {font: Verdana, font_size: 10}
     type: TextBox
     layout_properties: {grid_position: 'EOYZCV,QCXKDE'}
   - name: label_7
-    properties: {text: Make/Type/Model}
+    properties: {text: Make/Type/Model, font: Verdana, font_size: 10}
     type: Label
     layout_properties: {grid_position: 'CPIFZM,QVXAMP'}
-  - name: text_box_3
-    properties: {}
+  - name: txt_carmake
+    properties: {font: Verdana, font_size: 10}
     type: TextBox
     layout_properties: {grid_position: 'CPIFZM,UWEIOK'}
   - name: label_8
-    properties: {text: Date, align: right}
+    properties: {text: Date, align: right, font: Verdana, font_size: 10}
     type: Label
     layout_properties: {grid_position: 'ZMGXBM,MPETTQ'}
-  - name: text_box_4
-    properties: {}
+  - name: txt_date
+    properties: {font: Verdana, font_size: 10}
     type: TextBox
     layout_properties: {grid_position: 'ZMGXBM,BJFTKA'}
   - name: label_9
-    properties: {text: Area Recommendation / Explanation}
+    properties: {text: Area Recommendation / Explanation, font: Verdana, font_size: 10}
     type: Label
     layout_properties: {grid_position: 'OCRIUR,BEDOPH'}
-  - name: text_area_1
-    properties: {height: 150.19921875}
+  - name: txt_explanation
+    properties: {height: 150.19921875, font: Verdana, font_size: 10}
     type: TextArea
     layout_properties: {grid_position: 'IQYZAN,LONAQU'}
   - name: label_10
-    properties: {text: VEHICLE REPAIR ESTIMATE, icon: 'fa:car', align: center, font: Verdana, bold: true, role: text, background: '#006400', foreground: 'theme:White'}
+    properties: {role: text, bold: true, align: center, background: '#006400', icon: 'fa:car', font: Verdana, foreground: 'theme:White', font_size: 12, text: VEHICLE REPAIR ESTIMATE}
     type: Label
     layout_properties: {grid_position: 'OCSJFC,MCNITF'}
   - name: label_11
-    properties: {text: Name of Shop}
+    properties: {text: Name of Shop, font: Verdana, font_size: 10}
     type: Label
     layout_properties: {grid_position: 'PMNLWT,HFIXWH'}
   - name: text_box_5
-    properties: {}
+    properties: {font: Verdana, font_size: 10}
     type: TextBox
     layout_properties: {grid_position: 'PMNLWT,ZZRNCX'}
   - name: label_12
-    properties: {text: Address}
+    properties: {text: Address, font: Verdana, font_size: 10}
     type: Label
     layout_properties: {grid_position: 'RLSNYL,ETNFZJ'}
   - name: text_box_6
-    properties: {}
+    properties: {font: Verdana, font_size: 10}
     type: TextBox
     layout_properties: {grid_position: 'RLSNYL,HOXGVE'}
   - name: label_13
-    properties: {text: Contact Person, align: right}
+    properties: {text: Contact Person, align: left, font: Verdana, font_size: 10}
     type: Label
     layout_properties: {grid_position: 'IBYJNQ,FFVRJR'}
   - name: text_box_7
-    properties: {}
+    properties: {font: Verdana, font_size: 10}
     type: TextBox
     layout_properties: {grid_position: 'IBYJNQ,NISXTY'}
   - name: label_14
-    properties: {text: Contact No., align: right}
+    properties: {text: Contact No., align: right, font: Verdana, font_size: 10}
     type: Label
-    layout_properties: {grid_position: 'VLFMEB,JPLCKE'}
+    layout_properties: {grid_position: 'IBYJNQ,YIPEYO'}
   - name: text_box_8
-    properties: {}
+    properties: {font: Verdana, font_size: 10}
     type: TextBox
-    layout_properties: {grid_position: 'VLFMEB,KZFOIR'}
+    layout_properties: {grid_position: 'IBYJNQ,ZWRNLJ'}
   - name: label_15
-    properties: {text: Job Due on, align: right}
+    properties: {text: Job Due on, align: right, font: Verdana, font_size: 10}
     type: Label
-    layout_properties: {grid_position: 'ZRRQYA,QZARBK'}
+    layout_properties: {grid_position: 'IBYJNQ,KXRWJX'}
   - name: text_box_9
-    properties: {}
+    properties: {font: Verdana, font_size: 10}
     type: TextBox
-    layout_properties: {grid_position: 'ZRRQYA,AVGAPB'}
+    layout_properties: {grid_position: 'IBYJNQ,EAGUSX'}
   - name: label_16
-    properties: {text: Job Order / Scope of Work}
+    properties: {text: Job Order / Scope of Work, font: Verdana, font_size: 10}
     type: Label
     layout_properties: {grid_position: 'XNTNON,TKJEYI'}
   - name: text_area_2
-    properties: {height: 171.31640625}
+    properties: {height: 171.31640625, font: Verdana, font_size: 10}
     type: TextArea
     layout_properties: {grid_position: 'NFTMJD,HWJLJF'}
   - name: label_17
-    properties: {text: Total Labor Amount, align: right}
+    properties: {text: Total Labor Amount, align: right, font: Verdana, font_size: 10}
     type: Label
     layout_properties: {grid_position: 'AWSFLL,JSPNJB'}
   - name: text_box_11
-    properties: {}
+    properties: {font: Verdana, font_size: 10}
     type: TextBox
     layout_properties: {grid_position: 'AWSFLL,GPUMSH'}
   - name: label_18
-    properties: {text: ESTIMATED PARTS, role: text, icon: 'fa:car', align: center, background: '#006400', foreground: 'theme:White'}
+    properties: {role: text, bold: true, align: center, background: '#006400', icon: 'fa:car', font: Verdana, foreground: 'theme:White', font_size: 12, text: ESTIMATED PARTS}
     type: Label
     layout_properties: {grid_position: 'BUDKGP,VMMCJB'}
   - name: data_grid_1
@@ -215,32 +215,32 @@ components:
       type: DataRowPanel
       components:
       - name: label_19
-        properties: {text: Parts Name, spacing_above: none, align: center, role: null}
+        properties: {text: Parts Name, spacing_above: none, align: center, role: null, font: Verdana, font_size: null}
         type: Label
         layout_properties: {column: VJQQOR}
       - name: label_20
-        properties: {text: Amount, spacing_above: none, align: center}
+        properties: {text: Amount, spacing_above: none, align: center, font: Verdana}
         type: Label
         layout_properties: {column: OJLQEN}
-      layout_properties: {}
+      layout_properties: {pinned: true}
     - name: repeating_panel_1
       properties: {item_template: Main.RowTemplate13.RowTemplate16}
       type: RepeatingPanel
     layout_properties: {grid_position: 'ZFHJAO,MXTGCI'}
   - name: label_21
-    properties: {text: TOTAL AMOUNT OF PARTS, align: right}
+    properties: {text: TOTAL AMOUNT OF PARTS, align: right, font: Verdana, font_size: 10}
     type: Label
     layout_properties: {grid_position: 'RHVIYI,KPAPFK'}
   - name: text_box_10
-    properties: {}
+    properties: {font: Verdana, font_size: 10}
     type: TextBox
     layout_properties: {grid_position: 'RHVIYI,XDMHYN'}
   - name: label_22
-    properties: {text: TOTAL LABOR & PARTS, align: right}
+    properties: {text: TOTAL LABOR & PARTS, align: right, font: Verdana, font_size: 10}
     type: Label
     layout_properties: {grid_position: 'JFRESI,FEPRVI'}
   - name: text_box_12
-    properties: {}
+    properties: {font: Verdana, font_size: 10}
     type: TextBox
     layout_properties: {grid_position: 'JFRESI,UMMTBO'}
   - name: label_23
@@ -253,26 +253,26 @@ components:
   layout_properties: {column: 'null'}
   components:
   - name: label_24
-    properties: {text: Approval No., align: right}
+    properties: {text: Approval No., align: right, font: Verdana, font_size: 10}
     type: Label
     layout_properties: {grid_position: 'AJKRLW,RZJWBS'}
   - name: text_box_13
-    properties: {}
+    properties: {font: Verdana, font_size: 10}
     type: TextBox
     layout_properties: {grid_position: 'AJKRLW,HLACZX'}
   - name: button_2
-    properties: {text: Generate}
+    properties: {text: Generate, role: primary-color, font: Verdana, bold: true, background: 'theme:Gray 600', font_size: 10}
     type: Button
     layout_properties: {grid_position: 'AJKRLW,QYLCCT'}
   - name: label_25
-    properties: {text: Remarks}
+    properties: {text: Remarks, font: Verdana, font_size: 10}
     type: Label
     layout_properties: {grid_position: 'IHCETW,QFLSOV'}
   - name: text_area_3
-    properties: {height: 164.48046875}
+    properties: {height: 164.48046875, font: Verdana, font_size: 10}
     type: TextArea
     layout_properties: {grid_position: 'KITADV,IOLIPF'}
   - name: button_3
-    properties: {text: '', align: right, icon: 'fa:check', role: primary-color}
+    properties: {text: '', align: right, icon: 'fa:check', role: primary-color, font: Verdana, font_size: 10, background: ''}
     type: Button
     layout_properties: {grid_position: 'BIWTJU,UMFXQE'}

@@ -20,9 +20,11 @@ class RowTemplate13(RowTemplate13Template):
     if not self.expanded:
       self.expanded_panel_1.visible = True
       self.expanded = True
+      
     else:
       self.expanded_panel_1.visible = False
       self.expanded = False
+      
 
   def toggle_expand2(self, **event_args):
     if not self.expanded2:
@@ -31,16 +33,19 @@ class RowTemplate13(RowTemplate13Template):
     else:
       self.expanded_panel_remarks.visible = False
       self.expanded2 = False
+      
 
     # Any code you write here will run before the form opens.
 
   def btn_edit_click(self, **event_args):
     self.data_row_panel_write_view.visible = True
     self.data_row_panel_read_view.visible = False
+    self.expanded_panel_1.visible = False
 
   def btn_close_click(self, **event_args):
     self.data_row_panel_write_view.visible = False
     self.data_row_panel_read_view.visible = True
+    self.expanded_panel_remarks.visible = False
 
   def btn_save_click(self, **event_args):
     record = anvil.server.call('update_repTicketStatus', self.lbl_requestno.text, self.dp_status.selected_value)
@@ -52,6 +57,18 @@ class RowTemplate13(RowTemplate13Template):
 
   def btn_view_click(self, **event_args):
     self.toggle_expand()
+    repair_details = app_tables.repairapproval.search(request_no=self.lbl_requestno.text)
+    if repair_details:
+      self.txt_requestArea.text = repair_details[0]['requesting_area']
+      self.txt_carmake.text = f"{repair_details[0]['make']}/{repair_details[0]['type']}/{repair_details[0]['model']}"
+      self.txt_plateno.text = repair_details[0]['plate_no']
+      self.txt_date.text = repair_details[0]['date']
+      self.txt_explanation.text = repair_details[0]['explanation']
+    else:
+      alert('Plate number not found')
+      
+      
+
 
   def btn_approval_click(self, **event_args):
     self.toggle_expand2()
