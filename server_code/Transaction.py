@@ -120,6 +120,16 @@ def update_repTicketStatus(request_no, ticket_status):
     return False
 
 @anvil.server.callable
+def update_repairRemarks(request_no, remarks):
+  record = app_tables.repairapproval.get(request_no=request_no)
+  if record is not None:
+    record['remarks'] = remarks
+    record.update()
+    return True
+  else:
+    return False
+    
+@anvil.server.callable
 def update_user(email, role, area):
   users = app_tables.users.get(email=email)
   if users:

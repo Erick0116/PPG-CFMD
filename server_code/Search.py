@@ -50,6 +50,10 @@ def get_next_id():
   return next_id_no
 
 @anvil.server.callable
+def get_next_approver_id():
+  all_ids = app_tables.
+
+@anvil.server.callable
 def parts_item_populate(plate_no, date):
   return app_tables.partsitem.search(plate_no=plate_no, date=date, status='Requested')
 

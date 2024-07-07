@@ -62,6 +62,7 @@ components:
       items: ['', Open, Approved, Canceled]
     type: DropDown
     layout_properties: {column: JKSDUP}
+    event_bindings: {change: dp_status_onhold_change}
   - name: flow_panel_2
     properties: {align: center}
     type: FlowPanel
@@ -76,7 +77,7 @@ components:
       properties: {text: '', icon: 'fa:close'}
       type: Button
       layout_properties: {}
-  - name: lbl_plateno
+  - name: lbl_plateno_onhold
     properties: {}
     type: Label
     layout_properties: {column: VJQQOR}
@@ -100,3 +101,34 @@ components:
     layout_properties: {column: ARGPIM}
     data_bindings:
     - {property: text, code: 'self.item[''date'']', writeback: false}
+  - name: expanded_panel_onhold
+    properties: {col_widths: '{"FPSPUM":35,"YTFKVC":15,"XJQANH":10}'}
+    type: ColumnPanel
+    layout_properties: {}
+    components:
+    - name: label_8
+      properties: {text: Approval No., align: right, font: Verdana, font_size: 10}
+      type: Label
+      layout_properties: {grid_position: 'VGICZU,FPSPUM'}
+    - name: txt_approverNo
+      properties: {font: Verdana, font_size: 10}
+      type: TextBox
+      layout_properties: {grid_position: 'VGICZU,YTFKVC'}
+    - name: btn_generate_approverNo
+      properties: {text: GENERATE, align: center, role: primary-color, background: 'theme:Gray 600', bold: true, font: Verdana, font_size: 10}
+      type: Button
+      layout_properties: {grid_position: 'VGICZU,XJQANH'}
+      event_bindings: {click: btn_generate_approverNo_click}
+    - name: label_7
+      properties: {text: Remarks, font: Verdana, font_size: 10}
+      type: Label
+      layout_properties: {grid_position: 'DRYDUK,VQJFRP'}
+    - name: txt_remarks_onhold
+      properties: {height: 125.515625, font: Verdana, font_size: 10}
+      type: TextArea
+      layout_properties: {grid_position: 'CHABAW,AHXLES'}
+    - name: btn_save_onhold
+      properties: {text: '', align: right, icon: 'fa:save', role: primary-color, font: Verdana, font_size: 10}
+      type: Button
+      layout_properties: {grid_position: 'NTWNFX,MYWQCA'}
+      event_bindings: {click: btn_save_onhold_click}
