@@ -144,37 +144,37 @@ components:
   layout_properties: {slot: left-nav}
   components:
   - name: btn_register
-    properties: {role: secondary-color, bold: true, align: left, background: '#FFD700', icon: 'fa:car', font: Verdana, foreground: 'theme:Black', font_size: 15, text: register vehicle}
+    properties: {role: secondary-color, bold: true, align: left, background: '#FFD700', icon: 'fa:car', font: Verdana, icon_align: top, foreground: 'theme:Black', font_size: 10, text: ''}
     type: Button
     layout_properties: {grid_position: 'YVGIBN,TIEGVO'}
     event_bindings: {click: btn_register_click}
   - name: btn_vehicleList
-    properties: {text: LIST oF VEHICLES, align: left, bold: true, font: Verdana, font_size: 15, role: primary-color, icon: 'fa:list', background: 'theme:Gray 600'}
+    properties: {role: primary-color, bold: true, align: left, background: 'theme:Gray 600', icon: 'fa:list', font: Verdana, icon_align: top, font_size: 10, text: ''}
     type: Button
     layout_properties: {grid_position: 'YJFZLF,AYASKO'}
     event_bindings: {click: btn_vehicleList_click}
   - name: btn_transfer
-    properties: {text: Transfer vehicle, font: Verdana, font_size: 15, bold: true, align: left, role: primary-color, icon: 'fa:ship', background: 'theme:Gray 600'}
+    properties: {role: primary-color, bold: true, align: left, background: 'theme:Gray 600', icon: 'fa:ship', font: Verdana, icon_align: top, font_size: 10, text: ''}
     type: Button
     layout_properties: {grid_position: 'LLJCFU,JXNKOV'}
     event_bindings: {click: btn_transfer_click}
   - name: btn_repair_approval
-    properties: {text: repair APPROVAL, role: primary-color, align: left, bold: true, font: Verdana, font_size: 15, icon: 'fa:check-circle', background: 'theme:Gray 600'}
+    properties: {role: primary-color, bold: true, align: left, background: 'theme:Gray 600', icon: 'fa:check-circle', font: Verdana, icon_align: top, font_size: 10, text: ''}
     type: Button
     layout_properties: {grid_position: 'CTSJLD,GEOMHS'}
     event_bindings: {click: btn_repair_approval_click}
   - name: btn_request_repair
-    properties: {text: REquest REPAIR, icon: 'fa:car', font: Verdana, bold: true, font_size: 15, role: secondary-color, align: left, background: '#FFD700'}
+    properties: {role: secondary-color, bold: true, align: left, background: '#FFD700', icon: 'fa:car', font: Verdana, icon_align: top, font_size: 10, text: ''}
     type: Button
     layout_properties: {grid_position: 'SABCAH,KXVKHL', full_width_row: false}
     event_bindings: {click: btn_request_repair_click}
   - name: btn_viewRequest
-    properties: {text: VIEW REQUEST, font: Verdana, font_size: 15, bold: true, align: left, icon: 'fa:list-alt', role: primary-color, background: 'theme:Gray 600'}
+    properties: {role: primary-color, bold: true, align: left, background: 'theme:Gray 600', icon: 'fa:list-alt', font: Verdana, icon_align: top, font_size: 10, text: ''}
     type: Button
     layout_properties: {grid_position: 'YAOFAA,CPEBAL'}
     event_bindings: {click: btn_viewRequest_click}
   - name: btn_acount
-    properties: {text: ACCOUNt MANAGEMENT, role: primary-color, background: 'theme:Gray 600', icon: 'fa:user-o', font: Verdana, font_size: 15, bold: true, align: left}
+    properties: {role: primary-color, bold: true, align: left, background: 'theme:Gray 600', icon: 'fa:user-o', font: Verdana, icon_align: top, font_size: 10, text: ''}
     type: Button
     layout_properties: {grid_position: 'UUFIQC,NTQGBM'}
     event_bindings: {click: btn_acount_click}

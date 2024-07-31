@@ -51,7 +51,7 @@ def get_next_id():
 
 @anvil.server.callable
 def get_next_approver_id():
-  all_ids = app_tables.
+  pass
 
 @anvil.server.callable
 def parts_item_populate(plate_no, date):
