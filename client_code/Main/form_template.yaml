@@ -53,8 +53,9 @@ components:
       type: Label
       layout_properties: {pinned: true}
     - name: rp_items
-      properties: {item_template: Main.RowTemplate13, spacing_below: none, spacing_above: none, background: ''}
+      properties: {item_template: Main.RowTemplate13, spacing_below: none, spacing_above: none, background: '', role: null}
       type: RepeatingPanel
+      layout_properties: {}
     layout_properties: {grid_position: 'XWOBMG,FWVZFB'}
   - name: label_10
     properties: {role: text, bold: false, spacing_above: none, background: 'theme:Gray 200', font: Verdana, foreground: '', spacing_below: none, italic: true, font_size: 12, text: 'Status category: On Hold'}
