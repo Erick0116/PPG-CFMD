@@ -21,6 +21,8 @@ class RowTemplate13(RowTemplate13Template):
       self.expanded_panel_1.visible = True
       self.expanded = True
       
+      
+      
     else:
       self.expanded_panel_1.visible = False
       self.expanded = False
@@ -66,7 +68,7 @@ class RowTemplate13(RowTemplate13Template):
       self.txt_explanation.text = repair_details[0]['explanation']
     else:
       alert('Plate number not found')
-      
+     
       
 
 

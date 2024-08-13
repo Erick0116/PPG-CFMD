@@ -93,7 +93,7 @@ components:
   layout_properties: {column: 'null'}
   components:
   - name: label_4
-    properties: {role: text, bold: true, align: center, background: '#006400', icon: 'fa:info-circle', font: Verdana, foreground: 'theme:White', font_size: 12, text: DETAILS}
+    properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:info-circle', font: Verdana, foreground: 'theme:White', font_size: 12, text: DETAILS}
     type: Label
     layout_properties: {grid_position: 'OENJGQ,LBEKCE'}
   - name: label_5
@@ -137,7 +137,7 @@ components:
     type: TextArea
     layout_properties: {grid_position: 'IQYZAN,LONAQU'}
   - name: label_10
-    properties: {role: text, bold: true, align: center, background: '#006400', icon: 'fa:car', font: Verdana, foreground: 'theme:White', font_size: 12, text: VEHICLE REPAIR ESTIMATE}
+    properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:car', font: Verdana, foreground: 'theme:White', font_size: 12, text: VEHICLE REPAIR ESTIMATE}
     type: Label
     layout_properties: {grid_position: 'OCSJFC,MCNITF'}
   - name: label_11
@@ -197,7 +197,7 @@ components:
     type: TextBox
     layout_properties: {grid_position: 'AWSFLL,GPUMSH'}
   - name: label_18
-    properties: {role: text, bold: true, align: center, background: '#006400', icon: 'fa:car', font: Verdana, foreground: 'theme:White', font_size: 12, text: ESTIMATED PARTS}
+    properties: {role: text, bold: true, align: center, background: 'theme:Gray 600', icon: 'fa:car', font: Verdana, foreground: 'theme:White', font_size: 12, text: ESTIMATED PARTS}
     type: Label
     layout_properties: {grid_position: 'BUDKGP,VMMCJB'}
   - name: data_grid_1
@@ -211,7 +211,7 @@ components:
     type: DataGrid
     components:
     - name: data_row_panel_1
-      properties: {background: '#006400', foreground: 'theme:White', font: Verdana, bold: true, align: center, role: null, font_size: null}
+      properties: {background: 'theme:Gray 600', foreground: 'theme:White', font: Verdana, bold: true, align: center, role: null, font_size: null}
       type: DataRowPanel
       components:
       - name: label_19
@@ -244,7 +244,7 @@ components:
     type: TextBox
     layout_properties: {grid_position: 'JFRESI,UMMTBO'}
   - name: label_23
-    properties: {role: text, background: '#006400'}
+    properties: {role: text, background: 'theme:Gray 600'}
     type: Label
     layout_properties: {grid_position: 'QIZUGM,SWMEFD'}
 - name: expanded_panel_remarks

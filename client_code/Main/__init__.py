@@ -34,8 +34,6 @@ class Main(MainTemplate):
       else:
         alert('You dont have the prreviledge to access the page')
     self.check_user()    
-    self.total_repair_approval()
-    self.total_vehicle()
     self.rp_items.items = anvil.server.call('repair_populate_open')
     self.rp_pending.items = anvil.server.call('repair_populate_pending')
 
@@ -47,20 +45,8 @@ class Main(MainTemplate):
     else:
       self.txt_user.text = "Not logged in"  # Handle case where no user is logged in
     
-  def total_repair_approval(self, **event_args):
-    results = app_tables.repairapproval.search(status="Requested")
-    count = 0
-    for record in results:
-        count += 1  # Increment count for each record found    
-    self.lbl_count.text= str(count)  # Convert count to string for assignment
-
-  def total_vehicle(self, **event_args):
-    results = app_tables.vehicles.search(status="Active")
-    count = 0
-    for record in results:
-      count += 1
-    self.lbl_count_vehicle.text = str(count)
-
+    
+  
       
       
     
